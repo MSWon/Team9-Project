@@ -15,11 +15,11 @@ public class Chapter implements ActionListener{
 	JPanel Cardpanel;
 	JPanel Btnpanel;
 	JPanel Scrollpanel;
-	JList<String> list1,list2;
+	JList<JButton> list1,list2;
 	JScrollPane scroller;
 	JMenuBar menubar;
 	JMenu menu1,menu2;
-	
+	Color gray = new Color(245,245,245);
 	
 	
 	public void go(){
@@ -105,36 +105,44 @@ public class Chapter implements ActionListener{
 		
 		Scrollpanel = new JPanel();
 		Scrollpanel.setLayout(new BoxLayout(Scrollpanel,BoxLayout.Y_AXIS));
-		Scrollpanel.setBackground(Color.WHITE);
+		Scrollpanel.setBackground(gray);
 		
 		JLabel h_label = new JLabel(" OOP Education  ");
 		h_label.setFont(new Font("Gothic",Font.BOLD,25));
+		Scrollpanel.add(h_label);
 		
 		JLabel label_1 = new JLabel(" Inheritance",SwingConstants.LEFT);
 		label_1.setFont(new Font("Gothic",Font.BOLD,20));
-		
-		
-		list1 = new JList<String>(new String[]{" Superclass"," Subclass"," Override",				
-								 " Overload"," Others"});	
-		list1.setFont(new Font("Gothic",Font.PLAIN,15));
-		list1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		list1.setAlignmentX(SwingConstants.CENTER);
-		
-		JLabel label_2 = new JLabel(" Polymorphism",SwingConstants.LEFT);
-		label_2.setFont(new Font("Gothic",Font.BOLD,20));
-
-		
-		list2 = new JList<String>(new String[]{" Superclass"," Subclass"," Override",				
-		 " Overload"," Others"});				
-		list2.setFont(new Font("Gothic",Font.PLAIN,15));
-		list2.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);	
-		list2.setAlignmentX(SwingConstants.CENTER);
-		
-		Scrollpanel.add(h_label);
 		Scrollpanel.add(label_1);
-		Scrollpanel.add(list1);
+		
+		String[] listname = {" Superclass"," Subclass"," Override",				
+				 " Overload"," Others"};
+		
+		for(int i = 0; i<listname.length; i++){
+			
+			JButton button = new JButton(listname[i]);
+			button.setFont(new Font("Gothic",Font.PLAIN,15));
+			button.setBackground(gray);
+			button.setBorder(null);
+			Scrollpanel.add(button);
+		}
+		
+		JLabel label_2 = new JLabel(" GUI",SwingConstants.LEFT);
+		label_2.setFont(new Font("Gothic",Font.BOLD,20));
 		Scrollpanel.add(label_2);
-		Scrollpanel.add(list2);
+		
+		String[] listname2 = {" Superclass"," Subclass"," Override",				
+				 " Overload"," Others"};
+		
+		for(int i = 0; i<listname2.length; i++){
+			
+			JButton button = new JButton(listname2[i]);
+			button.setFont(new Font("Gothic",Font.PLAIN,15));
+			button.setBackground(gray);
+			button.setBorder(null);
+			Scrollpanel.add(button);
+		}
+		
 
 		scroller = new JScrollPane(Scrollpanel);
 		scroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
