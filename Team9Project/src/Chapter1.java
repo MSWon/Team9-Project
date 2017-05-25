@@ -6,7 +6,8 @@ public class Chapter1 extends Chapter{
 	
 	public void go2(){
 		
-		p1 = new Panel1();
+		//p1 = new Panel1();
+		p1 = new TextInPanel();
 		p2 = new Panel2();
 		p3 = new Panel3();
 		
