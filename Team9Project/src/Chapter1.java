@@ -3,8 +3,6 @@ import java.awt.BorderLayout;
 public class Chapter1 extends Chapter{
 	
 
-
-
 	private QuizPanel quiz;
 
 	
@@ -13,7 +11,7 @@ public class Chapter1 extends Chapter{
 	public void go2(){
 		
 		//p1 = new Panel1();
-		p1 = new TextInPanel();
+		p1 = new TextPanel();
 		p2 = new Panel2();
 		p3 = new Panel3();
 
@@ -23,7 +21,6 @@ public class Chapter1 extends Chapter{
 		Cardpanel.add(p1);
 		Cardpanel.add(p2);
 		Cardpanel.add(p3);
-
 
 
 		Cardpanel.add(quiz);

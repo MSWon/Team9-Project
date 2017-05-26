@@ -1,19 +1,24 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Font;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
-import javax.swing.*;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
-public class TextInPanel extends JPanel{
+public class TextPanel extends JPanel {
+
 	private JPanel subpanel;
 	private JTextArea textarea;
+	
+	public TextPanel() {
 
-	public TextInPanel()
-	{
 		subpanel = new JPanel();
 		textarea = new JTextArea();
+		textarea.setFont(new Font("Gothic", Font.BOLD, 25));
+
 		
 		try {
 		      File myFile = new File("MyText.txt");            
@@ -50,7 +55,6 @@ public class TextInPanel extends JPanel{
 		this.setLayout(new BorderLayout());		
 		this.setBackground(Color.WHITE);
 		this.add(subpanel,BorderLayout.CENTER);
-
 	}
-	
+
 }
