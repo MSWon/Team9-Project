@@ -11,7 +11,7 @@ public class Chapter implements ActionListener{
 	JButton button1,button2;
 	JButton first,prev,next,last;
 	JPanel npanel,spanel,innerpanel;
-	JPanel p1, p2, p3;
+	TextPanel p1, p2, p3;
 	JPanel Cardpanel;
 	JPanel Btnpanel;
 	JPanel Scrollpanel;

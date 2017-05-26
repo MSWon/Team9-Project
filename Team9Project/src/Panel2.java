@@ -9,7 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Panel2 extends JPanel {
+public class Panel2 extends TextPanel {
 
 	private JLabel label1,label2;
 	private JPanel subpanel;

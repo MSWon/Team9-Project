@@ -5,23 +5,31 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
+import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 public class TextPanel extends JPanel {
 
-	private JPanel subpanel;
+
+	private JPanel subpanel, subpane2;
 	private JTextArea textarea;
+	private JLabel label1, label2;
 	
-	public TextPanel() {
+	
+	public void textpanel(File f) {
 
 		subpanel = new JPanel();
+		subpanel.setBackground(Color.WHITE);
 		textarea = new JTextArea();
 		textarea.setFont(new Font("Gothic", Font.BOLD, 25));
+		
 
 		
 		try {
-		      File myFile = new File("MyText.txt");            
+		      File myFile = f;            
 		      FileReader fileReader = new FileReader(myFile);
 		      
 		      BufferedReader reader = new BufferedReader(fileReader);
@@ -52,9 +60,26 @@ public class TextPanel extends JPanel {
 		*/
 		subpanel.add(textarea);
 		
-		this.setLayout(new BorderLayout());		
+		this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));		
 		this.setBackground(Color.WHITE);
-		this.add(subpanel,BorderLayout.CENTER);
+		this.add(subpanel);
+	}
+	
+	public void imagepanel(ImageIcon i)
+	{
+		subpane2 = new JPanel();
+		label1 = new JLabel("Image name");
+		label1.setFont(new Font("Gothic",Font.BOLD,25));
+		label1.setBackground(Color.WHITE);
+		subpane2.setBackground(Color.WHITE);
+		subpane2.add(label1);
+		
+		label2 = new JLabel(i);
+		
+		this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));	
+		this.setBackground(Color.WHITE);
+		this.add(subpane2);
+		this.add(label2);
 	}
 
 }

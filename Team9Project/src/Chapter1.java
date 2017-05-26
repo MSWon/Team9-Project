@@ -1,4 +1,7 @@
 import java.awt.BorderLayout;
+import java.io.File;
+
+import javax.swing.ImageIcon;
 
 public class Chapter1 extends Chapter{
 	
@@ -10,8 +13,13 @@ public class Chapter1 extends Chapter{
 	
 	public void go2(){
 		
-		//p1 = new Panel1();
+		File f = new File("MyText.txt");
+		ImageIcon i = new ImageIcon("panel1.jpg");
+		
 		p1 = new TextPanel();
+		p1.textpanel(f);
+		p1.imagepanel(i);
+		//p1 = new TextPanel();
 		p2 = new Panel2();
 		p3 = new Panel3();
 

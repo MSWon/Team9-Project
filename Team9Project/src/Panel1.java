@@ -6,6 +6,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.Image;
+import java.io.File;
 
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
@@ -13,8 +14,22 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Panel1 extends JPanel {
+public class Panel1 extends TextPanel {
+	
+	
+	@Override
+	public void textpanel(File f) {
+		// TODO Auto-generated method stub
+		super.textpanel(f);
+	}
 
+	@Override
+	public void imagepanel(ImageIcon i) {
+		// TODO Auto-generated method stub
+		super.imagepanel(i);
+	}
+
+	/*
 	private JLabel label1,label2;
 	private JPanel subpanel;
 	
@@ -35,6 +50,7 @@ public class Panel1 extends JPanel {
 		this.add(subpanel,BorderLayout.NORTH);
 		this.add(label2,BorderLayout.CENTER);
 	}
+	*/
 	
 	
 }
