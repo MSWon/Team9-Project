@@ -20,7 +20,7 @@ public class Panel1 extends JPanel {
 	
 	
 	public Panel1(){
-		
+
 		subpanel = new JPanel();
 		label1 = new JLabel("Panel1");
 		label1.setFont(new Font("Gothic",Font.BOLD,30));
