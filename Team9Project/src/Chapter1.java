@@ -2,6 +2,8 @@ import java.awt.BorderLayout;
 
 public class Chapter1 extends Chapter{
 	
+
+	
 	@Override
 	
 	public void go2(){
@@ -10,10 +12,12 @@ public class Chapter1 extends Chapter{
 		p1 = new TextInPanel();
 		p2 = new Panel2();
 		p3 = new Panel3();
+
 		
 		Cardpanel.add(p1);
 		Cardpanel.add(p2);
 		Cardpanel.add(p3);
+
 		
 		innerpanel.add(Cardpanel);
 		innerpanel.add(Btnpanel);
