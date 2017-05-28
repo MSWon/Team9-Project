@@ -14,20 +14,22 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Panel1 extends TextPanel {
+public class Panel1{
 	
 	
-	@Override
-	public void textpanel(File f) {
-		// TODO Auto-generated method stub
-		super.textpanel(f);
-	}
 
-	@Override
-	public void imagepanel(ImageIcon i) {
-		// TODO Auto-generated method stub
-		super.imagepanel(i);
-	}
+
+//	@Override
+//	public void textpanel(File f) {
+//		// TODO Auto-generated method stub
+//		super.textpanel(f);
+//	}
+//
+//	@Override
+//	public void imagepanel(ImageIcon i) {
+//		// TODO Auto-generated method stub
+//		super.imagepanel(i);
+//	}
 
 	/*
 	private JLabel label1,label2;

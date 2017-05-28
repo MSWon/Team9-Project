@@ -1,6 +1,4 @@
 
-
-
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -25,6 +23,7 @@ public class TextEditor implements ActionListener{
 	private Color backgroundColor;
 	
 	public void makeEditorFrom(JTextArea textToEdit) {
+		
 		editorFrame = new JFrame();
 		editorFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		editorFrame.setTitle("Text Editor");

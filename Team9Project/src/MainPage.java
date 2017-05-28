@@ -17,6 +17,9 @@ public class MainPage implements ActionListener{
 	private String pic_dir;
 	private JScrollPane scroller;
 	
+	/**
+	 * @wbp.parser.entryPoint
+	 */
 	public void go(){
 		
 		frame = new JFrame();
@@ -71,10 +74,10 @@ public class MainPage implements ActionListener{
 		npanel.setBackground(Color.MAGENTA);
 		npanel.add(label);
 		
-		frame.setLayout(new GridLayout(3,1));
-		frame.add(npanel);
-		frame.add(cpanel);
-		frame.add(scroller);
+		frame.getContentPane().setLayout(new GridLayout(3,1));
+		frame.getContentPane().add(npanel);
+		frame.getContentPane().add(cpanel);
+		frame.getContentPane().add(scroller);
 		
 		frame.setVisible(true);
 	}

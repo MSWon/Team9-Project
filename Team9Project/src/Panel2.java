@@ -9,7 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Panel2 extends TextPanel {
+public class Panel2{
 
 	private JLabel label1,label2;
 	private JPanel subpanel;
@@ -25,11 +25,11 @@ public class Panel2 extends TextPanel {
 		
 		
 		label2 = new JLabel(new ImageIcon("panel2.jpg"));
-		
-		this.setLayout(new BorderLayout());		
-		this.setBackground(Color.WHITE);
-		this.add(subpanel,BorderLayout.NORTH);
-		this.add(label2,BorderLayout.CENTER);
+//		
+//		this.setLayout(new BorderLayout());		
+//		this.setBackground(Color.WHITE);
+//		this.add(subpanel,BorderLayout.NORTH);
+//		this.add(label2,BorderLayout.CENTER);
 	}
 	
 	

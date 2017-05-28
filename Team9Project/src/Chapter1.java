@@ -8,27 +8,27 @@ public class Chapter1 extends Chapter{
 
 	private QuizPanel quiz;
 
-	
-	@Override
+
 	
 	public void go2(){
 		
 		File f = new File("MyText.txt");
 		ImageIcon i = new ImageIcon("panel1.jpg");
 		
-		p1 = new TextPanel();
-		p1.textpanel(f);
-		p1.imagepanel(i);
+		p1 = new TextPanel(f);
+//		p1.textpanel(f);
+		
+//		p1.imagepanel(i);
 		//p1 = new TextPanel();
-		p2 = new Panel2();
-		p3 = new Panel3();
+//		p2 = new Panel2();
+//		p3 = new Panel3();
 
 		quiz = new QuizPanel();
 
 		
 		Cardpanel.add(p1);
-		Cardpanel.add(p2);
-		Cardpanel.add(p3);
+//		Cardpanel.add(p2);
+//		Cardpanel.add(p3);
 
 
 		Cardpanel.add(quiz);
