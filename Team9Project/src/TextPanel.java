@@ -20,18 +20,20 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 public class TextPanel extends JPanel implements ActionListener {
 	
 	private TextEditor texteditor;
-	private JPanel subpanel, subpane2;
+	private JPanel subpanel, btnpanel;
 	private JTextArea textArea;
 	private JLabel label1, label2;
 	
 	public TextPanel(File f) {
+		setBackground(Color.WHITE);
 		
-				
-		JButton editbutton = new JButton("Edit");
-		editbutton.setFont(new Font("±¼¸²", Font.BOLD, 18));
-		editbutton.addActionListener(this);
+		subpanel = new JPanel();
+		subpanel.setBackground(Color.WHITE);
+		btnpanel = new JPanel();
+		btnpanel.setBackground(Color.WHITE);
 		
 		textArea = new JTextArea();
+		textArea.setEditable(false);
 		textArea.setFont(new Font("Gothic", Font.BOLD, 25));
 		
 		try {
@@ -50,26 +52,35 @@ public class TextPanel extends JPanel implements ActionListener {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
+		
+				
+		JButton editbutton = new JButton("Edit");
+		editbutton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 18));
+		editbutton.addActionListener(this);
+		subpanel.add(textArea);
+		btnpanel.add(editbutton);
+		GroupLayout gl_btnpanel = new GroupLayout(btnpanel);
+		gl_btnpanel.setHorizontalGroup(
+			gl_btnpanel.createParallelGroup(Alignment.TRAILING)
+				.addGroup(gl_btnpanel.createSequentialGroup()
+					.addContainerGap(584, Short.MAX_VALUE)
+					.addComponent(editbutton, GroupLayout.PREFERRED_SIZE, 107, GroupLayout.PREFERRED_SIZE)
+					.addGap(56))
+		);
+		gl_btnpanel.setVerticalGroup(
+			gl_btnpanel.createParallelGroup(Alignment.TRAILING)
+				.addGroup(gl_btnpanel.createSequentialGroup()
+					.addContainerGap(461, Short.MAX_VALUE)
+					.addComponent(editbutton)
+					.addGap(33))
+		);
+		btnpanel.setLayout(gl_btnpanel);
+		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		this.add(subpanel);
+		this.add(btnpanel);
+						
 
 		
-		GroupLayout groupLayout = new GroupLayout(this);
-		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.TRAILING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap(345, Short.MAX_VALUE)
-					.addComponent(editbutton, GroupLayout.PREFERRED_SIZE, 79, GroupLayout.PREFERRED_SIZE)
-					.addGap(26))
-				.addComponent(textArea, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 747, Short.MAX_VALUE)
-		);
-		groupLayout.setVerticalGroup(
-			groupLayout.createParallelGroup(Alignment.TRAILING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addComponent(textArea, GroupLayout.PREFERRED_SIZE, 533, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-					.addComponent(editbutton)
-					.addContainerGap())
-		);
-		setLayout(groupLayout);
 	}
 	
 	
@@ -97,19 +108,19 @@ public class TextPanel extends JPanel implements ActionListener {
 //			ex.printStackTrace();
 //		}
 //		
-//		/*
-//		int panelwidth = (int) panel.getSize().getWidth();
-//		int panelheight = (int) panel.getSize().getHeight();
-//		
-//		int textwidth = (int) textarea.getSize().getWidth();
-//		int textheight = (int) textarea.getSize().getHeight();
-//	
-//		if (textwidth > panelwidth || textheight > panelwidth) {
-//			return;
-//		}
-//		
-//		textarea.setLocation(panelwidth/2 - textwidth/2, panelheight/2 - textheight/2);
-//		*/
+		/*
+		int panelwidth = (int) panel.getSize().getWidth();
+		int panelheight = (int) panel.getSize().getHeight();
+		
+		int textwidth = (int) textarea.getSize().getWidth();
+		int textheight = (int) textarea.getSize().getHeight();
+	
+		if (textwidth > panelwidth || textheight > panelwidth) {
+			return;
+		}
+		
+		textarea.setLocation(panelwidth/2 - textwidth/2, panelheight/2 - textheight/2);
+		*/
 //		subpanel.add(textarea);
 //		
 //		this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));		
