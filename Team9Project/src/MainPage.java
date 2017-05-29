@@ -22,7 +22,7 @@ public class MainPage implements ActionListener{
 	 */
 	public void go(){
 		
-		frame = new JFrame();
+		frame = new JFrame("Main Page");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(1200, 800);
 		frame.setLocationRelativeTo(null);
@@ -88,27 +88,27 @@ public class MainPage implements ActionListener{
 			Object source = e.getSource();
 			if(source == button.get(0)){
 				frame.dispose();
-				Chapter1 c = new Chapter1();
+				Chapter c = new Chapter();
 				c.go();
-				c.go2();
+				c.go_to_Chap1();
 			}
 			else if(source == button.get(1)){
 				frame.dispose();
-				Chapter2 c = new Chapter2();
+				Chapter c = new Chapter();
 				c.go();
-				c.go2();
+				c.go_to_Chap2();
 			}
 			else if(source == button.get(2)){
 				frame.dispose();
-				Chapter3 c = new Chapter3();
+				Chapter c = new Chapter();
 				c.go();
-				c.go2();
+				c.go_to_Chap3();
 			}
 			else if(source == button.get(3)){
 				frame.dispose();
-				Chapter4 c = new Chapter4();
+				Chapter c = new Chapter();
 				c.go();
-				c.go2();
+				c.go_to_Chap4();
 			}
 	
 		
