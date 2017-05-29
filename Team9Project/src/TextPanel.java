@@ -21,6 +21,7 @@ public class TextPanel extends JPanel implements ActionListener {
 	
 	private TextEditor texteditor;
 	private JPanel subpanel, btnpanel;
+	private JPanel subpanel2;
 	private JTextArea textArea;
 	private JLabel label1, label2;
 	
@@ -130,18 +131,18 @@ public class TextPanel extends JPanel implements ActionListener {
 
 	public void imagepanel(ImageIcon i)
 	{
-		subpane2 = new JPanel();
+		subpanel2 = new JPanel();
 		label1 = new JLabel("Image name");
 		label1.setFont(new Font("Gothic",Font.BOLD,25));
 		label1.setBackground(Color.WHITE);
-		subpane2.setBackground(Color.WHITE);
-		subpane2.add(label1);
+		subpanel2.setBackground(Color.WHITE);
+		subpanel2.add(label1);
 		
 		label2 = new JLabel(i);
 		
 		this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));	
 		this.setBackground(Color.WHITE);
-		this.add(subpane2);
+		this.add(subpanel2);
 		this.add(label2);
 	}
 
