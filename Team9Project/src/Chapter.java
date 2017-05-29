@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.*;
 
@@ -10,12 +11,10 @@ public class Chapter implements ActionListener{
 	private JLabel label1;
 	private JButton button1,button2;
 	private JPanel npanel,spanel,innerpanel;
-	private TextPanel p1, p2, p3;
 	private JPanel Scrollpanel;
-	private JList<JButton> list1,list2;
+	ArrayList<JButton> buttons;
 	private JScrollPane scroller;
 	private JMenuBar menubar;
-	private JMenu menu1,menu2;
 	
 	private Chapter1 chapter1;
 	private Chapter2 chapter2;
@@ -84,17 +83,24 @@ public class Chapter implements ActionListener{
 		label_1.setFont(new Font("Gothic",Font.BOLD,20));
 		Scrollpanel.add(label_1);
 		
+		buttons = new ArrayList<JButton>();
+		
 		String[] listname = {" Superclass"," Subclass"," Override",				
 				 " Overload"," Others"};
 		
 		for(int i = 0; i<listname.length; i++){
 			
 			JButton button = new JButton(listname[i]);
+			button.addActionListener(this);
+			button.setName(listname[i]);
 			button.setFont(new Font("Gothic",Font.PLAIN,15));
 			button.setBackground(gray);
 			button.setBorder(null);
+			buttons.add(button);
 			Scrollpanel.add(button);
+			
 		}
+
 		
 		JLabel label_2 = new JLabel(" GUI",SwingConstants.LEFT);
 		label_2.setFont(new Font("Gothic",Font.BOLD,20));
@@ -106,10 +112,14 @@ public class Chapter implements ActionListener{
 		for(int i = 0; i<listname2.length; i++){
 			
 			JButton button = new JButton(listname2[i]);
+			button.addActionListener(this);
+			button.setName(listname2[i]);
 			button.setFont(new Font("Gothic",Font.PLAIN,15));
 			button.setBackground(gray);
 			button.setBorder(null);
+			buttons.add(button);
 			Scrollpanel.add(button);
+			
 		}
 		
 
@@ -192,15 +202,19 @@ public class Chapter implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		
 		JButton source = (JButton)e.getSource();
-		
+	
 		if(source.equals(button1)){
 			this.frame.dispose();
 			MainPage frame = new MainPage();
 			frame.go();
 		}
-
-
-		
+	
+			
+		for(int i=0; i<4; i++){
+			if(source == buttons.get(i))
+				chapter1.cl.show(chapter1.getCardpanel(),"panel"+(i+1));
+		}
+	
 	}	
 }
 

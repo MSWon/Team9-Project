@@ -18,20 +18,29 @@ public class Chapter1 implements ActionListener{
 	private JPanel Cardpanel;
 	private JPanel Btnpanel;
 	private JButton first,prev,next,last;
+	CardLayout cl;
 	
 	public Chapter1(){
+		
+		String filename = "text";
 		
 		Cardpanel = new JPanel();   // Card panel
 		Cardpanel.setLayout(new CardLayout());
 		Cardpanel.setBackground(Color.WHITE);
 		
-		File f = new File("MyText.txt");
+		cl = (CardLayout) (Cardpanel.getLayout());
+		
+		for(int i=0; i<4;i++){
+			
+			File f = new File(filename+(i+1)+".txt");
+			textpanel = new TextPanel(f);
+			String panelname = "panel"+(i+1);
+			Cardpanel.add(textpanel, panelname);
+		}
+
 		ImageIcon i = new ImageIcon("panel1.jpg");
 		
-		textpanel = new TextPanel(f);
 		quiz = new QuizPanel();
-		
-		Cardpanel.add(textpanel);
 		Cardpanel.add(quiz);
 		
 		Btnpanel = new JPanel(); // Button panel
@@ -86,7 +95,7 @@ public class Chapter1 implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		CardLayout cl = (CardLayout) (Cardpanel.getLayout());
+
 		
 		if (e.getSource().equals(first)) {
 
