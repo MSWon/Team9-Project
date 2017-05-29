@@ -9,15 +9,14 @@ public class Chapter implements ActionListener{
 	private JFrame frame;
 	private JLabel label1;
 	private JButton button1,button2;
-	private JButton first,prev,next,last;
 	private JPanel npanel,spanel,innerpanel;
 	private TextPanel p1, p2, p3;
-	private JPanel Btnpanel;
 	private JPanel Scrollpanel;
 	private JList<JButton> list1,list2;
 	private JScrollPane scroller;
 	private JMenuBar menubar;
 	private JMenu menu1,menu2;
+	
 	private Chapter1 chapter1;
 	private Chapter2 chapter2;
 	private Chapter3 chapter3;
