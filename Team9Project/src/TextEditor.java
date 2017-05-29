@@ -25,7 +25,7 @@ public class TextEditor implements ActionListener{
 	public void makeEditorFrom(JTextArea textToEdit) {
 		
 		editorFrame = new JFrame();
-		editorFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		editorFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		editorFrame.setTitle("Text Editor");
 		editorPanel = new JPanel();
 		backgroundColor = editorPanel.getBackground();
