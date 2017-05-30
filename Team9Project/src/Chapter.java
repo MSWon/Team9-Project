@@ -10,19 +10,17 @@ public class Chapter implements ActionListener{
 	private JFrame frame;
 	private JLabel label1;
 	private JButton button1,button2;
-	private JPanel npanel,spanel,innerpanel;
+	private JPanel spanel,innerpanel;
 	private JPanel Scrollpanel;
-	ArrayList<JButton> buttons;
+	private ArrayList<JButton> buttons;
 	private JScrollPane scroller;
 	private JMenuBar menubar;
+	private JPanel Btnpanel;
+	private JButton first,prev,next,last;
+	private Cardpanel cardpanel;
+	private CardLayout cl;
 	
-	private Chapter1 chapter1;
-	private Chapter2 chapter2;
-	private Chapter3 chapter3;
-	private Chapter4 chapter4;
-
 	Color gray = new Color(245,245,245);
-	
 	
 	public void go(){
 		
@@ -70,6 +68,42 @@ public class Chapter implements ActionListener{
 		innerpanel = new JPanel();
 		innerpanel.setBackground(Color.WHITE);
 		innerpanel.setLayout(new BoxLayout(innerpanel,BoxLayout.Y_AXIS));
+		
+		cardpanel = new Cardpanel();
+		cardpanel.Chapter1();
+		cardpanel.Chapter2();
+		cardpanel.Chapter3();
+		cardpanel.Chapter4();
+		
+		Btnpanel = new JPanel(); // Button panel
+		
+		first = new JButton("  First");
+		first.setBackground(Color.WHITE);
+		first.setBorder(null);
+		first.addActionListener(this);
+		first.setFont(new Font("Gothic",Font.BOLD,25));
+		prev = new JButton("  Prev");
+		prev.addActionListener(this);
+		prev.setBackground(Color.WHITE);
+		prev.setBorder(null);
+		prev.setFont(new Font("Gothic",Font.BOLD,25));
+		next = new JButton("  Next");
+		next.addActionListener(this);
+		next.setBackground(Color.WHITE);
+		next.setBorder(null);
+		next.setFont(new Font("Gothic",Font.BOLD,25));
+		last = new JButton("  Last");
+		last.addActionListener(this);
+		last.setBackground(Color.WHITE);
+		last.setBorder(null);
+		last.setFont(new Font("Gothic",Font.BOLD,25));
+		
+		Btnpanel.add(first);
+		Btnpanel.add(prev);
+		Btnpanel.add(next);
+		Btnpanel.add(last);
+		Btnpanel.setBackground(Color.WHITE);
+
 		
 		Scrollpanel = new JPanel();
 		Scrollpanel.setLayout(new BoxLayout(Scrollpanel,BoxLayout.Y_AXIS));
@@ -122,97 +156,79 @@ public class Chapter implements ActionListener{
 			
 		}
 		
-
 		scroller = new JScrollPane(Scrollpanel);
 		scroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		
+		innerpanel.add(cardpanel);
+		innerpanel.add(Btnpanel);
 		
+		spanel.add(scroller);
+		spanel.add(innerpanel);
+		
+		frame.add(menubar,BorderLayout.NORTH);
+		frame.add(spanel,BorderLayout.CENTER);
+		frame.setVisible(true);
+			
 				
 	}
 	
 	public void go_to_Chap1(){
 		
-		chapter1 = new Chapter1();
-
-		
-		innerpanel.add(chapter1.getCardpanel());
-		innerpanel.add(chapter1.getBtnpanel());
-		
-		spanel.add(scroller);
-		spanel.add(innerpanel);
-		
-		frame.setTitle("Chapter 1");
-		frame.add(menubar,BorderLayout.NORTH);
-		frame.add(spanel,BorderLayout.CENTER);
-		frame.setVisible(true);	
+		cl = (CardLayout) (cardpanel.getLayout());
+		cl.show(cardpanel, "panel1");
 	}
 	
 	public void go_to_Chap2(){
 		
-		chapter2 = new Chapter2();
-
-		
-		innerpanel.add(chapter2.getCardpanel());
-		innerpanel.add(chapter2.getBtnpanel());
-		
-		spanel.add(scroller);
-		spanel.add(innerpanel);
-		
-		frame.setTitle("Chapter 2");
-		frame.add(menubar,BorderLayout.NORTH);
-		frame.add(spanel,BorderLayout.CENTER);
-		frame.setVisible(true);	
+		cl = (CardLayout) (cardpanel.getLayout());
+		cl.show(cardpanel, "panel5");
 	}
 	
 	public void go_to_Chap3(){
 		
-		chapter3 = new Chapter3();
-		
-
-		
-		innerpanel.add(chapter3.getCardpanel());
-		innerpanel.add(chapter3.getBtnpanel());
-		
-		spanel.add(scroller);
-		spanel.add(innerpanel);
-		
-		frame.setTitle("Chapter 3");
-		frame.add(menubar,BorderLayout.NORTH);
-		frame.add(spanel,BorderLayout.CENTER);
-		frame.setVisible(true);	
+		cl = (CardLayout) (cardpanel.getLayout());
+		cl.show(cardpanel, "panel9");
+	
 	}
 	
 	public void go_to_Chap4(){
 		
-		chapter4 = new Chapter4();
-		
-		innerpanel.add(chapter4.getCardpanel());
-		innerpanel.add(chapter4.getBtnpanel());
-		
-		spanel.add(scroller);
-		spanel.add(innerpanel);
-		
-		frame.setTitle("Chapter 4");
-		frame.add(menubar,BorderLayout.NORTH);
-		frame.add(spanel,BorderLayout.CENTER);
-		frame.setVisible(true);	
+		cl = (CardLayout) (cardpanel.getLayout());
+		cl.show(cardpanel, "panel13");
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
 		JButton source = (JButton)e.getSource();
-	
+		
 		if(source.equals(button1)){
 			this.frame.dispose();
 			MainPage frame = new MainPage();
 			frame.go();
 		}
+		
+		if (e.getSource().equals(first)) {
+
+			cl.first(cardpanel);
+
+		} else if (e.getSource().equals(prev)) {
+
+			cl.previous(cardpanel);
+
+		} else if (e.getSource().equals(next)) {
+
+			cl.next(cardpanel);
+
+		} else if (e.getSource().equals(last)) {
+
+			cl.last(cardpanel);
+		}
 	
 			
-		for(int i=0; i<4; i++){
+		for(int i=0; i<10; i++){
 			if(source == buttons.get(i))
-				chapter1.cl.show(chapter1.getCardpanel(),"panel"+(i+1));
+				cl.show(cardpanel,"panel"+(i+1));
 		}
 	
 	}	
