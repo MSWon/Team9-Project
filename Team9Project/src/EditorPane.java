@@ -1,0 +1,104 @@
+
+
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.border.TitledBorder;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
+
+public class EditorPane implements ActionListener{
+
+	private JFrame editorFrame;
+	private JPanel editorPanel;
+	private JPanel innerPanel;
+	private JPanel buttonPanel;
+	private JTextPane paneHolder;
+	private JTextPane editedPane;
+	private JScrollPane scrollPane;
+	private JButton editButton;
+	private JButton cancelButton;
+	private Border borderForPane;
+	private Color backgroundColor;
+	
+	/**
+	 * @wbp.parser.entryPoint
+	 */
+	public void makeEditorFrom(JTextPane paneToEdit){
+		// frame
+		editorFrame = new JFrame();
+		editorFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		editorFrame.setTitle("Editor");
+		// outer panel
+		editorPanel = new JPanel();
+		editorFrame.getContentPane().add(editorPanel);
+		
+		// pane holder
+		paneHolder = paneToEdit;
+		
+		// edited pane
+		editedPane = new JTextPane();
+		editedPane.setDocument(paneHolder.getDocument());
+		
+		// inner scroll panel
+		scrollPane = new JScrollPane(editedPane);
+		
+		// border
+		borderForPane = new TitledBorder("Edit Panel");
+		editorPanel.setBorder(borderForPane);
+		
+		// buttons
+		buttonPanel = new JPanel();
+		buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
+		editButton = new JButton("Edit sumbit");
+		
+		editButton.addActionListener(this);
+		cancelButton = new JButton("Cancel");
+		cancelButton.addActionListener(this);
+		GroupLayout gl_editorPanel = new GroupLayout(editorPanel);
+		gl_editorPanel.setHorizontalGroup(
+			gl_editorPanel.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_editorPanel.createSequentialGroup()
+					.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 467, GroupLayout.PREFERRED_SIZE)
+					.addGroup(gl_editorPanel.createParallelGroup(Alignment.LEADING)
+						.addComponent(buttonPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addGroup(gl_editorPanel.createSequentialGroup()
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(editButton))
+						.addGroup(gl_editorPanel.createSequentialGroup()
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addComponent(cancelButton)))
+					.addContainerGap())
+		);
+		gl_editorPanel.setVerticalGroup(
+			gl_editorPanel.createParallelGroup(Alignment.LEADING)
+				.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 337, GroupLayout.PREFERRED_SIZE)
+				.addGroup(gl_editorPanel.createSequentialGroup()
+					.addGap(57)
+					.addComponent(editButton)
+					.addGap(65)
+					.addComponent(buttonPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
+					.addComponent(cancelButton)
+					.addContainerGap())
+		);
+		editorPanel.setLayout(gl_editorPanel);
+		
+		editorFrame.setVisible(true);
+		editorFrame.setSize(600, 400);
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (((JButton)e.getSource()).equals(editButton)) {
+			paneHolder.setDocument(editedPane.getDocument());
+		}
+		editorFrame.dispose();
+		
+	}
+	
+}

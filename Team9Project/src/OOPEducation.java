@@ -8,7 +8,5 @@ public class OOPEducation {
 		MainPage mp = new MainPage();
 		mp.go();
 		
-
-	
 	}
 }
