@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
+import javax.swing.JTextPane;
 import javax.swing.JButton;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -20,10 +21,10 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class TextPanel extends JPanel implements ActionListener {
 	
-	private TextEditor texteditor;
+	private EditorPane editorpane;
 	private JPanel subpanel, btnpanel;
 	private JPanel subpanel2;
-	private JTextArea textArea;
+	private JEditPane textpane;
 	private JLabel label1, label2;
 	
 	public TextPanel(File f) {
@@ -34,9 +35,9 @@ public class TextPanel extends JPanel implements ActionListener {
 		btnpanel = new JPanel();
 		btnpanel.setBackground(Color.WHITE);
 		
-		textArea = new JTextArea();
-		textArea.setEditable(false);
-		textArea.setFont(new Font("Gothic", Font.BOLD, 25));
+		textpane = new JEditPane();
+		textpane.setEditable(false);
+		textpane.setFont(new Font("Gothic", Font.BOLD, 25));
 		
 		try {
 		      File myFile = f;            
@@ -48,7 +49,7 @@ public class TextPanel extends JPanel implements ActionListener {
 		      
 		      while((line = reader.readLine()) != null)
 		      {
-		         textArea.append(line+"\n");
+		         textpane.append(line+"\n");
 		      }
 		      reader.close();
 		} catch (Exception ex) {
@@ -59,7 +60,7 @@ public class TextPanel extends JPanel implements ActionListener {
 		JButton editbutton = new JButton("Edit");
 		editbutton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 18));
 		editbutton.addActionListener(this);
-		subpanel.add(textArea);
+		subpanel.add(textpane);
 		btnpanel.add(editbutton);
 		GroupLayout gl_btnpanel = new GroupLayout(btnpanel);
 		gl_btnpanel.setHorizontalGroup(
@@ -155,9 +156,8 @@ public class TextPanel extends JPanel implements ActionListener {
 		try {
 			if (resultStr.equals(correctAns))
 			{
-				System.out.println("correct password");
-				texteditor = new TextEditor();
-				texteditor.makeEditorFrom(textArea);
+				editorpane = new EditorPane();
+				editorpane.makeEditorFrom(textpane);
 			}
 			else
 			{
