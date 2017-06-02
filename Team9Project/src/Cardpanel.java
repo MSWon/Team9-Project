@@ -20,15 +20,19 @@ public class Cardpanel extends JPanel {
 	public void Chapter1(){
 		String filename = "text1_";
 		int i;
+		
+		this.add(new TextPanel("text1_1.txt"), "panel1");
+		this.add(new TextPanel("text1_2.txt","pic1_2.png"), "panel2");
+		this.add(new TextPanel("text1_3.txt"), "panel3");
+		this.add(new TextPanel("text1_3.txt"), "panel4");
 
-		for(i=1; i<=4; i++){			
-			File f = new File(filename + i + ".txt");
-			textpanel = new TextPanel(f);
-			String panelname = "panel" + i;
-			this.add(textpanel, panelname);	
-
-		}
-		num = i;
+//		for(i=1; i<=4; i++){					
+//			textpanel = new TextPanel(filename + i + ".txt");
+//			String panelname = "panel" + i;
+//			this.add(textpanel, panelname);	
+//
+//		}
+		num = 5;
 		quiz = new QuizPanel1();
 		this.add(quiz);
 		
@@ -39,8 +43,7 @@ public class Cardpanel extends JPanel {
 		int i;
 		int j = 1;
 		for(i=num; i<=num+3; i++){			
-			File f = new File(filename + j + ".txt");
-			textpanel = new TextPanel(f);
+			textpanel = new TextPanel(filename + j + ".txt");
 			String panelname = "panel" + i;
 			this.add(textpanel, panelname);	
 			j++;
@@ -56,8 +59,7 @@ public class Cardpanel extends JPanel {
 		int i;
 		int j = 1;
 		for(i=num; i<=num+3; i++){			
-			File f = new File(filename + j + ".txt");
-			textpanel = new TextPanel(f);
+			textpanel = new TextPanel(filename + j + ".txt");
 			String panelname = "panel" + i;
 			this.add(textpanel, panelname);	
 			j++;
@@ -73,8 +75,7 @@ public class Cardpanel extends JPanel {
 		int i;
 		int j = 1;
 		for(i=num; i<=num+3; i++){			
-			File f = new File(filename + j + ".txt");
-			textpanel = new TextPanel(f);
+			textpanel = new TextPanel(filename + j + ".txt");
 			String panelname = "panel" + i;
 			this.add(textpanel, panelname);	
 			j++;

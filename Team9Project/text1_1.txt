@@ -2,4 +2,4 @@
 
 
 
-This is Chapter 1
+Chapter 6 - GUI

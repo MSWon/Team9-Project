@@ -1,3 +1,10 @@
-You've got a friend in me.
-Oh you've got a friend in me.
-When the roads looks rough ahead.
+¤ýGUI: Program interface that takes advantage of the 
+  computer's graphics capabilities to make the program 
+  easier to use.
+¤ýThere are two sets of Java APIs for GUI. AWT and Swing.
+
+ 1. Component: Components are elementary GUI entites,
+    such as Button, Label, and TextField.
+ 2. Container: Containers, such as Frame and Panel, are used 
+    to hold components in a specific layout.
+
