@@ -1,0 +1,4 @@
+Polymorphism is the ability of an object to take many forms.
+When you define a superclass, any subclass of that superclass can be used
+ where the superclass is expected.
+Ex1) If a method takes a Car parameter, we can give any other subclass of Car.
