@@ -159,6 +159,10 @@ public class TextPanel extends JPanel implements ActionListener {
 				texteditor = new TextEditor();
 				texteditor.makeEditorFrom(textArea);
 			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "You enter wrong password");
+			}
 		} catch(NullPointerException NEX) {
 			System.out.println("User enters null.");
 		}
