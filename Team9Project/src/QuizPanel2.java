@@ -163,7 +163,7 @@ public class QuizPanel2 extends JPanel implements ActionListener{
 		paint(this.getGraphics());
 		
 	}
-	/////////////////////////이건 잘 돌아가는지 보려고 !
+	///////////////////////// 여기 아래는 잘 돌아가는지 보기위한것 ! 나중에 없애고 OOPEducation인가 거기다가 quiz 추가시켜야됨
 	static public void main(String args[]){
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

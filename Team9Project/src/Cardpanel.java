@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 public class Cardpanel extends JPanel {
 	
-	private QuizPanel quiz;
+	private QuizPanel1 quiz;
 	private TextPanel textpanel;
 	private int num = 1;
 	
@@ -29,7 +29,7 @@ public class Cardpanel extends JPanel {
 
 		}
 		num = i;
-		quiz = new QuizPanel();
+		quiz = new QuizPanel1();
 		this.add(quiz);
 		
 	}
@@ -46,7 +46,7 @@ public class Cardpanel extends JPanel {
 			j++;
 		}
 		num = i;
-		quiz = new QuizPanel();
+		quiz = new QuizPanel1();
 		this.add(quiz);
 		
 	}
@@ -63,7 +63,7 @@ public class Cardpanel extends JPanel {
 			j++;
 		}
 		num = i;
-		quiz = new QuizPanel();
+		quiz = new QuizPanel1();
 		this.add(quiz);
 		
 	}
@@ -80,7 +80,7 @@ public class Cardpanel extends JPanel {
 			j++;
 		}
 		num = i;
-		quiz = new QuizPanel();
+		quiz = new QuizPanel1();
 		this.add(quiz);
 		
 	}
