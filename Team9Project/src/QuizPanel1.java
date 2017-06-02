@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class QuizPanel extends JPanel {
+public class QuizPanel1 extends JPanel {
    
    private JFrame frame;
    private JTextField textField;
@@ -27,7 +27,7 @@ public class QuizPanel extends JPanel {
    /**
     * Create the panel.
     */
-   public QuizPanel() {
+   public QuizPanel1() {
       setBackground(UIManager.getColor("Button.background"));
       
       JButton btnSubmit = new JButton("Submit");
