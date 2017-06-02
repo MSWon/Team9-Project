@@ -10,6 +10,7 @@ import java.io.FileReader;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
@@ -148,9 +149,18 @@ public class TextPanel extends JPanel implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
-		texteditor = new TextEditor();
-		texteditor.makeEditorFrom(textArea);
-		
+		String resultStr = null;
+		String correctAns = "pass";
+		resultStr = JOptionPane.showInputDialog("Enter the admin's password\n\u203B Edit is only for administratior \u203B");
+		try {
+			if (resultStr.equals(correctAns))
+			{
+				System.out.println("correct password");
+				texteditor = new TextEditor();
+				texteditor.makeEditorFrom(textArea);
+			}
+		} catch(NullPointerException NEX) {
+			System.out.println("User enters null.");
+		}
 	}
 }

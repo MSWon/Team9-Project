@@ -58,7 +58,7 @@ public class TextEditor implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (((JButton)e.getSource()).equals(editButton))
-			edtitedText.setText(textToShow.getText());
+				edtitedText.setText(textToShow.getText());
 		editorFrame.dispose();
 	}
 	
