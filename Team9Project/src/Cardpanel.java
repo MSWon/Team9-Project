@@ -33,10 +33,11 @@ public class Cardpanel extends JPanel {
 //			this.add(textpanel, panelname);	
 //
 //		}
-		num = 5;
+		num = 6;
 		quiz1 = new QuizPanel1();
+		quiz2 = new QuizPanel2();
 		this.add(quiz1);
-		
+		this.add(quiz2);
 	}
 	
 	public void Chapter2(){

@@ -32,6 +32,8 @@ public class QuizPanel2 extends JPanel implements ActionListener {
 
    public QuizPanel2() {
       
+	   this.setBackground(Color.WHITE);
+	   
       leftButton_1 = new JRadioButton("1 + 1");
       leftButton_1.addActionListener(this);
       buttonGroup.add(leftButton_1);

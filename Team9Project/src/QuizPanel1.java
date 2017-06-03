@@ -28,7 +28,8 @@ public class QuizPanel1 extends JPanel {
     * Create the panel.
     */
    public QuizPanel1() {
-      setBackground(UIManager.getColor("Button.background"));
+      
+	   this.setBackground(Color.WHITE);
       
       JButton btnSubmit = new JButton("Submit");
       btnSubmit.addActionListener(new ActionListener() {
