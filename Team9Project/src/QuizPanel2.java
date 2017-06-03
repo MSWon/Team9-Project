@@ -168,23 +168,23 @@ public class QuizPanel2 extends JPanel implements ActionListener {
       }
    }
 
-   public static void main(String[] args) {
-      
-      JFrame frame = new JFrame();
-      
-      QuizPanel2 qp = new QuizPanel2();
-      frame.add(qp);
-      
-      frame.setSize(600, 700);
-      frame.setVisible(true);
-      
-   
-
-   }
+//   public static void main(String[] args) {
+//      
+//      JFrame frame = new JFrame();
+//      
+//      QuizPanel2 qp = new QuizPanel2();
+//      frame.add(qp);
+//      
+//      frame.setSize(600, 700);
+//      frame.setVisible(true);
+//      
+//   
+//      여기 코드는  QuizPanel2가 잘 돌아가는지 보려고 main 함수를 짜본거 (없어도 됨)
+//   }
    @Override
    public void actionPerformed(ActionEvent e) {
 	   paint(this.getGraphics()); // 뭔진 모르겠지만 이게 있어야 선이 그어짐 
 	
-}
+   }
 
 }
