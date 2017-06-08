@@ -117,7 +117,7 @@ public class QuizPanel2 extends JPanel implements ActionListener {
 
    @Override
    public void paintComponent(Graphics g){
-      
+      super.paintComponent(g);
 	   //버튼의 범위를 넓게 인식하는것 같아서 선이 그어지는 위치를 좀더 정밀하게 하려고 Point를 새로 정의함.
       Point l_p1 = leftButton_1.getLocation();
       l_p1.x += leftButton_1.getWidth()/2;
@@ -181,7 +181,7 @@ public class QuizPanel2 extends JPanel implements ActionListener {
 //      frame.setVisible(true);
 //      
 //   
-//      여기 코드는  QuizPanel2가 잘 돌아가는지 보려고 main 함수를 짜본거 (없어도 됨)
+////      여기 코드는  QuizPanel2가 잘 돌아가는지 보려고 main 함수를 짜본거 (없어도 됨)
 //   }
    @Override
    public void actionPerformed(ActionEvent e) {

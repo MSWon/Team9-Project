@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class QuizPanel1 extends JPanel {
+public class QuizPanel1 extends JPanel implements ActionListener{
    
    private JFrame frame;
    private JTextField textField;
@@ -32,51 +32,52 @@ public class QuizPanel1 extends JPanel {
 	   this.setBackground(Color.WHITE);
       
       JButton btnSubmit = new JButton("Submit");
-      btnSubmit.addActionListener(new ActionListener() {
-         public void actionPerformed(ActionEvent e) {
-            
-            int Score = 0;
-            char Signal_1,Signal_2,Signal_3,Signal_4,Signal_5 ; // 어떤 문제가 맞고 틀린지 옆에 OX 체크
-            
-            if(textField.getText().toLowerCase().equals(Answer[0])){
-            	Score++;
-            	Signal_1 = 'O';
-            }
-            else
-            	Signal_1 = 'X';  //1번쨰 문제
-            
-            if(textField_1.getText().toLowerCase().equals(Answer[1])){
-            	Score++;
-            	Signal_2 = 'O';
-            }
-            else
-            	Signal_2 = 'X';  //2번쨰 문제
-            
-            if(textField_2.getText().toLowerCase().equals(Answer[2])){
-            	Score++;
-            	Signal_3 = 'O';
-            }
-            else
-            	Signal_3 = 'X'; // 3번째 문제
-            
-            if(textField_3.getText().toLowerCase().equals(Answer[3])){
-            	Score++;
-            	Signal_4 = 'O';
-            }
-            else
-            	Signal_4 = 'X'; //4번쨰 문제
-            
-            if(textField_4.getText().toLowerCase().equals(Answer[4])){
-            	Score++;
-            	Signal_5 = 'O';
-            }
-            else
-            	Signal_5 = 'X'; //5번째 문제
-            
-            JOptionPane.showMessageDialog(frame, "You've got "+Score+" / 5 correct."+"\n1."+Signal_1+"\n2."+Signal_2+"\n3."+Signal_3+"\n4."+Signal_4+"\n5."+Signal_5);
-            
-         }
-      });
+      btnSubmit.addActionListener(this);
+//      btnSubmit.addActionListener(new ActionListener() {
+//         public void actionPerformed(ActionEvent e) {
+//            
+//            int Score = 0;
+//            char Signal_1,Signal_2,Signal_3,Signal_4,Signal_5 ; // 어떤 문제가 맞고 틀린지 옆에 OX 체크
+//            
+//            if(textField.getText().toLowerCase().equals(Answer[0])){
+//            	Score++;
+//            	Signal_1 = 'O';
+//            }
+//            else
+//            	Signal_1 = 'X';  //1번쨰 문제
+//            
+//            if(textField_1.getText().toLowerCase().equals(Answer[1])){
+//            	Score++;
+//            	Signal_2 = 'O';
+//            }
+//            else
+//            	Signal_2 = 'X';  //2번쨰 문제
+//            
+//            if(textField_2.getText().toLowerCase().equals(Answer[2])){
+//            	Score++;
+//            	Signal_3 = 'O';
+//            }
+//            else
+//            	Signal_3 = 'X'; // 3번째 문제
+//            
+//            if(textField_3.getText().toLowerCase().equals(Answer[3])){
+//            	Score++;
+//            	Signal_4 = 'O';
+//            }
+//            else
+//            	Signal_4 = 'X'; //4번쨰 문제
+//            
+//            if(textField_4.getText().toLowerCase().equals(Answer[4])){
+//            	Score++;
+//            	Signal_5 = 'O';
+//            }
+//            else
+//            	Signal_5 = 'X'; //5번째 문제
+//            
+//            JOptionPane.showMessageDialog(frame, "You've got "+Score+" / 5 correct."+"\n1."+Signal_1+"\n2."+Signal_2+"\n3."+Signal_3+"\n4."+Signal_4+"\n5."+Signal_5);
+//            
+//         }
+//      });
       btnSubmit.setBackground(UIManager.getColor("Button.background"));
       btnSubmit.setFont(new Font("굴림", Font.BOLD, 21));
       
@@ -199,7 +200,51 @@ public class QuizPanel1 extends JPanel {
       setLayout(groupLayout);
 
    }
+@Override
+public void actionPerformed(ActionEvent e) {
+	 int Score = 0;
+     char Signal_1,Signal_2,Signal_3,Signal_4,Signal_5 ; // 어떤 문제가 맞고 틀린지 옆에 OX 체크
+     
+     if(textField.getText().toLowerCase().equals(Answer[0])){
+     	Score++;
+     	Signal_1 = 'O';
+     }
+     else
+     	Signal_1 = 'X';  //1번쨰 문제
+     
+     if(textField_1.getText().toLowerCase().equals(Answer[1])){
+     	Score++;
+     	Signal_2 = 'O';
+     }
+     else
+     	Signal_2 = 'X';  //2번쨰 문제
+     
+     if(textField_2.getText().toLowerCase().equals(Answer[2])){
+     	Score++;
+     	Signal_3 = 'O';
+     }
+     else
+     	Signal_3 = 'X'; // 3번째 문제
+     
+     if(textField_3.getText().toLowerCase().equals(Answer[3])){
+     	Score++;
+     	Signal_4 = 'O';
+     }
+     else
+     	Signal_4 = 'X'; //4번쨰 문제
+     
+     if(textField_4.getText().toLowerCase().equals(Answer[4])){
+     	Score++;
+     	Signal_5 = 'O';
+     }
+     else
+     	Signal_5 = 'X'; //5번째 문제
+     
+     JOptionPane.showMessageDialog(frame, "You've got "+Score+" / 5 correct."+"\n1."+Signal_1+"\n2."+Signal_2+"\n3."+Signal_3+"\n4."+Signal_4+"\n5."+Signal_5);
+	
+ }
 }
+
 
 
 
