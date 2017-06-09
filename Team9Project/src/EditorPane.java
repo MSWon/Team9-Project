@@ -1,6 +1,7 @@
 
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -102,6 +103,7 @@ public class EditorPane implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (((JButton)e.getSource()).equals(editButton)) {
+			editedPane.setFont(new Font("Gothic", Font.BOLD, 25));
 			paneHolder.setDocument(editedPane.getDocument());
 			// save to text, image
 			try {
