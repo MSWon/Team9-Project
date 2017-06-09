@@ -25,10 +25,12 @@ public class TextPanel extends JPanel implements ActionListener {
 	private JPanel subpanel, btnpanel;
 	private JPanel subpanel2;
 	private JEditPane textpane;
+	private String FileNameHolder;
 	private JLabel label1, label2;
 	
 	public TextPanel(String filename) {
 		
+		FileNameHolder = filename;
 		
 		File f = new File(filename);
 		setBackground(Color.WHITE);
@@ -161,7 +163,7 @@ public class TextPanel extends JPanel implements ActionListener {
 			if (resultStr.equals(correctAns))
 			{
 				editorpane = new EditorPane();
-				editorpane.makeEditorFrom(textpane);
+				editorpane.makeEditorFrom(textpane, FileNameHolder);
 			}
 			else
 			{

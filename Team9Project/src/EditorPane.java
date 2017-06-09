@@ -3,6 +3,11 @@
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -14,20 +19,19 @@ public class EditorPane implements ActionListener{
 
 	private JFrame editorFrame;
 	private JPanel editorPanel;
-	private JPanel innerPanel;
 	private JPanel buttonPanel;
 	private JTextPane paneHolder;
 	private JTextPane editedPane;
+	private String textNameHolder;
 	private JScrollPane scrollPane;
 	private JButton editButton;
 	private JButton cancelButton;
 	private Border borderForPane;
-	private Color backgroundColor;
 	
 	/**
 	 * @wbp.parser.entryPoint
 	 */
-	public void makeEditorFrom(JTextPane paneToEdit){
+	public void makeEditorFrom(JTextPane paneToEdit, String textName){
 		// frame
 		editorFrame = new JFrame();
 		editorFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -38,6 +42,9 @@ public class EditorPane implements ActionListener{
 		
 		// pane holder
 		paneHolder = paneToEdit;
+		
+		// text holder
+		textNameHolder = textName;
 		
 		// edited pane
 		editedPane = new JTextPane();
@@ -96,6 +103,22 @@ public class EditorPane implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		if (((JButton)e.getSource()).equals(editButton)) {
 			paneHolder.setDocument(editedPane.getDocument());
+			// save to text, image
+			try {
+				String textToWrite = editedPane.getText();
+				
+				File myFile = new File(textNameHolder);
+				FileWriter fileWriter = new FileWriter(myFile);
+				BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+				
+				bufferedWriter.write(textToWrite);
+				
+				bufferedWriter.close();
+
+			} catch (IOException ioe) {
+				ioe.printStackTrace();
+			}
+			
 		}
 		editorFrame.dispose();
 		
