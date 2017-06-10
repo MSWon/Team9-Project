@@ -1,10 +1,8 @@
-¤ıGUI: Program interface that takes advantage of the 
-  computer's graphics capabilities to make the program 
-  easier to use.
-¤ıThere are two sets of Java APIs for GUI. AWT and Swing.
-
- 1. Component: Components are elementary GUI entites,
-    such as Button, Label, and TextField.
- 2. Container: Containers, such as Frame and Panel, are used 
-    to hold components in a specific layout.
-
+¤ıHigh level object-oriented programming language. 
+¤ıCreated by Sun Microsystems in 1990s (first release in 1995). 
+¤ıSyntax resembles C and C++, but it is simpler for the programmer. 
+¤ıCompiled Java programs run on Java Virtual Machine (JVM).
+¤ıOne of the most popular programming languages today, 
+particularly in client-server applications and embedded devices. 
+¤ıMost Java technologies were open sourced in 2007.
+ 

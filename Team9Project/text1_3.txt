@@ -1,7 +1,11 @@
-Today is monday start of the week.
-I hate going to class early.
-So monday is my worst day.
+		         Why JAVA?
 
-this is the work
-
-Editing possible?
+¤ıFriendly syntax 
+¤ıObject-orientation 
+¤ıAutomatic memory management (garbage collection) 
+¤ı"Write once ? run anywhere" 
+¤ıIntegrated security mechanisms 
+¤ıEasy networking 
+¤ıWidely adopted from servers to desktops and from mobile 
+  devices to household appliances 
+¤ıOpen and free

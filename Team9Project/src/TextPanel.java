@@ -93,6 +93,8 @@ public class TextPanel extends JPanel implements ActionListener {
 	
 	public TextPanel(String filename, String imagename) {
 		
+		FileNameHolder = filename;
+		
 		File f = new File(filename);
 		setBackground(Color.WHITE);
 		

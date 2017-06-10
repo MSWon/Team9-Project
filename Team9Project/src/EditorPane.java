@@ -30,6 +30,7 @@ public class EditorPane implements ActionListener{
 	private JButton cancelButton;
 	private Border borderForPane;
 	private String firsttext;
+
 	
 	/**
 	 * @wbp.parser.entryPoint
@@ -39,6 +40,7 @@ public class EditorPane implements ActionListener{
 		editorFrame = new JFrame();
 		editorFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		editorFrame.setTitle("Editor");
+		editorFrame.setSize(819, 645);
 		// outer panel
 		editorPanel = new JPanel();
 		editorFrame.getContentPane().add(editorPanel);
@@ -47,6 +49,7 @@ public class EditorPane implements ActionListener{
 		paneHolder = paneToEdit;
 		// Initial JTextpane's text
 		firsttext = paneHolder.getText();
+
 		
 		// text holder
 		textNameHolder = textName;
@@ -55,6 +58,7 @@ public class EditorPane implements ActionListener{
 		editedPane = new JTextPane();
 		editedPane.setDocument(paneHolder.getDocument());
 		editedPane.setFont(paneHolder.getFont());
+
 		
 		// inner scroll panel
 		scrollPane = new JScrollPane(editedPane);
@@ -67,41 +71,45 @@ public class EditorPane implements ActionListener{
 		buttonPanel = new JPanel();
 		buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
 		editButton = new JButton("Edit sumbit");
+		editButton.setFont(new Font("±¼¸²", Font.BOLD, 15));
 		
 		editButton.addActionListener(this);
 		cancelButton = new JButton("Cancel");
+		cancelButton.setFont(new Font("±¼¸²", Font.BOLD, 15));
 		cancelButton.addActionListener(this);
 		GroupLayout gl_editorPanel = new GroupLayout(editorPanel);
 		gl_editorPanel.setHorizontalGroup(
 			gl_editorPanel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_editorPanel.createSequentialGroup()
-					.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 467, GroupLayout.PREFERRED_SIZE)
-					.addGroup(gl_editorPanel.createParallelGroup(Alignment.LEADING)
-						.addComponent(buttonPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap()
+					.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 649, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(gl_editorPanel.createParallelGroup(Alignment.TRAILING)
 						.addGroup(gl_editorPanel.createSequentialGroup()
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(editButton))
-						.addGroup(gl_editorPanel.createSequentialGroup()
-							.addPreferredGap(ComponentPlacement.UNRELATED)
-							.addComponent(cancelButton)))
+							.addGap(115)
+							.addComponent(buttonPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(editButton)
+						.addComponent(cancelButton))
 					.addContainerGap())
 		);
 		gl_editorPanel.setVerticalGroup(
 			gl_editorPanel.createParallelGroup(Alignment.LEADING)
-				.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 337, GroupLayout.PREFERRED_SIZE)
 				.addGroup(gl_editorPanel.createSequentialGroup()
-					.addGap(57)
+					.addContainerGap()
 					.addComponent(editButton)
-					.addGap(65)
+					.addGap(110)
 					.addComponent(buttonPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
+					.addPreferredGap(ComponentPlacement.RELATED, 367, Short.MAX_VALUE)
 					.addComponent(cancelButton)
+					.addGap(28))
+				.addGroup(gl_editorPanel.createSequentialGroup()
+					.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 546, Short.MAX_VALUE)
 					.addContainerGap())
 		);
 		editorPanel.setLayout(gl_editorPanel);
 		
 		editorFrame.setVisible(true);
-		editorFrame.setSize(600, 400);
+		
 		
 	}
 
