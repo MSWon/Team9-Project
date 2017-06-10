@@ -13,6 +13,7 @@ import java.io.IOException;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.TitledBorder;
+import javax.swing.text.Document;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
@@ -28,6 +29,7 @@ public class EditorPane implements ActionListener{
 	private JButton editButton;
 	private JButton cancelButton;
 	private Border borderForPane;
+	private String firsttext;
 	
 	/**
 	 * @wbp.parser.entryPoint
@@ -43,6 +45,7 @@ public class EditorPane implements ActionListener{
 		
 		// pane holder
 		paneHolder = paneToEdit;
+		firsttext = paneHolder.getText();
 		
 		// text holder
 		textNameHolder = textName;
@@ -50,6 +53,7 @@ public class EditorPane implements ActionListener{
 		// edited pane
 		editedPane = new JTextPane();
 		editedPane.setDocument(paneHolder.getDocument());
+		editedPane.setFont(paneHolder.getFont());
 		
 		// inner scroll panel
 		scrollPane = new JScrollPane(editedPane);
@@ -103,7 +107,7 @@ public class EditorPane implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (((JButton)e.getSource()).equals(editButton)) {
-			editedPane.setFont(new Font("Gothic", Font.BOLD, 25));
+
 			paneHolder.setDocument(editedPane.getDocument());
 			// save to text, image
 			try {
@@ -121,6 +125,9 @@ public class EditorPane implements ActionListener{
 				ioe.printStackTrace();
 			}
 			
+		}
+		else{
+			paneHolder.setText(firsttext);
 		}
 		editorFrame.dispose();
 		
