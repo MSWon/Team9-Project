@@ -45,6 +45,7 @@ public class EditorPane implements ActionListener{
 		
 		// pane holder
 		paneHolder = paneToEdit;
+		// Initial JTextpane's text
 		firsttext = paneHolder.getText();
 		
 		// text holder
