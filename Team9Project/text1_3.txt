@@ -1,4 +1,3 @@
-		         Why JAVA?
 
 ¤ıFriendly syntax 
 ¤ıObject-orientation 
