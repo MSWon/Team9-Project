@@ -1,0 +1,15 @@
+
+
+
+¤ıArray stores a numbered list of variables 
+  (base types or references). 
+
+¤ıArray is an object, so array variable is a reference 
+  to the array object! 
+
+¤ıThere are three steps in creating an array: 
+
+  1.Declare an array (reference) variable of some type.
+  2.Create a new array object and assign it to the variable.
+  3.Initialize contents of the array with variables of 
+    the type that matches the array's type.

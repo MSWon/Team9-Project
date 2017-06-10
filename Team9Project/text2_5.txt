@@ -1,0 +1,8 @@
+¤ýFour kinds of variables in Java:
+
+[1] Instance variables: inside class but outside methods without the static modifier.
+[2] Class variables: inside class but outside methods with the static modifier. 
+[3] Local variables: inside methods. These are not visible outside the method
+    In which they are declared.
+[4] Parameters: method(& constructor) parameters. These are only usable 
+   Inside the method/constructor for which they are defined.

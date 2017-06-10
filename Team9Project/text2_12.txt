@@ -1,0 +1,5 @@
+¤ý Reference variable holds bits that represent a way of 
+   accessing an object stored in memory. 
+¤ý A reference variable doesn't hold the object, it holds 
+   something like a pointer or address to the object.
+¤ý Think of reference variable as a remote control.

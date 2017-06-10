@@ -1,0 +1,8 @@
+¤ıRules for variable names: 
+
+  ¤ıMust start with a letter, underscore (_), or dollar sign ($).
+  ¤ıMust NOT start with a number.
+  ¤ıAfter the first character, you can use numbers as well. 
+  ¤ıIt can be anything you like but not one of the
+     Java's reserved words.
+

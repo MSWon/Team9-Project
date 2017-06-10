@@ -1,1 +1,15 @@
-This is just blank pages
+<Class>
+¤ýA Java program consists of one or more classes.
+¤ýGow to get a class?
+  [1] Use one that someone else published in the ¡°Java Class Library¡±
+  (i.e. Java API)or another library.
+  [2] Define your own class:
+      
+      public class MyfirstApp{
+	    public static void main(String args[]){
+	      	    //lets print something
+		    System.out.println("Hello Java!");
+	    }
+      }
+
+¤ýTo write a Java Program you need to define at least one class.

@@ -1,0 +1,8 @@
+¤ýObjects live in a garbage collectable heap. 
+
+   Book b = new Book(); 
+   Book c = new Book();
+ 
+¤ýThese reference variables refer to two Book objects. 
+   The Book objects are stored on the heap.
+

@@ -1,5 +1,6 @@
+¤ýClass: Type(blueprint or model) of an object
+Defines instance variables (state) and methods(behavior).
+[Example: class ¡°Dog¡± has variables size, breed and name, and a method bark().]
 
-
-
-
-This is Chapter 2
+¤ýObject: An instance (realization) of the class.
+-Many objects of the same class can exist, such as yourDog, myDog¡¦

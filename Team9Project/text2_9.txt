@@ -1,0 +1,10 @@
+¤ıA special method that is used when an object is created
+
+¤ıAn class can have one or more constructors with different
+  parameters.
+
+¤ıA constructor without parameters is called no-arg constructor
+  or default constructor.
+
+¤ıHas the same name than the class and no return value.
+

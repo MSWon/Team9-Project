@@ -25,7 +25,7 @@ public class Chapter implements ActionListener{
 	public void go(){
 		
 		frame = new JFrame();  
-		frame.setSize(1200, 800);
+		frame.setSize(1300, 950);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		
@@ -113,14 +113,14 @@ public class Chapter implements ActionListener{
 		h_label.setFont(new Font("Gothic",Font.BOLD,25));
 		Scrollpanel.add(h_label);
 		
-		JLabel label_1 = new JLabel(" Inheritance",SwingConstants.LEFT);
+		JLabel label_1 = new JLabel(" Tutorial",SwingConstants.LEFT);
 		label_1.setFont(new Font("Gothic",Font.BOLD,20));
 		Scrollpanel.add(label_1);
 		
 		buttons = new ArrayList<JButton>();
 		
-		String[] listname = {" Superclass"," Subclass"," Override",				
-				 " Overload"," Others"};
+		String[] listname = {" About Java"," Java System"," Compiling"};
+			
 		
 		for(int i = 0; i<listname.length; i++){
 			
@@ -136,12 +136,12 @@ public class Chapter implements ActionListener{
 		}
 
 		
-		JLabel label_2 = new JLabel(" GUI",SwingConstants.LEFT);
+		JLabel label_2 = new JLabel(" FirstStepToOOP",SwingConstants.LEFT);
 		label_2.setFont(new Font("Gothic",Font.BOLD,20));
 		Scrollpanel.add(label_2);
 		
-		String[] listname2 = {" Superclass"," Subclass"," Override",				
-				 " Overload"," Others"};
+		String[] listname2 = {" Class&Object"," Class"," Variables",				
+				 " Methods"," Objects"," Constructor"," Array"};
 		
 		for(int i = 0; i<listname2.length; i++){
 			
@@ -175,13 +175,13 @@ public class Chapter implements ActionListener{
 	public void go_to_Chap1(){
 		
 		cl = (CardLayout) (cardpanel.getLayout());
-		cl.show(cardpanel, "panel1");
+		cl.show(cardpanel, "chapter1");
 	}
 	
 	public void go_to_Chap2(){
 		
 		cl = (CardLayout) (cardpanel.getLayout());
-		cl.show(cardpanel, "panel5");
+		cl.show(cardpanel, "chapter2");
 	}
 	
 	public void go_to_Chap3(){

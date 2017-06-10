@@ -1,2 +1,7 @@
-This is just for the test
-of Chapter 2
+¤ıInstance variables:
+Store state of an object(also called fields).
+Each instance variable must have a type: either base type of a reference type
+
+¤ıMethods:
+Define behavior (actions) of an object.
+Can have parameters and a return value

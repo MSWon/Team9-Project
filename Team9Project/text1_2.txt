@@ -3,6 +3,6 @@
 ¤ıSyntax resembles C and C++, but it is simpler for the programmer. 
 ¤ıCompiled Java programs run on Java Virtual Machine (JVM).
 ¤ıOne of the most popular programming languages today, 
-particularly in client-server applications and embedded devices. 
+    particularly in client-server applications and embedded devices. 
 ¤ıMost Java technologies were open sourced in 2007.
  

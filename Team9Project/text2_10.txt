@@ -1,0 +1,8 @@
+¤ý Variables can be used in many ways:
+  ¤ý As instance variables (inside a class) 
+  ¤ý As class variables (inside a class, static) 
+  ¤ý As local variables (inside a method) 
+  ¤ý As method parameters
+
+¤ý A variable is like a cup: it holds something 
+¤ý Like every cup, also a variable has size and type

@@ -1,0 +1,5 @@
+[1] Method name should describe the method's behavior,so it is often
+    a verb.
+[2] A method must specify what type of value it returns.
+    (if there is no return value then the keyword void is used.)
+

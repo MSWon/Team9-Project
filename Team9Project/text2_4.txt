@@ -1,1 +1,1 @@
-I hope that we get a full point.
+<Anatomy of a Java Program(class)>

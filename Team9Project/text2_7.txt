@@ -1,0 +1,15 @@
+
+¤ýWhen you excute a Java program, the Java Virtual Machine (JVM) looks
+  for the main() method from the class you give to the JVM.
+
+¤ýEvery Java program has at least one class with a main() method.
+
+¤ýIf a class doesn't have a main method, it can be used by other classes
+  but it cannot be executed as a program.
+
+¤ýThe main method takes one parameter:
+  an array of command line arguments.
+
+¤ýAnything that you write inside the main method's curly braces {} will
+  be executed by the JVM.
+  (Always remember to close a brace that you open!)
