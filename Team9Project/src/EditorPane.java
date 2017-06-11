@@ -70,7 +70,7 @@ public class EditorPane implements ActionListener{
 		// buttons
 		buttonPanel = new JPanel();
 		buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
-		editButton = new JButton("Edit sumbit");
+		editButton = new JButton("Edit submit");
 		editButton.setFont(new Font("±¼¸²", Font.BOLD, 15));
 		
 		editButton.addActionListener(this);
