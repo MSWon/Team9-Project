@@ -47,7 +47,7 @@ public class Cardpanel extends JPanel {
 		this.add(new MultiPanel("\nReference Variables\n",40,"text2_12.txt",25,"text2_12.jpg"));
 		this.add(new MultiPanel("",1,"text2_13.txt",25,"text2_13.jpg"));
 		this.add(new MultiPanel("\nArray",40,"text2_14.txt",25),"panel10"); //Array	
-		
+		this.add(new QuizPanel2());
 	}
 	
 	public void Chapter3(){
