@@ -68,7 +68,7 @@ public class QuizPanel2 extends JPanel implements ActionListener {
       leftButton_3.setHorizontalTextPosition(SwingConstants.LEFT);
       leftButton_3.addActionListener(this);
       
-      lblInstanceVariable = new JLabel("Instance Variable");
+      lblInstanceVariable = new JLabel("Instance Variables");
       lblInstanceVariable.setFont(new Font("±¼¸²", Font.BOLD, 18));
       leftButton_3.setBackground(Color.WHITE);
       
@@ -148,8 +148,9 @@ public class QuizPanel2 extends JPanel implements ActionListener {
       			.addComponent(RightButton_2)
       			.addComponent(txtrEe, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
       		.addGroup(groupLayout.createSequentialGroup()
-      			.addGap(64)
-      			.addComponent(lblInstanceVariable, GroupLayout.PREFERRED_SIZE, 161, GroupLayout.PREFERRED_SIZE)
+      			.addGap(60)
+      			.addComponent(lblInstanceVariable)
+      			.addPreferredGap(ComponentPlacement.RELATED)
       			.addComponent(leftButton_3)
       			.addGap(426)
       			.addComponent(RightButton_3)
