@@ -51,7 +51,13 @@ public class Cardpanel extends JPanel {
 	}
 	
 	public void Chapter3(){
-
+		
+		this.add(new MultiPanel("chapter3.txt",40), "chapter3");
+		this.add(new MultiPanel("What is Encapsulation",40,"text3_1.txt",25,"text3_1.jpg") , "panel11"); //About Encapsulation
+		this.add(new MultiPanel("State and Behavior",40,"text3_2.txt",25,"text3_2.jpg"), "panel12" ); //State&Behavior
+		this.add(new MultiPanel("Passing data to a Method",40,"text3_3.jpg") );
+		this.add(new MultiPanel("Benefits of encapsulation",40,"text3_4.txt",25) , "panel13"); //Getter&Setter
+		this.add(new MultiPanel("To Encapsulate",40,"text3_5.txt",25, "text3_5.jpg") );
 		
 	}
 	

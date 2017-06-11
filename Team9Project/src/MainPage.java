@@ -15,7 +15,7 @@ public class MainPage implements ActionListener{
 	private JLabel label_1;
 	private ArrayList<JButton> button = new ArrayList<JButton>();
 	private int ChapNum = 7;
-	private String[] ChapTitle = {"1. Tutorial","2. FirstSteptoOOP","3. Inheritance","4. Encapsulation","5. Polymorphism","6. GUI","7. Serialization"};
+	private String[] ChapTitle = {"1. Tutorial","2. FirstSteptoOOP","3. Encapsulation","4.Inheritance ","5. Polymorphism","6. GUI","7. Serialization"};
 	private String pic_dir;
 	private JScrollPane scroller;
 	

@@ -156,6 +156,26 @@ public class Chapter implements ActionListener{
 			
 		}
 		
+		JLabel label_3 = new JLabel(" Encapsulation",SwingConstants.LEFT);
+		label_3.setFont(new Font("Gothic",Font.BOLD,20));
+		Scrollpanel.add(label_3);
+		
+		String[] listname3 = {" About Encapsulation"," State&Behavior"," Getter&Setter",				
+				 " Methods"};
+		
+		for(int i = 0; i<listname3.length; i++){
+			
+			JButton button = new JButton(listname3[i]);
+			button.addActionListener(this);
+			button.setName(listname3[i]);
+			button.setFont(new Font("Gothic",Font.PLAIN,15));
+			button.setBackground(gray);
+			button.setBorder(null);
+			buttons.add(button);
+			Scrollpanel.add(button);
+			
+		}
+		
 		scroller = new JScrollPane(Scrollpanel);
 		scroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		
@@ -187,7 +207,7 @@ public class Chapter implements ActionListener{
 	public void go_to_Chap3(){
 		
 		cl = (CardLayout) (cardpanel.getLayout());
-		cl.show(cardpanel, "panel9");
+		cl.show(cardpanel, "chapter3");
 	
 	}
 	

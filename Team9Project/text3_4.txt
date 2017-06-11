@@ -1,0 +1,9 @@
+  Getters and Setters
+
+¤ıGetters and setters are methods for retrieving and changing 
+  values of instance variables.
+¤ıA setter takes a parameter ? new value for an instance variable. 
+¤ıIt usually returns nothing
+¤ıA getter usually has no parameters, and it returns the value of
+  an instance variable
+¤ıAlso known as ¡°accessors¡± and ¡°mutators

@@ -1,0 +1,8 @@
+  Three steps of encapsulation
+
+1.Mark all instance variables private so they are well hidden.
+2.Mark getters and setters public so they can be accessed by anyone.
+3.Public and private are access modifiers that can be used to set 
+  who can access variables, methods and even classes.
+
+

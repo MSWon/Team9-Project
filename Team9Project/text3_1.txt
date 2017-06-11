@@ -1,0 +1,11 @@
+
+¤ıEncapsulation : The combination of program code and data,and/or
+  restriction of access to data except through dedicated code
+¤ıIdea : To hide the implementation details from users. 
+
+ "State affects behavior, behavior affects states"
+
+¤ıState of objects is represented by instance variables
+  Behavior of objects is represented by methods
+
+  "And they affects each others!"

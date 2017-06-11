@@ -1,0 +1,6 @@
+¤ýLet¡¯s say there are two dogs named ¡°Biggy¡±with weight of
+  30kg and ¡°Fido¡± woth weight of 5kg.
+¤ýIf the dog class has a method bark(), shouldn¡¯t Biggy bark a bit
+  deeped/louder than Fido?
+¤ýLets make them make yippy sound if dog is less than 10kg
+  else bark deeply.
