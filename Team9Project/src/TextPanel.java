@@ -50,30 +50,7 @@ public class TextPanel extends JPanel implements ActionListener {
 		JButton btnQuestion = new JButton("Question");
 		btnQuestion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				String returnVal = JOptionPane.showInputDialog(null, "What is your question?");
-				try {
-					TextArea area = new TextArea();
-					File myFile = new File("question.txt");
-					FileReader fileReader = new FileReader(myFile);
-				    BufferedReader reader = new BufferedReader(fileReader);
-				    String line = null;
-				    while((line = reader.readLine()) != null)
-				    {
-				       area.append(line+"\n");
-				    }
-				    reader.close();
-				    
-				    FileWriter fileWriter = new FileWriter(myFile);
-				    BufferedWriter writer = new BufferedWriter(fileWriter);
-				      
-				    String addline = returnVal;
-				    area.append(addline+"\n");
-				    
-				    
-				    writer.close();
-				} catch(Exception E) {
-					System.out.println("exception");
-				}
+				QuestionFrame option = new QuestionFrame();
 			}
 		});
 		btnQuestion.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 18));
