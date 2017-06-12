@@ -1,0 +1,7 @@
+¤ıSometimes we want to make our own widgets, or
+  just draw something on the screen.
+
+¤ıCreating custom widget is easy,create class that:
+  ¤ıextends JPanel(or another component) and
+  ¤ıoverrides the paintComponent() method.
+

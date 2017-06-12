@@ -17,8 +17,10 @@ public class Chapter implements ActionListener{
 	private JMenuBar menubar;
 	private JPanel Btnpanel;
 	private JButton first,prev,next,last;
+	private JButton label_1,label_2,label_3;
 	private Cardpanel cardpanel;
 	private CardLayout cl;
+	private HelperDog hd;
 	
 	Color gray = new Color(245,245,245);
 	
@@ -52,8 +54,8 @@ public class Chapter implements ActionListener{
 		button2.setBackground(Color.MAGENTA);
 		button2.setForeground(Color.WHITE);
 		button2.setFont(new Font("Gothic",Font.PLAIN,30));
-		button2.setBorder(null);
 		button2.addActionListener(this);
+		button2.setBorder(null);
 				
 		menubar.add(button1);
 		menubar.add(label1);
@@ -117,7 +119,10 @@ public class Chapter implements ActionListener{
 		h_label.setFont(new Font("Gothic",Font.BOLD,25));
 		Scrollpanel.add(h_label);
 		
-		JLabel label_1 = new JLabel(" Tutorial",SwingConstants.LEFT);
+		label_1 = new JButton(" Tutorial");
+		label_1.setBackground(gray);
+		label_1.setBorder(null);
+		label_1.addActionListener(this);
 		label_1.setFont(new Font("Gothic",Font.BOLD,20));
 		Scrollpanel.add(label_1);
 		
@@ -140,7 +145,10 @@ public class Chapter implements ActionListener{
 		}
 
 		
-		JLabel label_2 = new JLabel(" FirstStepToOOP",SwingConstants.LEFT);
+		label_2 = new JButton(" FirstStepToOOP");
+		label_2.setBackground(gray);
+		label_2.setBorder(null);
+		label_2.addActionListener(this);
 		label_2.setFont(new Font("Gothic",Font.BOLD,20));
 		Scrollpanel.add(label_2);
 		
@@ -160,7 +168,10 @@ public class Chapter implements ActionListener{
 			
 		}
 		
-		JLabel label_3 = new JLabel(" Encapsulation",SwingConstants.LEFT);
+		label_3 = new JButton(" Encapsulation");
+		label_3.setBackground(gray);
+		label_3.setBorder(null);
+		label_3.addActionListener(this);
 		label_3.setFont(new Font("Gothic",Font.BOLD,20));
 		Scrollpanel.add(label_3);
 		
@@ -218,7 +229,7 @@ public class Chapter implements ActionListener{
 	public void go_to_Chap4(){
 		
 		cl = (CardLayout) (cardpanel.getLayout());
-		cl.show(cardpanel, "panel13");
+		cl.show(cardpanel, "chapter4");
 	}
 	
 	public void go_to_Chap5(){
@@ -251,10 +262,6 @@ public class Chapter implements ActionListener{
 			frame.go();
 		}
 		
-		if (source.equals(button2)) {
-			HelperDog hd = new HelperDog();
-		}
-		
 		if (e.getSource().equals(first)) {
 
 			cl.first(cardpanel);
@@ -271,12 +278,21 @@ public class Chapter implements ActionListener{
 
 			cl.last(cardpanel);
 		}
-	
+		
+		if(e.getSource().equals(button2))
+			hd = new HelperDog();
 			
 		for(int i=0; i<buttons.size(); i++){
 			if(source == buttons.get(i))
 				cl.show(cardpanel,"panel"+(i+1));
 		}
+		
+		if(e.getSource().equals(label_1))
+			cl.show(cardpanel, "chapter1");
+		else if(e.getSource().equals(label_2))
+			cl.show(cardpanel, "chapter2");
+		else if(e.getSource().equals(label_3))
+			cl.show(cardpanel, "chapter3");
 	
 	}	
 }

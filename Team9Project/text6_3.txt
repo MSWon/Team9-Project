@@ -1,0 +1,13 @@
+
+
+¤ıLayout managers are used with container components.
+¤ıA layout manager controls the size and the location 
+  of the components inside the container component.
+ 
+  ¤ıGridLayout : forces every component to the same size
+                           arranged in a grid.
+  ¤ıFlowLayout : lets each component choose its own size but places 
+                            them horizontally with line wrapping.
+  ¤ıBoxLayout : stacks components vertically/horizontally,
+ 	                even if they could fit side-by-side.
+  ¤ıLayouts can be nested: container's child can be another container.

@@ -1,0 +1,9 @@
+¤ıTo handle events, your code should implement 
+  a listener interface.
+¤ıListener interface
+  ¤ı is the bridge between event listener(code) and the 
+     event source(widget).
+  ¤ı event source uses the interface to call back your
+     code when the event happens.
+
+	

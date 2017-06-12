@@ -47,7 +47,6 @@ public class Cardpanel extends JPanel {
 		this.add(new MultiPanel("\nReference Variables\n",40,"text2_12.txt",25,"text2_12.jpg"));
 		this.add(new MultiPanel("",1,"text2_13.txt",25,"text2_13.jpg"));
 		this.add(new MultiPanel("\nArray",40,"text2_14.txt",25),"panel10"); //Array	
-		this.add(new QuizPanel2());
 		
 	}
 	
@@ -79,7 +78,17 @@ public class Cardpanel extends JPanel {
 	
 	
 	public void Chapter6(){
-
+		
+		this.add(new MultiPanel("chapter6.txt",40), "chapter6"); //GUI
+		this.add(new MultiPanel("",1,"text6_1.txt",25,"text6_1.png") ); 
+		this.add(new MultiPanel("Swing class hierarchy",40,"text6_2.jpg") ); //Class hierarchy
+		this.add(new MultiPanel("\nLayout Manager",40,"text6_3.txt",25) ); //Layout Manager
+		this.add(new MultiPanel("The three basic layout managers.",40,"text6_4.jpg") );
+		this.add(new MultiPanel("",1,"text6_5.txt",25,"text6_5.jpg") ); // Event handling
+		this.add(new MultiPanel("",1,"text6_6.txt",25,"text6_6.jpg") );
+		this.add(new MultiPanel("\nEvent Handling\n",40,"text6_7.jpg") );
+		this.add(new MultiPanel("\nEvent Handling2\n\n",40,"text6_8.jpg") );
+		this.add(new MultiPanel("Cusom Widgets\n",20,"text6_9.txt",25,"text6_9.jpg") ); // Custom Widgets
 		
 	}
 	

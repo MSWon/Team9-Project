@@ -1,0 +1,12 @@
+¤ıGUI widgets can create different kinds of events
+  when the user interacts with them.
+¤ıIf we want to do something when the JButton is clicked
+
+ 1) Create an event handler that is executed when the 
+    action event happens.
+ 2) Register the event handler to JButton's action event.
+
+¤ıEvent registeration (1):Tell the widget that you want
+  			  to listen to an event.
+¤ıEvent notification (2):When the event happens,the
+			 widget will call your code.
