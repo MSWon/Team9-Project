@@ -1,6 +1,7 @@
 package Chapter;
 
 import java.awt.*;
+import Main.MainPage;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -51,7 +52,8 @@ public class SearchKeyword extends JDialog implements ActionListener{
 	
 	public void keysearch(){
 		//Chapter b=new Chapter();
-		c=new Chapter();
+		
+		c = new Chapter();
 		c.set();
 		String key=inputkey.getText();
 		ArrayList<String> as=new ArrayList<String>();
@@ -86,15 +88,16 @@ public class SearchKeyword extends JDialog implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		//Chapter a=new Chapter();
-		c=new Chapter();
+	
+		
 		// TODO Auto-generated method stub
 		int m=1; //chapter number
-		c.set();
+		
 		//cp=c.cardpanel;
 		//cp=new Cardpanel();
 		//CardLayout clt=c.cl;
 		//clt=(CardLayout)(cp.getLayout());
-		Cardpanel cp=c.getCardPanel();
+		Cardpanel cp= Chapter.cardpanel;
 		//CardLayout clt=c.getCardLayout();
 		CardLayout clt=(CardLayout)(cp.getLayout());
 		//CardLayout clt=c.getCl();

@@ -21,6 +21,7 @@ public class MainPage implements ActionListener{
 	private String[] ChapTitle = {"1. Tutorial","2. FirstSteptoOOP","3. Encapsulation","4.Inheritance ","5. Polymorphism","6. GUI","7. Serialization"};
 	private String pic_dir;
 	private JScrollPane scroller;
+	private Chapter c;
 	
 	/**
 	 * @wbp.parser.entryPoint
@@ -125,43 +126,43 @@ public class MainPage implements ActionListener{
 			Object source = e.getSource();
 			if(source == button.get(0)){
 				frame.dispose();
-				Chapter c = new Chapter();
+				c = new Chapter();
 				c.go();
 				c.go_to_Chap1();
 			}
 			else if(source == button.get(1)){
 				frame.dispose();
-				Chapter c = new Chapter();
+				c = new Chapter();
 				c.go();
 				c.go_to_Chap2();
 			}
 			else if(source == button.get(2)){
 				frame.dispose();
-				Chapter c = new Chapter();
+				c = new Chapter();
 				c.go();
 				c.go_to_Chap3();
 			}
 			else if(source == button.get(3)){
 				frame.dispose();
-				Chapter c = new Chapter();
+				c = new Chapter();
 				c.go();
 				c.go_to_Chap4();
 			}
 			else if(source == button.get(4)){
 				frame.dispose();
-				Chapter c = new Chapter();
+				c = new Chapter();
 				c.go();
 				c.go_to_Chap5();
 			}
 			else if(source == button.get(5)){
 				frame.dispose();
-				Chapter c = new Chapter();
+				c = new Chapter();
 				c.go();
 				c.go_to_Chap6();
 			}
 			else if(source == button.get(6)){
 				frame.dispose();
-				Chapter c = new Chapter();
+				c = new Chapter();
 				c.go();
 				c.go_to_Chap7();
 			}

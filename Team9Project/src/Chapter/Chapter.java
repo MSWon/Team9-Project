@@ -22,7 +22,7 @@ public class Chapter implements ActionListener{
 	private JPanel Btnpanel;
 	private JButton first,prev,next,last;
 	private JButton label_1,label_2,label_3;
-	private Cardpanel cardpanel;
+	public static Cardpanel cardpanel;
 	private CardLayout cl;
 	private HelperDog hd;
 	//SearchKeyword dialog=new SearchKeyword(frame,"Search Keyword");
