@@ -1,2 +1,2 @@
-Ex2) In array of Animals, each cell in array of Animals can contain
- a different subclass of Animal.
+Ex2) In array of Animals, each cell in array of Animals 
+can contain a different subclass of Animal.

@@ -144,6 +144,24 @@ public class MainPage implements ActionListener{
 				c.go();
 				c.go_to_Chap4();
 			}
+			else if(source == button.get(4)){
+				frame.dispose();
+				Chapter c = new Chapter();
+				c.go();
+				c.go_to_Chap5();
+			}
+			else if(source == button.get(5)){
+				frame.dispose();
+				Chapter c = new Chapter();
+				c.go();
+				c.go_to_Chap6();
+			}
+			else if(source == button.get(6)){
+				frame.dispose();
+				Chapter c = new Chapter();
+				c.go();
+				c.go_to_Chap7();
+			}
 	
 		
 	}

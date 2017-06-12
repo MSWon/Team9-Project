@@ -48,6 +48,7 @@ public class Cardpanel extends JPanel {
 		this.add(new MultiPanel("",1,"text2_13.txt",25,"text2_13.jpg"));
 		this.add(new MultiPanel("\nArray",40,"text2_14.txt",25),"panel10"); //Array	
 		this.add(new QuizPanel2());
+		
 	}
 	
 	public void Chapter3(){
@@ -62,6 +63,28 @@ public class Cardpanel extends JPanel {
 	}
 	
 	public void Chapter4(){
+
+		
+	}
+	
+	public void Chapter5(){
+		
+		this.add(new MultiPanel("chapter5.txt",40), "chapter5");
+		this.add(new MultiPanel("",1,"text5_1.txt",25,"text5_1.png") );
+		this.add(new MultiPanel("",1,"text5_2.txt",25,"text5_2.png") );
+		this.add(new MultiPanel("\nWhy polymorphism is important",40,"text5_3.txt",24) );
+		this.add(new MultiPanel("Example: illegal overrides\n",40,"text5_4.png") );
+		this.add(new MultiPanel("Overloading",40,"text5_5.txt",25,"text5_5.png") );
+	}
+	
+	
+	public void Chapter6(){
+
+		
+	}
+	
+	
+	public void Chapter7(){
 
 		
 	}

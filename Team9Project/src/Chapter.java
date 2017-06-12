@@ -49,62 +49,6 @@ public class Chapter implements ActionListener{
 		label1.setBorder(null);
 		
 		button2 = new JButton("Help");
-		// helper Dog
-				button2.addActionListener(new ActionListener() {
-					
-					@Override
-					public void actionPerformed(ActionEvent arg0) {
-						JFrame helpFrame = new JFrame();
-						helpFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-						
-						JPanel helpPane = new JPanel();
-						helpPane.setLayout(new GridLayout(0, 2, 5, 5));
-						helpFrame.add(helpPane);
-						
-						ImageIcon helperDog = new ImageIcon("HelperDog.jpg");
-						JLabel helperDogLabel = new JLabel(helperDog);
-						helpPane.add(helperDogLabel);
-						helpPane.setBackground(Color.WHITE);
-						
-						JPanel buttonPane = new JPanel();
-						helpPane.add(buttonPane);
-						buttonPane.setLayout(new BoxLayout(buttonPane, BoxLayout.Y_AXIS));
-						Color tooltipColor = new Color(255, 255, 102);
-						buttonPane.setBackground(tooltipColor);//255,255,102				
-						
-						JLabel menuLabel = new JLabel("menu");
-						JButton searchButton = new JButton("Search");
-						searchButton.addActionListener(new ActionListener() {
-							
-							@Override
-							public void actionPerformed(ActionEvent e) {
-								// search 부분 태풍이가 추가하면 됍니다
-								
-							}
-						});
-						JLabel emptyLabel = new JLabel(" ");
-						JButton aboutButton = new JButton("About");
-						aboutButton.addActionListener(new ActionListener() {
-							
-							@Override
-							public void actionPerformed(ActionEvent e) {
-
-								JOptionPane.showMessageDialog(Chapter.this.button2, "Created by team 9",
-											"About ", JOptionPane.INFORMATION_MESSAGE);
-								
-							}
-						});
-						buttonPane.add(menuLabel);
-						buttonPane.add(emptyLabel);
-						buttonPane.add(searchButton);
-						buttonPane.add(emptyLabel);
-						buttonPane.add(aboutButton);
-						
-						helpFrame.setSize(200, 200);
-						helpFrame.setVisible(true);
-					}
-				});
-				
 		button2.setBackground(Color.MAGENTA);
 		button2.setForeground(Color.WHITE);
 		button2.setFont(new Font("Gothic",Font.PLAIN,30));
@@ -130,6 +74,9 @@ public class Chapter implements ActionListener{
 		cardpanel.Chapter2();
 		cardpanel.Chapter3();
 		cardpanel.Chapter4();
+		cardpanel.Chapter5();
+		cardpanel.Chapter6();
+		cardpanel.Chapter7();
 		
 		Btnpanel = new JPanel(); // Button panel
 		
@@ -217,7 +164,7 @@ public class Chapter implements ActionListener{
 		Scrollpanel.add(label_3);
 		
 		String[] listname3 = {" About Encapsulation"," State&Behavior"," Getter&Setter",				
-				 " Methods"};
+				 };
 		
 		for(int i = 0; i<listname3.length; i++){
 			
@@ -272,6 +219,25 @@ public class Chapter implements ActionListener{
 		cl = (CardLayout) (cardpanel.getLayout());
 		cl.show(cardpanel, "panel13");
 	}
+	
+	public void go_to_Chap5(){
+		
+		cl = (CardLayout) (cardpanel.getLayout());
+		cl.show(cardpanel, "chapter5");
+	}
+	
+	public void go_to_Chap6(){
+		
+		cl = (CardLayout) (cardpanel.getLayout());
+		cl.show(cardpanel, "chapter6");
+	}
+	
+	public void go_to_Chap7(){
+		
+		cl = (CardLayout) (cardpanel.getLayout());
+		cl.show(cardpanel, "chapter7");
+	}
+	
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -302,7 +268,7 @@ public class Chapter implements ActionListener{
 		}
 	
 			
-		for(int i=0; i<10; i++){
+		for(int i=0; i<buttons.size(); i++){
 			if(source == buttons.get(i))
 				cl.show(cardpanel,"panel"+(i+1));
 		}
