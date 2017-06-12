@@ -75,9 +75,9 @@ public class Cardpanel extends JPanel {
 		this.add(new MultiPanel("chapter5\\chapter5.txt",40), "chapter5");
 		this.add(new MultiPanel("",1,"chapter5\\text5_1.txt",25,"chapter5\\text5_1.png") );
 		this.add(new MultiPanel("",1,"chapter5\\text5_2.txt",25,"chapter5\\text5_2.png") );
-		this.add(new MultiPanel("\nWhy polymorphism is important",40,"chapter5\\text5_3.txt",24) );
-		this.add(new MultiPanel("Example: illegal overrides\n",40,"chapter5\\text5_4.png") );
-		this.add(new MultiPanel("Overloading",40,"chapter5\\text5_5.txt",25,"chapter5\\text5_5.png") );
+		this.add(new MultiPanel("\nWhy polymorphism is important",40,"chapter5\\text5_3.txt",24) ); // Polymorphism example
+		this.add(new MultiPanel("Example: illegal overrides\n",40,"chapter5\\text5_4.png") ); // Illegal overrides
+		this.add(new MultiPanel("Overloading",40,"chapter5\\text5_5.txt",25,"chapter5\\text5_5.png") ); // Overloading
 	}
 	
 	
@@ -102,12 +102,12 @@ public class Cardpanel extends JPanel {
 		this.add(new MultiPanel("chapter7\\chapter7.txt",40), "chapter7"); //Serialization
 		this.add(new MultiPanel("",1,"chapter7\\text7_1.txt",25,"chapter7\\text7_1.png") ); 
 		this.add(new MultiPanel("",1,"chapter7\\text7_2.txt",25,"chapter7\\text7_2.png") ); 
-		this.add(new MultiPanel("Steps for Writing a serializable object",35,"chapter7\\text7_3.txt",25) );
-		this.add(new MultiPanel("\n\n",35,"chapter7\\text7_3.png") );	
+		this.add(new MultiPanel("Steps for Writing a serializable object",35,"chapter7\\text7_3.txt",25) );//Serialization Steps
+		this.add(new MultiPanel("\n\n",35,"chapter7\\text7_3.png") );	//Connection Stream
 		this.add(new MultiPanel("",1,"chapter7\\text7_4.txt",25,"chapter7\\text7_4.png") ); 
 		this.add(new MultiPanel("",1,"chapter7\\text7_5.png") ); 
 		this.add(new MultiPanel("How to make object Serializable",40,"chapter7\\text7_6.txt",25,"chapter7\\text7_6.png") ); 
-		this.add(new MultiPanel("",1,"chapter7\\text7_7.txt",20) ); 
+		this.add(new MultiPanel("",1,"chapter7\\text7_7.txt",20) ); // Deserialization 
 	
 	}
 
