@@ -250,6 +250,10 @@ public class Chapter implements ActionListener{
 			frame.go();
 		}
 		
+		if (source.equals(button2)) {
+			HelperDog hd = new HelperDog();
+		}
+		
 		if (e.getSource().equals(first)) {
 
 			cl.first(cardpanel);
