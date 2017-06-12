@@ -1,3 +1,4 @@
+package Main;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -5,6 +6,8 @@ import java.util.ArrayList;
 
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
+
+import Chapter.Chapter;
 
 public class MainPage implements ActionListener{
 	
@@ -37,7 +40,7 @@ public class MainPage implements ActionListener{
 
 		for(int i=1;i<=ChapNum;i++){
 			
-			pic_dir = "chapter" + i +".jpg";
+			pic_dir = "chapters\\chapter" + i +".jpg";
 			ImageIcon pic = new ImageIcon(pic_dir);
 			button.add(new JButton(ChapTitle[i-1]));
 			button.get(i-1).setSize(300,400);

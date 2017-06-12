@@ -1,9 +1,13 @@
+package Chapter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.*;
+
+import HelpDog.HelperDog;
+import Main.MainPage;
 
 public class Chapter implements ActionListener{
 	
