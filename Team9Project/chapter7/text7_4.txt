@@ -1,0 +1,6 @@
+¤ıThat parts of object are actually serialized?
+¤ıWhat if the object has a reference variable (remote control) pointing 
+   at another object on the heap?
+¤ıWhat if the object has 100 such reference variables?
+¤ıWhat if those reference variable objects have more references to othere objects?
+

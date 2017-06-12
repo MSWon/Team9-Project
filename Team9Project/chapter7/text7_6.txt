@@ -1,0 +1,4 @@
+
+Very simple : just implement the java.io.Serializable interface
+
+

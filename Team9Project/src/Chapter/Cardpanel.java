@@ -98,8 +98,17 @@ public class Cardpanel extends JPanel {
 	
 	
 	public void Chapter7(){
-
 		
+		this.add(new MultiPanel("chapter7\\chapter7.txt",40), "chapter7"); //Serialization
+		this.add(new MultiPanel("",1,"chapter7\\text7_1.txt",25,"chapter7\\text7_1.png") ); 
+		this.add(new MultiPanel("",1,"chapter7\\text7_2.txt",25,"chapter7\\text7_2.png") ); 
+		this.add(new MultiPanel("Steps for Writing a serializable object",35,"chapter7\\text7_3.txt",25) );
+		this.add(new MultiPanel("\n\n",35,"chapter7\\text7_3.png") );	
+		this.add(new MultiPanel("",1,"chapter7\\text7_4.txt",25,"chapter7\\text7_4.png") ); 
+		this.add(new MultiPanel("",1,"chapter7\\text7_5.png") ); 
+		this.add(new MultiPanel("How to make object Serializable",40,"chapter7\\text7_6.txt",25,"chapter7\\text7_6.png") ); 
+		this.add(new MultiPanel("",1,"chapter7\\text7_7.txt",20) ); 
+	
 	}
 
 }

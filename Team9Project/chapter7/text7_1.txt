@@ -1,0 +1,7 @@
+¤ıSerialization : The data could be used by a Java program later.
+                  We should save the state and behaviours.
+
+  <Some reasons for saving object's state>
+
+¤ıSave object's state to mass storage for later use.
+¤ıThe state may include settings, preferences or other application data.

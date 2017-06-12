@@ -1,0 +1,23 @@
+   Deserialization : restoring a serialized object
+
+1. Make a FileInputStream.
+
+	FileInputStream fileStream = new FileInputStream("MyFile.ser");
+
+2. Make an ObjectInputStream with the FileInputStream.
+
+	ObjectInputStream ois = new ObjectInputStream(fileStream);
+
+3. Read objects from the file.
+
+	Object ob1 = ois.readObject();
+	Object ob2 = ois.readObject();
+	Object ob3 = ois.readObject();
+
+4. Cast the objects.
+
+	MyClass myOb1 = (MyClass) ob1;
+
+5. Close the ObjectInputStream.
+
+	ois.close();

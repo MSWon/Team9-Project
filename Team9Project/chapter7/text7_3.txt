@@ -1,0 +1,17 @@
+1. Create a FileOutputStream object with name of the output file.
+
+	FileOutputStream fileStream = new FileOutputStream("MyFile.ser");
+
+2. Create an ObjectOutputStream object with the FileOutputStream.
+
+	ObjectOutputStream os = new ObjectOutputStream(fileStream);
+
+3. Write the objects to the file using the ObjectOutputStream.
+
+	os.writeObject(characterOne);
+	os.writeObject(characterTwo);
+	os.writeObject(characterThree);
+
+4. Close the ObjectOutputStream.
+
+	os.close();

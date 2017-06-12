@@ -1,0 +1,8 @@
+  Serialization :
+  ¤ıWrite three serialized objects to a file
+  ¤ıThe file is binary. It won't make sense to humans.
+  ¤ıOnly objects that are Serializable can be serialized.
+
+  Text file :
+  ¤ıConvert three objects into text and write them to a text file.
+  ¤ıStates of objects are written in a specific format.
