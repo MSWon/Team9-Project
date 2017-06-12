@@ -53,6 +53,7 @@ public class Chapter implements ActionListener{
 		button2.setForeground(Color.WHITE);
 		button2.setFont(new Font("Gothic",Font.PLAIN,30));
 		button2.setBorder(null);
+		button2.addActionListener(this);
 				
 		menubar.add(button1);
 		menubar.add(label1);
