@@ -8,6 +8,10 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Chapter.Chapter;
+import Chapter.SearchKeyword;
+
 import javax.swing.JButton;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -21,7 +25,7 @@ public class HelperDog extends JFrame implements ActionListener{
 	private JButton btnNewButton;
 	private JButton btnNewButton_1;
 	private ImageIcon helperDog = new ImageIcon("HelperDog_Message_pop_up.jpg");
-	
+	SearchKeyword dialog=new SearchKeyword(this,"Search Keyword");
 	/**
 	 * Create the frame.
 	 */
@@ -69,8 +73,7 @@ public class HelperDog extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (((JButton)e.getSource()).equals(btnNewButton)) {
-			// search
-			
+			dialog.setVisible(true);
 		}
 		if (((JButton)e.getSource()).equals(btnNewButton_1)) {
 			JOptionPane.showMessageDialog(HelperDog.this, "Created by team 9",

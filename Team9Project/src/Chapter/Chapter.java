@@ -25,8 +25,16 @@ public class Chapter implements ActionListener{
 	private Cardpanel cardpanel;
 	private CardLayout cl;
 	private HelperDog hd;
-	
+	//SearchKeyword dialog=new SearchKeyword(frame,"Search Keyword");
+	ValueList[] vl=new ValueList[7];
 	Color gray = new Color(245,245,245);
+	String[] c1={"Teemu","Henrikki","Laine","Professor"};
+	String[] c2={"OOP","instance variable","method","argument","reference","modifier","constructor","statement","loop","branching","class","heap","package","library"};
+	String[] c3={"inheritance","composition","override","superclass","subclass","binding","IS-A","HAS-A","super"};
+	String[] c4={"getter","setter","guardian"};
+	String[] c5={"test","4","6"};
+	String[] c6={"teyt","123","grt"};
+	String[] c7={"lat","atke","gehre"};
 	
 	public void go(){
 		
@@ -210,7 +218,15 @@ public class Chapter implements ActionListener{
 			
 				
 	}
-	
+	public Cardpanel getCardPanel()
+	{
+		cardpanel=new Cardpanel();
+		cardpanel.Chapter1();
+		cardpanel.Chapter2();
+		cardpanel.Chapter3();
+		cardpanel.Chapter4();
+		return cardpanel;
+	}
 	public void go_to_Chap1(){
 		
 		cl = (CardLayout) (cardpanel.getLayout());
@@ -254,7 +270,40 @@ public class Chapter implements ActionListener{
 		cl.show(cardpanel, "chapter7");
 	}
 	
-
+	public void set(){
+		for(int i=0; i<7; i++)
+		{
+			vl[i]=new ValueList();
+		}
+		for(String s:c1)
+		{
+			vl[0].setKeyWord(s);
+		}
+		for(String s:c2)
+		{
+			vl[1].setKeyWord(s);
+		}
+		for(String s:c3)
+		{
+			vl[2].setKeyWord(s);
+		}
+		for(String s:c4)
+		{
+			vl[3].setKeyWord(s);
+		}
+		for(String s:c5)
+		{
+			vl[4].setKeyWord(s);
+		}
+		for(String s:c6)
+		{
+			vl[5].setKeyWord(s);
+		}
+		for(String s:c7)
+		{
+			vl[6].setKeyWord(s);
+		}
+	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
