@@ -24,15 +24,16 @@ public class Chapter implements ActionListener{
 	private JButton first,prev,next,last;
 	private JButton label_1,label_2,label_3,label_4,label_5,label_6,label_7;
 	public static Cardpanel cardpanel;
+	private Keywords keyword;
 	private CardLayout cl;
 	private HelperDog hd;
 	//SearchKeyword dialog=new SearchKeyword(frame,"Search Keyword");
-	ValueList[] vl=new ValueList[7];
+	ValueList[] vl=new ValueList[30];
 	Color gray = new Color(245,245,245);
 	String[] c1={"Teemu","Henrikki","Laine","Professor"};
 	String[] c2={"OOP","instance variable","method","argument","reference","modifier","constructor","statement","loop","branching","class","heap","package","library"};
 	String[] c3={"inheritance","composition","override","superclass","subclass","binding","IS-A","HAS-A","super"};
-	String[] c4={"getter","setter","guardian"};
+	String[] c4={"getter","getter setter","guardian"};
 	String[] c5={"test","4","6"};
 	String[] c6={"teyt","123","grt"};
 	String[] c7={"lat","atke","gehre"};
@@ -358,37 +359,16 @@ public class Chapter implements ActionListener{
 	}
 	
 	public void set(){
-		for(int i=0; i<7; i++)
+		
+		keyword = new Keywords();
+		
+		for(int i=0; i<30; i++)
 		{
 			vl[i]=new ValueList();
-		}
-		for(String s:c1)
-		{
-			vl[0].setKeyWord(s);
-		}
-		for(String s:c2)
-		{
-			vl[1].setKeyWord(s);
-		}
-		for(String s:c3)
-		{
-			vl[2].setKeyWord(s);
-		}
-		for(String s:c4)
-		{
-			vl[3].setKeyWord(s);
-		}
-		for(String s:c5)
-		{
-			vl[4].setKeyWord(s);
-		}
-		for(String s:c6)
-		{
-			vl[5].setKeyWord(s);
-		}
-		for(String s:c7)
-		{
-			vl[6].setKeyWord(s);
+			int size = keyword.keyword_dataframe.get(i).size();
+			
+			for(int j=0; j<size; j++)
+				vl[i].setKeyWord((String) keyword.keyword_dataframe.get(i).get(j));
 		}
 	}
 	@Override

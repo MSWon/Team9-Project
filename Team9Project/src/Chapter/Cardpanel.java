@@ -107,7 +107,7 @@ public class Cardpanel extends JPanel {
 		this.add(new MultiPanel("",1,"chapter6\\text6_6.txt",25,"chapter6\\text6_6.jpg") );
 		this.add(new MultiPanel("\nEvent Handling\n",40,"chapter6\\text6_7.jpg") );
 		this.add(new MultiPanel("\nEvent Handling2\n\n",40,"chapter6\\text6_8.jpg") );
-		this.add(new MultiPanel("Cusom Widgets\n",20,"chapter6\\text6_9.txt",25,"chapter6\\text6_9.jpg"), "panel27" ); // Custom Widgets
+		this.add(new MultiPanel("Cusom Widgets\n",40,"chapter6\\text6_9.txt",25,"chapter6\\text6_9.jpg"), "panel27" ); // Custom Widgets
 		
 	}
 	

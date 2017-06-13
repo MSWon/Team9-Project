@@ -57,7 +57,7 @@ public class SearchKeyword extends JDialog implements ActionListener{
 		c.set();
 		String key=inputkey.getText();
 		ArrayList<String> as=new ArrayList<String>();
-		ValueList[] copy=new ValueList[7];
+		ValueList[] copy=new ValueList[30];
 		
 		copy=c.vl.clone();
 		int p=0;
@@ -70,7 +70,7 @@ public class SearchKeyword extends JDialog implements ActionListener{
 				if(s.contains(key))
 				{
 					listStr.add(s);
-					System.out.println(listStr.get(p));
+//					System.out.println(listStr.get(p));
 					p++;
 				}
 			}
@@ -87,25 +87,15 @@ public class SearchKeyword extends JDialog implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		//Chapter a=new Chapter();
-	
 		
 		// TODO Auto-generated method stub
 		int m=1; //chapter number
 		
-		//cp=c.cardpanel;
-		//cp=new Cardpanel();
-		//CardLayout clt=c.cl;
-		//clt=(CardLayout)(cp.getLayout());
 		Cardpanel cp= Chapter.cardpanel;
-		//CardLayout clt=c.getCardLayout();
+
 		CardLayout clt=(CardLayout)(cp.getLayout());
-		//CardLayout clt=c.getCl();
-		//c.cl=(CardLayout)(c.cardpanel.getLayout());
-		//cp.Chapter1();
-		//cp.Chapter2();
-		//cp.Chapter3();
-		//cp.Chapter4();
+		
+		
 		if(e.getSource().equals(btnsearch))
 		{
 			keysearch();
@@ -120,53 +110,25 @@ public class SearchKeyword extends JDialog implements ActionListener{
 				ArrayList<String> x=(ArrayList<String>)v.getKeyWord().clone();
 				for(String s:x)
 				{
-					System.out.println(s);
-					System.out.println(list.getSelectedValue());
+
 					if(list.getSelectedValue().equals(s))
 					{
-						System.out.println(String.valueOf(list.getSelectedValue().equals(s)));
-						//chapter m 으로 이동
-						System.out.println(m);
-						switch(m)
-						{
-						case 1:
-							
-							clt.show(cp, "chapter1");
-							//c.go_to_Chap1();
-							dispose();
-							break;
-						case 2:
-							
-							clt.show(cp, "chapter2");
-							//c.go_to_Chap2();
-							System.out.println(m);
-							System.out.println("success");
-							dispose();
-							break;
-						case 3:
-							
-							clt.show(cp, "chapter3");
-							//c.go_to_Chap3();
-							dispose();
-							break;
-						case 4:
-							
-							clt.show(cp, "chapter4");
-							System.out.println(m);
-							System.out.println("success");
-							//c.go_to_Chap4();
-							dispose();
-							break;
-						}
+						//chapter m 으로 이동					
+						clt.show(cp, "panel" + m);
+//						dispose();
+						
 					}
 				}
 				m++;
 			}
 			//원하는 챕터로 이동
 		}
+	
 		if(e.getSource().equals(btncancel))
 		{
 			dispose();
 		}
+	  }
 	}
-}
+	
+

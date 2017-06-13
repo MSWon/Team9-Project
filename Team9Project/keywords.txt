@@ -1,0 +1,30 @@
+Java,programming,JVM,object-oriented
+virtual machine,compiler
+source,output
+class,object,blueprint,state,variables
+class library
+instance variables,class variables,local variables,parameters
+method,behavior
+creating objects
+constructor,special method,return value
+array,stores,initialize
+encapsulation,hide
+Biggy,weight,dogs
+getters,setters,retrieving,changing,accessors,mutators
+superclass,subclasses,inherit,common,extends
+abstract,specific
+dynamic binding
+IS-A
+HAS-A
+super,super.method,keyword
+access modifiers
+polymorphism
+illegal overrides
+overloading
+class hierarchy,swing
+layout Manager,container 
+GUI,widgets,Jbutton,event,register,event registeration
+cusom widgets
+FileOutputStream,ObjectOutputStream,serializable
+connection streams
+deserialization,FileInputStream,ObjectInputStream
