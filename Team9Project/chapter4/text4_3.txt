@@ -1,0 +1,4 @@
+¤ıStep 1 : identifying common state and behavior
+¤ıStep 2 : create superclass with common code
+¤ıStep 3 : overriding (rewrite a superclass method)
+¤ıStep 4 : more abstraction

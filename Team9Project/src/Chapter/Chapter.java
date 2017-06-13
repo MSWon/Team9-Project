@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.*;
+import javax.swing.plaf.ColorUIResource;
 
 import HelpDog.HelperDog;
 import Main.MainPage;
@@ -21,7 +22,7 @@ public class Chapter implements ActionListener{
 	private JMenuBar menubar;
 	private JPanel Btnpanel;
 	private JButton first,prev,next,last;
-	private JButton label_1,label_2,label_3;
+	private JButton label_1,label_2,label_3,label_4,label_5,label_6,label_7;
 	public static Cardpanel cardpanel;
 	private CardLayout cl;
 	private HelperDog hd;
@@ -203,8 +204,94 @@ public class Chapter implements ActionListener{
 			
 		}
 		
+		label_4 = new JButton(" Inheritance");
+		label_4.setBackground(gray);
+		label_4.setBorder(null);
+		label_4.addActionListener(this);
+		label_4.setFont(new Font("Gothic",Font.BOLD,20));
+		Scrollpanel.add(label_4);
+		
+		String[] listname4 = {" How to inherit"," Animal example"," Dynamic binding", " IS-A", " HAS-A",
+				" Super keyword", " Access modifiers"};
+		
+		for(int i = 0; i<listname4.length; i++){
+			
+			JButton button = new JButton(listname4[i]);
+			button.addActionListener(this);
+			button.setName(listname4[i]);
+			button.setFont(new Font("Gothic",Font.PLAIN,15));
+			button.setBackground(gray);
+			button.setBorder(null);
+			buttons.add(button);
+			Scrollpanel.add(button);	
+		}
+		
+		label_5 = new JButton(" Polymorphism");
+		label_5.setBackground(gray);
+		label_5.setBorder(null);
+		label_5.addActionListener(this);
+		label_5.setFont(new Font("Gothic",Font.BOLD,20));
+		Scrollpanel.add(label_5);
+		
+		String[] listname5 = {" Polymorphism example"," Illegal overrides"," Overloading"};
+		
+		for(int i = 0; i<listname5.length; i++){
+			
+			JButton button = new JButton(listname5[i]);
+			button.addActionListener(this);
+			button.setName(listname5[i]);
+			button.setFont(new Font("Gothic",Font.PLAIN,15));
+			button.setBackground(gray);
+			button.setBorder(null);
+			buttons.add(button);
+			Scrollpanel.add(button);	
+		}
+		
+		label_6 = new JButton(" GUI");
+		label_6.setBackground(gray);
+		label_6.setBorder(null);
+		label_6.addActionListener(this);
+		label_6.setFont(new Font("Gothic",Font.BOLD,20));
+		Scrollpanel.add(label_6);
+		
+		String[] listname6 = {" Class hierarchy"," Layout Manager"," Event handling"," Custom Widgets"};
+		
+		for(int i = 0; i<listname6.length; i++){
+			
+			JButton button = new JButton(listname6[i]);
+			button.addActionListener(this);
+			button.setName(listname6[i]);
+			button.setFont(new Font("Gothic",Font.PLAIN,15));
+			button.setBackground(gray);
+			button.setBorder(null);
+			buttons.add(button);
+			Scrollpanel.add(button);	
+		}
+		
+		label_7 = new JButton(" Serialization");
+		label_7.setBackground(gray);
+		label_7.setBorder(null);
+		label_7.addActionListener(this);
+		label_7.setFont(new Font("Gothic",Font.BOLD,20));
+		Scrollpanel.add(label_7);
+		
+		String[] listname7 = {" Serialization steps"," Connection stream"," Deserialization"};
+		
+		for(int i = 0; i<listname7.length; i++){
+			
+			JButton button = new JButton(listname7[i]);
+			button.addActionListener(this);
+			button.setName(listname7[i]);
+			button.setFont(new Font("Gothic",Font.PLAIN,15));
+			button.setBackground(gray);
+			button.setBorder(null);
+			buttons.add(button);
+			Scrollpanel.add(button);	
+		}
+		
 		scroller = new JScrollPane(Scrollpanel);
 		scroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		
 		
 		innerpanel.add(cardpanel);
 		innerpanel.add(Btnpanel);
@@ -346,7 +433,15 @@ public class Chapter implements ActionListener{
 			cl.show(cardpanel, "chapter2");
 		else if(e.getSource().equals(label_3))
 			cl.show(cardpanel, "chapter3");
-	
+		else if(e.getSource().equals(label_4))
+			cl.show(cardpanel, "chapter4");
+		else if(e.getSource().equals(label_5))
+			cl.show(cardpanel, "chapter5");
+		else if(e.getSource().equals(label_6))
+			cl.show(cardpanel, "chapter6");
+		else if(e.getSource().equals(label_7))
+			cl.show(cardpanel, "chapter7");
+
 	}	
 }
 

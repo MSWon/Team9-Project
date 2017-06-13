@@ -1,0 +1,4 @@
+¤ýHAS-A is Composition.
+¤ýHAS-A relationship is called composition because a class 
+  is composed of another class.
+¤ýYou can use the filled diamond arrow to show composition.

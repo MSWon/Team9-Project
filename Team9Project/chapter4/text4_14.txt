@@ -1,0 +1,5 @@
+¤ıThe IS-A relationship works in only one direction.
+¤ıDynamic binding means that the method to be called is determined at runtime
+  the method that is ¡°closest¡±to the object will be called.
+¤ıIS-A test works throughout inheritance tree
+

@@ -1,0 +1,7 @@
+When a subclass wants to call method of the superclass,it can use the super
+ 
+  ¤ıkeyword:
+
+  ¤ıFor a method : super.method(arguments);
+
+  ¤ıFor a constructor : super(arguments);

@@ -1,0 +1,9 @@
+¤ıBathtub is not Bathroom. But Bathtub and Bathroom are related! 
+  How could we express this relation?
+
+¤ıDoes it make sense to say : ¡°Bathroom HAS-A Bathtub?
+
+¤ıIf yes, Bathroom has a Bathtub as instance variable.
+
+¤ıBathroom has a reference to a Bathtub, but Bathroom does NOT 
+  extend Bathtub and vice versa.

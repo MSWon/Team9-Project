@@ -1,0 +1,4 @@
+¤ıWhen a method is called, JVM chooses the method that is
+  lowest in the class hierarchy.
+¤ıThis is process called dynamic binding.
+¤ıIt means that a method which is called is determined at runtime.

@@ -1,0 +1,10 @@
+¤ıWe put common code into a superclass.
+
+¤ıThen we create more subclasses that inherit the common code from the superclass.
+
+¤ıFinally, we can override inherited methods in subclasses by rewriting them.
+
+¤ıSubclass extends the superclass.
+
+¤ıSubclass inherits instance variables and methods of the superclass 
+    and adds some new stuff.

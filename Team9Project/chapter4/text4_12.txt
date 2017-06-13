@@ -1,0 +1,4 @@
+¤ýWe can use access modifiers to define how classes, instance variables 
+  and methods can be  accessed from other classes.
+
+¤ýThese modifiers control the visibility of your code from outside the class.

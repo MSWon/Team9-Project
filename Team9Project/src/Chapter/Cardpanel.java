@@ -66,7 +66,22 @@ public class Cardpanel extends JPanel {
 	}
 	
 	public void Chapter4(){
-
+		
+		this.add(new MultiPanel("chapter4\\chapter4.txt",40), "chapter4");
+		this.add(new MultiPanel("Inheritance",40,"chapter4\\text4_1.txt",25), "panel14" ); //How to inherit
+		this.add(new MultiPanel("\n",20,"chapter4\\text4_2.png"), "panel15" ); // Animal example
+		this.add(new MultiPanel("\nInheritance Example-Animal Simulation",40,"chapter4\\text4_3.txt",25) ); 
+		this.add(new MultiPanel("",1,"chapter4\\text4_4.png") );
+		this.add(new MultiPanel("Dynamic binding",40,"chapter4\\text4_5.txt",25,"chapter4\\text4_5.png"), "panel16" );  // Dynamic binding
+		this.add(new MultiPanel("Using IS-A",40,"chapter4\\text4_6.txt",25), "panel17" ); //IS-A
+		this.add(new MultiPanel("",1,"chapter4\\text4_7.txt",25,"chapter4\\text4_7.png") ); 
+		this.add(new MultiPanel("chapter4\\text4_8.txt",25) ); 
+		this.add(new MultiPanel("\nHAS-A",40,"chapter4\\text4_9.txt",25), "panel18" );  // HAS-A
+		this.add(new MultiPanel("",1,"chapter4\\text4_10.txt",25,"chapter4\\text4_10.png") );
+		this.add(new MultiPanel("\nThe super keyword",40,"chapter4\\text4_11.txt",25), "panel19" ); // Super keyword
+		this.add(new MultiPanel("\nAccess Modifiers",40,"chapter4\\text4_12.txt",25), "panel20" ); //Access modifiers
+		this.add(new MultiPanel("\n\nFour access modifiers\n",40,"chapter4\\text4_13.png") ); 
+		this.add(new MultiPanel("",1,"chapter4\\text4_14.txt",25,"chapter4\\text4_14.png") );
 		
 	}
 	
@@ -75,24 +90,24 @@ public class Cardpanel extends JPanel {
 		this.add(new MultiPanel("chapter5\\chapter5.txt",40), "chapter5");
 		this.add(new MultiPanel("",1,"chapter5\\text5_1.txt",25,"chapter5\\text5_1.png") );
 		this.add(new MultiPanel("",1,"chapter5\\text5_2.txt",25,"chapter5\\text5_2.png") );
-		this.add(new MultiPanel("\nWhy polymorphism is important",40,"chapter5\\text5_3.txt",24) ); // Polymorphism example
-		this.add(new MultiPanel("Example: illegal overrides\n",40,"chapter5\\text5_4.png") ); // Illegal overrides
-		this.add(new MultiPanel("Overloading",40,"chapter5\\text5_5.txt",25,"chapter5\\text5_5.png") ); // Overloading
+		this.add(new MultiPanel("\nWhy polymorphism is important",40,"chapter5\\text5_3.txt",24), "panel21" ); // Polymorphism example
+		this.add(new MultiPanel("Example: illegal overrides\n",40,"chapter5\\text5_4.png"), "panel22" ); // Illegal overrides
+		this.add(new MultiPanel("Overloading",40,"chapter5\\text5_5.txt",25,"chapter5\\text5_5.png"), "panel23" ); // Overloading
 	}
 	
 	
 	public void Chapter6(){
 		
-		this.add(new MultiPanel("chapter6\\chapter6.txt",40), "chapter6"); //GUI
+		this.add(new MultiPanel("chapter6\\chapter6.txt",40), "chapter6"); 
 		this.add(new MultiPanel("",1,"chapter6\\text6_1.txt",25,"chapter6\\text6_1.png") ); 
-		this.add(new MultiPanel("Swing class hierarchy",40,"chapter6\\text6_2.jpg") ); //Class hierarchy
-		this.add(new MultiPanel("\nLayout Manager",40,"chapter6\\text6_3.txt",25) ); //Layout Manager
+		this.add(new MultiPanel("Swing class hierarchy",40,"chapter6\\text6_2.jpg"), "panel24" ); //Class hierarchy
+		this.add(new MultiPanel("\nLayout Manager",40,"chapter6\\text6_3.txt",25), "panel25" ); //Layout Manager
 		this.add(new MultiPanel("The three basic layout managers.",40,"chapter6\\text6_4.jpg") );
-		this.add(new MultiPanel("",1,"chapter6\\text6_5.txt",25,"chapter6\\text6_5.jpg") ); // Event handling
+		this.add(new MultiPanel("",1,"chapter6\\text6_5.txt",25,"chapter6\\text6_5.jpg"), "panel26" ); // Event handling
 		this.add(new MultiPanel("",1,"chapter6\\text6_6.txt",25,"chapter6\\text6_6.jpg") );
 		this.add(new MultiPanel("\nEvent Handling\n",40,"chapter6\\text6_7.jpg") );
 		this.add(new MultiPanel("\nEvent Handling2\n\n",40,"chapter6\\text6_8.jpg") );
-		this.add(new MultiPanel("Cusom Widgets\n",20,"chapter6\\text6_9.txt",25,"chapter6\\text6_9.jpg") ); // Custom Widgets
+		this.add(new MultiPanel("Cusom Widgets\n",20,"chapter6\\text6_9.txt",25,"chapter6\\text6_9.jpg"), "panel27" ); // Custom Widgets
 		
 	}
 	
@@ -102,12 +117,12 @@ public class Cardpanel extends JPanel {
 		this.add(new MultiPanel("chapter7\\chapter7.txt",40), "chapter7"); //Serialization
 		this.add(new MultiPanel("",1,"chapter7\\text7_1.txt",25,"chapter7\\text7_1.png") ); 
 		this.add(new MultiPanel("",1,"chapter7\\text7_2.txt",25,"chapter7\\text7_2.png") ); 
-		this.add(new MultiPanel("Steps for Writing a serializable object",35,"chapter7\\text7_3.txt",25) );//Serialization Steps
-		this.add(new MultiPanel("\n\n",35,"chapter7\\text7_3.png") );	//Connection Stream
+		this.add(new MultiPanel("Steps for Writing a serializable object",35,"chapter7\\text7_3.txt",25), "panel28" );//Serialization Steps
+		this.add(new MultiPanel("\n\n",35,"chapter7\\text7_3.png") , "panel29");	//Connection Stream
 		this.add(new MultiPanel("",1,"chapter7\\text7_4.txt",25,"chapter7\\text7_4.png") ); 
 		this.add(new MultiPanel("",1,"chapter7\\text7_5.png") ); 
 		this.add(new MultiPanel("How to make object Serializable",40,"chapter7\\text7_6.txt",25,"chapter7\\text7_6.png") ); 
-		this.add(new MultiPanel("",1,"chapter7\\text7_7.txt",20) ); // Deserialization 
+		this.add(new MultiPanel("",1,"chapter7\\text7_7.txt",20), "panel30" ); // Deserialization 
 	
 	}
 

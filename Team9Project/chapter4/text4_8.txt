@@ -1,0 +1,13 @@
+
+
+
+
+¤ıDo use inheritance when one class is a more specific type of a superclass.
+
+¤ıDo consider inheritance when you have common behavior(methods) for multiple
+    classes of the same general type.
+
+¤ıDON'T use inheritance just so that you can reuse code from another class,
+    if the relationship otherwise doesn't make sense.
+
+¤ıDON'T use inheritance if the subclass and the superclass do not pass the IS-A test.

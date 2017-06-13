@@ -1,0 +1,15 @@
+
+
+Q : How do we know if we should use inheritance?
+A : the IS-A Test
+	Triangle IS-A Shape - O
+	Cat IS-A Feline - O
+	Surgeon IS-A Doctor - O
+	Bathtub IS-A Bathroom - X
+
+Ask yourself : ¡°does it make sense to say Class X IS-A Class Y?¡±
+
+- If it doesn¡¯t make sense, then there is 
+ something wrong with the inheritance design.
+- If Class B extends Class A , then Class B IS-A Class A. 
+ This is true anywhere in the inheritance tree.

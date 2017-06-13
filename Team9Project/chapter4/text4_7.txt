@@ -1,0 +1,9 @@
+¤ýIf Class C extends Class B, then Class C IS-A Class B 
+  and Class C IS-A Class A.
+
+¤ýClass C can do anything that A and B can do.
+
+¤ýIS-A works only in one direction!
+
+	1.Triangle IS-A Shape. ? O
+	2.Shape IS-A Triangle ? X
