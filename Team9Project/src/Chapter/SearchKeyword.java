@@ -14,7 +14,7 @@ public class SearchKeyword extends JDialog implements ActionListener{
 	private JScrollPane scroll=new JScrollPane();
 	private JTextArea area=new JTextArea();
 	private JList list=new JList();
-	private JButton btnsearch=new JButton("image넣자");
+	private JButton btnsearch;
 	private JButton btnok=new JButton("Go");
 	private JButton btncancel=new JButton("Cancel");
 	private JLabel lbl1=new JLabel("Enter Keyword : ");
@@ -30,6 +30,11 @@ public class SearchKeyword extends JDialog implements ActionListener{
 		listStr1[0]="---------------------------------";
 		setLayout(new FlowLayout(new FlowLayout().LEFT));
 		setSize(350,300);
+		ImageIcon oriicon=new ImageIcon("search_icon.png");
+		Image oriimg=oriicon.getImage();
+		Image changedimg=oriimg.getScaledInstance(20, 20, Image.SCALE_SMOOTH);
+		ImageIcon icon=new ImageIcon(changedimg);
+		btnsearch=new JButton(icon);
 		btnsearch.addActionListener(this);
 		btnok.addActionListener(this);
 		btncancel.addActionListener(this);
@@ -106,7 +111,6 @@ public class SearchKeyword extends JDialog implements ActionListener{
 		{
 			for(ValueList v:c.vl)
 			{
-				//ArrayList<String> x=v.getKeyWord();
 				ArrayList<String> x=(ArrayList<String>)v.getKeyWord().clone();
 				for(String s:x)
 				{
@@ -115,8 +119,7 @@ public class SearchKeyword extends JDialog implements ActionListener{
 					{
 						//chapter m 으로 이동					
 						clt.show(cp, "panel" + m);
-//						dispose();
-						
+						dispose();
 					}
 				}
 				m++;
