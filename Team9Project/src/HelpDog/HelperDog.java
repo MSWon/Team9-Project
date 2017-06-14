@@ -19,6 +19,7 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class HelperDog extends JFrame implements ActionListener{
 
@@ -31,6 +32,7 @@ public class HelperDog extends JFrame implements ActionListener{
 	 * Create the frame.
 	 */
 	public HelperDog() {
+		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 234, 208);
 		contentPane = new JPanel() {
@@ -43,18 +45,22 @@ public class HelperDog extends JFrame implements ActionListener{
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		btnNewButton = new JButton("Search");
-		btnNewButton.setBackground(Color.GRAY);
+		btnNewButton = new JButton("1. Search");
+		btnNewButton.setFont(new Font("MDæ∆∑’√º", Font.BOLD, 15));
+		btnNewButton.setBackground(Color.YELLOW);
+		btnNewButton.setBorder(null);
 		btnNewButton.addActionListener(this);
 		
-		btnNewButton_1 = new JButton("About");
-		btnNewButton_1.setBackground(Color.GRAY);
+		btnNewButton_1 = new JButton("2. About");
+		btnNewButton_1.setFont(new Font("MDæ∆∑’√º", Font.BOLD, 15));
+		btnNewButton_1.setBackground(Color.YELLOW);
+		btnNewButton_1.setBorder(null);
 		btnNewButton_1.addActionListener(this);
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
-					.addContainerGap(84, Short.MAX_VALUE)
+			gl_contentPane.createParallelGroup(Alignment.TRAILING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addContainerGap(101, Short.MAX_VALUE)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addComponent(btnNewButton)
 						.addComponent(btnNewButton_1))
@@ -63,11 +69,11 @@ public class HelperDog extends JFrame implements ActionListener{
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
+					.addGap(18)
 					.addComponent(btnNewButton)
-					.addGap(2)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(btnNewButton_1)
-					.addContainerGap(101, Short.MAX_VALUE))
+					.addContainerGap(99, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
 		setVisible(true);

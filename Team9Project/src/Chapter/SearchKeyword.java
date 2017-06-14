@@ -1,6 +1,7 @@
 package Chapter;
 
 import java.awt.*;
+import Chapter.*;
 import Main.MainPage;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,7 +27,6 @@ public class SearchKeyword extends JDialog implements ActionListener{
 	private Cardpanel cp;
 	public SearchKeyword(JFrame frame, String title){
 		super(frame,title);
-		//c=new Chapter();
 		listStr1[0]="---------------------------------";
 		setLayout(new FlowLayout(new FlowLayout().LEFT));
 		setSize(350,300);
@@ -56,7 +56,6 @@ public class SearchKeyword extends JDialog implements ActionListener{
 	}
 	
 	public void keysearch(){
-		//Chapter b=new Chapter();
 		
 		c = new Chapter();
 		c.set();
@@ -107,21 +106,26 @@ public class SearchKeyword extends JDialog implements ActionListener{
 			//JTextField에 쓴 키워드가 원래 설정되어 있는 키워드에 속해있는지 판단하고
 			//검색어가 속해있는 키워드들을 JList에 나열, 및 선택하게 함 
 		}
+		
+		Object selected = list.getSelectedValue();
+		
+		
 		if(e.getSource().equals(btnok))
 		{
 			for(ValueList v:c.vl)
 			{
 				ArrayList<String> x=(ArrayList<String>)v.getKeyWord().clone();
 				for(String s:x)
-				{
-
-					if(list.getSelectedValue().equals(s))
-					{
-						//chapter m 으로 이동					
-						clt.show(cp, "panel" + m);
-						dispose();
+				{			
+					if((list.getSelectedValue() == null))
+						;
+					else if(list.getSelectedValue().equals(s)){				
+							//move to chapter m 		
+							clt.show(cp, "panel" + m);
+//							dispose();
 					}
 				}
+				
 				m++;
 			}
 			//원하는 챕터로 이동

@@ -1,4 +1,4 @@
-package Chapter;
+package Editor;
 
 
 import java.awt.Color;

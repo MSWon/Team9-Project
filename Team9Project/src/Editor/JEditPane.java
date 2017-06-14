@@ -1,4 +1,4 @@
-package Chapter;
+package Editor;
 import javax.swing.JTextPane;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;

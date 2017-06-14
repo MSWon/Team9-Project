@@ -30,17 +30,10 @@ public class Chapter implements ActionListener{
 	//SearchKeyword dialog=new SearchKeyword(frame,"Search Keyword");
 	ValueList[] vl=new ValueList[30];
 	Color gray = new Color(245,245,245);
-	String[] c1={"Java","High level","object-oriented programming language","JVM","object-orientation","source","compiler"};
-	String[] c2={"class","object","library","instance variable","method","argument","reference variable","parameter","variable","modifier","constructor","return","statement","loop","branching","heap","package","main method","array"};
-	String[] c4={"inheritance","composition","override","superclass","subclass","binding","IS-A","HAS-A","super"};
-	String[] c3={"encapsulation","getter","setter","getter setter","guardian","accessors","mutators"};
-	String[] c5={"polymorphism","overloading"};
-	String[] c6={"GUI","graphic","AWT","Swing","component","container","layout","layout manager","event","handler","custom widget","frame","panel"};
-	String[] c7={"serialization","object's state","heap","object serialized","text","file","input","output","chain","serializable"};
 	
 	public void go(){
 		
-		frame = new JFrame();  
+		frame = new JFrame("OOP Education");  
 		frame.setSize(1300, 950);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);

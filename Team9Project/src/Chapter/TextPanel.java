@@ -23,6 +23,9 @@ import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
+import Editor.EditorPane;
+import Editor.JEditPane;
+
 public class TextPanel extends JPanel implements ActionListener {
 	
 	EditorPane editorpane;

@@ -28,7 +28,7 @@ public class MainPage implements ActionListener{
 	 */
 	public void go(){
 		
-		frame = new JFrame("Main Page");
+		frame = new JFrame("OOP Education");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(1250, 800);
 		frame.setLocationRelativeTo(null);

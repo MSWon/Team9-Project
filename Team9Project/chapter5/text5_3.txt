@@ -1,6 +1,7 @@
 
 1.You can write code that doesn¡¯t have to change when you add new subclasses.
 
-2.You can easily handle a collection different objects that have the same superclass.
+2.You can easily handle a collection different objects that have the same superclass. 
 
 3.With method overriding, you can easily handle different behavior in different subclasses.
+

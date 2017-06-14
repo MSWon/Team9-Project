@@ -12,6 +12,8 @@ import javax.swing.JPanel;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 
+import Editor.JEditPane;
+
 public class MultiPanel extends TextPanel {
 	
 	// Panel with only textfile you can adjust size of the font.
