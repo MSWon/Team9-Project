@@ -1,4 +1,5 @@
 package Quizes;
+
 import javax.swing.JPanel;
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
