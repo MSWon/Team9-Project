@@ -27,7 +27,6 @@ public class Chapter implements ActionListener{
 	private Keywords keyword;
 	private CardLayout cl;
 	private HelperDog hd;
-	//SearchKeyword dialog=new SearchKeyword(frame,"Search Keyword");
 	ValueList[] vl=new ValueList[30];
 	Color gray = new Color(245,245,245);
 	

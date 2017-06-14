@@ -39,7 +39,6 @@ public class SearchKeyword extends JDialog implements ActionListener{
 		btnok.addActionListener(this);
 		btncancel.addActionListener(this);
 		scroll.setViewportView(list);
-		//scroll.setBorder(border);
 		scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -51,8 +50,7 @@ public class SearchKeyword extends JDialog implements ActionListener{
 		add(btnok);
 		add(btncancel);
 		setLocation(350,200);
-		//setModal(true);
-		//setVisible(true);
+		
 	}
 	
 	public void keysearch(){
@@ -70,11 +68,10 @@ public class SearchKeyword extends JDialog implements ActionListener{
 			as=(ArrayList<String>) a.getKeyWord().clone();
 			for(String s:as)
 			{
-				//System.out.println(as.get(p));
+			
 				if(s.contains(key))
 				{
 					listStr.add(s);
-//					System.out.println(listStr.get(p));
 					p++;
 				}
 			}
@@ -85,7 +82,6 @@ public class SearchKeyword extends JDialog implements ActionListener{
 			listStr1[n++]=k;
 		}
 		listStr1[0]="--------------------------------------------------------------------";
-		//listStr1[n]="--------------------------------------------------------------------";
 		list.setListData(listStr1);
 	}
 
@@ -122,7 +118,7 @@ public class SearchKeyword extends JDialog implements ActionListener{
 					else if(list.getSelectedValue().equals(s)){				
 							//move to chapter m 		
 							clt.show(cp, "panel" + m);
-//							dispose();
+							dispose();
 					}
 				}
 				
