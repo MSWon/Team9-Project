@@ -79,7 +79,8 @@ public class HelperDog extends JFrame implements ActionListener{
 			dialog.setVisible(true);
 		}
 		if (((JButton)e.getSource()).equals(btnNewButton_1)) {
-			JOptionPane.showMessageDialog(HelperDog.this, "JAVA Education Program for oop developer: ±ÇÅÂÇ³, ±ÇÇı¹Î, ¸ÍÁÖÈñ, ¹ÚÁØ±Ô, ¿ø¹Î¼·\n"
+			JOptionPane.showMessageDialog(HelperDog.this, 
+					"JAVA Education Program for oop developer: ±ÇÅÂÇ³, ±ÇÇı¹Î, ¸ÍÁÖÈñ, ¹ÚÁØ±Ô, ¿ø¹Î¼·\n"
 					+ "Version: 1.0"
 					+ "build id: 0.0"
 					+ "\n"
