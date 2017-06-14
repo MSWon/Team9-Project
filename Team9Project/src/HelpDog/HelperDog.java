@@ -1,5 +1,6 @@
 package HelpDog;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Graphics;
 
@@ -43,9 +44,11 @@ public class HelperDog extends JFrame implements ActionListener{
 		setContentPane(contentPane);
 		
 		btnNewButton = new JButton("Search");
+		btnNewButton.setBackground(Color.GRAY);
 		btnNewButton.addActionListener(this);
 		
 		btnNewButton_1 = new JButton("About");
+		btnNewButton_1.setBackground(Color.GRAY);
 		btnNewButton_1.addActionListener(this);
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
@@ -76,7 +79,11 @@ public class HelperDog extends JFrame implements ActionListener{
 			dialog.setVisible(true);
 		}
 		if (((JButton)e.getSource()).equals(btnNewButton_1)) {
-			JOptionPane.showMessageDialog(HelperDog.this, "Created by team 9",
+			JOptionPane.showMessageDialog(HelperDog.this, "JAVA Education Program for oop developer: ±ÇÅÂÇ³, ±ÇÇý¹Î, ¸ÍÁÖÈñ, ¹ÚÁØ±Ô, ¿ø¹Î¼·\n"
+					+ "Version: 1.0"
+					+ "build id: 0.0"
+					+ "\n"
+					+ "(c) copyright: oop course 2017-06-14, all rights reserved.",
 					"About ", JOptionPane.INFORMATION_MESSAGE);
 		}
 	}
