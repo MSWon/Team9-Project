@@ -1,6 +1,7 @@
 package Quizes;
 
 
+
 import javax.swing.JPanel;
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
@@ -35,12 +36,14 @@ import com.jgoodies.forms.layout.FormSpecs;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
 
-public class QuizPanelLine extends JPanel implements ActionListener {
+public class QuizChapter4 extends Quiz implements ActionListener {
    
    private JRadioButton leftButton_1,leftButton_2,leftButton_3,RightButton_1,RightButton_2,RightButton_3,leftButton_4,RightButton_4;
 
    private final ButtonGroup buttonGroup = new ButtonGroup();
    private final ButtonGroup buttonGroup_1 = new ButtonGroup();
+   
+   JTextArea right1;
    JTextArea right2;
    JTextArea right3;
    JTextArea right4;
@@ -51,7 +54,7 @@ public class QuizPanelLine extends JPanel implements ActionListener {
    JTextArea left3;
    JTextArea left4;
 
-   public QuizPanelLine() {
+   public QuizChapter4() {
       
       this.setBackground(Color.WHITE);
       
@@ -84,15 +87,15 @@ public class QuizPanelLine extends JPanel implements ActionListener {
       RightButton_1.setBackground(Color.WHITE);
       RightButton_1.addActionListener(this);
       
-      lblQuiz = new JLabel("Quiz!");
+      lblQuiz = new JLabel("Quiz - Inheritance");
       lblQuiz.setForeground(Color.RED);
       lblQuiz.setFont(new Font("±¼¸²", Font.BOLD, 33));
       buttonGroup_1.add(RightButton_1);
       
-      JTextArea right1 = new JTextArea();
+      right1 = new JTextArea();
       right1.setEditable(false);
       right1.setFont(new Font("Monospaced", Font.BOLD, 18));
-      right1.setText("at least one class with\r\na main() method.");
+      right1.setText("is keyword used to \r\ninherit a class.");
       RightButton_2 = new JRadioButton("");
       RightButton_2.setBackground(Color.WHITE);
       RightButton_2.addActionListener(this);
@@ -101,7 +104,7 @@ public class QuizPanelLine extends JPanel implements ActionListener {
       right2 = new JTextArea();
       right2.setEditable(false);
       right2.setFont(new Font("Monospaced", Font.BOLD, 18));
-      right2.setText("Store state of an object\r\n(also called fields)");
+      right2.setText("is keyword used to refer to member\r\n of base class from subclass.");
       RightButton_3 = new JRadioButton("");
       RightButton_3.setBackground(Color.WHITE);
       RightButton_3.addActionListener(this);
@@ -110,7 +113,7 @@ public class QuizPanelLine extends JPanel implements ActionListener {
       right3 = new JTextArea();
       right3.setEditable(false);
       right3.setFont(new Font("Monospaced", Font.BOLD, 18));
-      right3.setText("is Type(blueprint or model)\r\nof an object\r\n");
+      right3.setText("Vehicle");
       RightButton_4 = new JRadioButton("");
       RightButton_4.setBackground(Color.WHITE);
       RightButton_4.addActionListener(this);
@@ -119,7 +122,7 @@ public class QuizPanelLine extends JPanel implements ActionListener {
       right4 = new JTextArea();
       right4.setEditable(false);
       right4.setFont(new Font("Monospaced", Font.BOLD, 18));
-      right4.setText("Has the same name than\r\nthe class and no return value.");
+      right4.setText("Engine");
       
       btnReset = new JButton("Reset");
       btnReset.addActionListener(this);
@@ -128,95 +131,94 @@ public class QuizPanelLine extends JPanel implements ActionListener {
       left1 = new JTextArea();
       left1.setEditable(false);
       left1.setFont(new Font("Monospaced", Font.BOLD, 18));
-      left1.setText("Class");
+      left1.setText("Car IS-A");
       
       left2 = new JTextArea();
       left2.setEditable(false);
       left2.setFont(new Font("Monospaced", Font.BOLD, 18));
-      left2.setText("Constructor");
+      left2.setText("Car HAS-A");
       
       left3 = new JTextArea();
       left3.setEditable(false);
       left3.setFont(new Font("Monospaced", Font.BOLD, 18));
-      left3.setText("Instance Variable");
+      left3.setText("super");
       
       left4 = new JTextArea();
       left4.setEditable(false);
       left4.setFont(new Font("Monospaced", Font.BOLD, 18));
-      left4.setText("Every Java \r\nProgram has");
+      left4.setText("extends");
       GroupLayout groupLayout = new GroupLayout(this);
       groupLayout.setHorizontalGroup(
-      	groupLayout.createParallelGroup(Alignment.LEADING)
-      		.addGroup(groupLayout.createSequentialGroup()
-      			.addGap(86)
-      			.addComponent(lblQuiz))
-      		.addGroup(groupLayout.createSequentialGroup()
-      			.addGap(178)
-      			.addComponent(left1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-      			.addGap(3)
-      			.addComponent(leftButton_1)
-      			.addGap(423)
-      			.addComponent(RightButton_1)
-      			.addComponent(right1, GroupLayout.PREFERRED_SIZE, 310, GroupLayout.PREFERRED_SIZE))
-      		.addGroup(groupLayout.createSequentialGroup()
-      			.addGap(118)
-      			.addComponent(left2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-      			.addComponent(leftButton_4)
-      			.addGap(426)
-      			.addComponent(RightButton_2)
-      			.addComponent(right2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-      		.addGroup(groupLayout.createSequentialGroup()
-      			.addGap(58)
-      			.addComponent(left3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-      			.addGap(3)
-      			.addComponent(leftButton_3)
-      			.addGap(426)
-      			.addComponent(RightButton_3)
-      			.addComponent(right3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-      		.addGroup(groupLayout.createSequentialGroup()
-      			.addGap(118)
-      			.addComponent(left4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-      			.addGap(6)
-      			.addComponent(leftButton_2)
-      			.addGap(426)
-      			.addComponent(RightButton_4)
-      			.addComponent(right4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-      		.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
-      			.addContainerGap(860, Short.MAX_VALUE)
-      			.addComponent(btnReset)
-      			.addGap(81))
+         groupLayout.createParallelGroup(Alignment.LEADING)
+            .addGroup(groupLayout.createSequentialGroup()
+               .addGap(86)
+               .addComponent(lblQuiz))
+            .addGroup(groupLayout.createSequentialGroup()
+               .addGap(148)
+               .addComponent(left1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+               .addGap(3)
+               .addComponent(leftButton_1)
+               .addGap(423)
+               .addComponent(RightButton_1)
+               .addComponent(right1, GroupLayout.PREFERRED_SIZE, 310, GroupLayout.PREFERRED_SIZE))
+            .addGroup(groupLayout.createSequentialGroup()
+               .addGap(138)
+               .addComponent(left2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+               .addComponent(leftButton_4)
+               .addGap(426)
+               .addComponent(RightButton_2)
+               .addComponent(right2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+            .addGroup(groupLayout.createSequentialGroup()
+               .addGap(178)
+               .addComponent(left3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+               .addGap(3)
+               .addComponent(leftButton_3)
+               .addGap(426)
+               .addComponent(RightButton_3)
+               .addComponent(right3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+            .addGroup(groupLayout.createSequentialGroup()
+               .addGap(158)
+               .addComponent(left4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+               .addGap(6)
+               .addComponent(leftButton_2)
+               .addGap(426)
+               .addComponent(RightButton_4)
+               .addComponent(right4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+            .addGroup(groupLayout.createSequentialGroup()
+               .addGap(831)
+               .addComponent(btnReset))
       );
       groupLayout.setVerticalGroup(
-      	groupLayout.createParallelGroup(Alignment.LEADING)
-      		.addGroup(groupLayout.createSequentialGroup()
-      			.addGap(48)
-      			.addComponent(lblQuiz)
-      			.addGap(48)
-      			.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-      				.addComponent(left1, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
-      				.addComponent(leftButton_1)
-      				.addComponent(RightButton_1)
-      				.addComponent(right1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-      			.addGap(54)
-      			.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-      				.addComponent(left2, GroupLayout.PREFERRED_SIZE, 73, GroupLayout.PREFERRED_SIZE)
-      				.addComponent(leftButton_4)
-      				.addComponent(RightButton_2)
-      				.addComponent(right2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-      			.addGap(63)
-      			.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-      				.addComponent(left3, GroupLayout.PREFERRED_SIZE, 107, GroupLayout.PREFERRED_SIZE)
-      				.addComponent(leftButton_3)
-      				.addComponent(RightButton_3)
-      				.addComponent(right3, GroupLayout.PREFERRED_SIZE, 107, GroupLayout.PREFERRED_SIZE))
-      			.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-      				.addComponent(left4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-      				.addComponent(leftButton_2)
-      				.addComponent(RightButton_4)
-      				.addComponent(right4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-      			.addGap(18)
-      			.addComponent(btnReset)
-      			.addContainerGap(43, Short.MAX_VALUE))
+         groupLayout.createParallelGroup(Alignment.LEADING)
+            .addGroup(groupLayout.createSequentialGroup()
+               .addGap(48)
+               .addComponent(lblQuiz)
+               .addGap(48)
+               .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+                  .addComponent(left1, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                  .addComponent(leftButton_1)
+                  .addComponent(RightButton_1)
+                  .addComponent(right1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+               .addGap(33)
+               .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+                  .addComponent(left2, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
+                  .addComponent(leftButton_4)
+                  .addComponent(RightButton_2)
+                  .addComponent(right2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+               .addGap(32)
+               .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+                  .addComponent(left3, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
+                  .addComponent(leftButton_3)
+                  .addComponent(RightButton_3)
+                  .addComponent(right3, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE))
+               .addGap(70)
+               .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+                  .addComponent(left4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                  .addComponent(leftButton_2)
+                  .addComponent(RightButton_4)
+                  .addComponent(right4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+               .addGap(72)
+               .addComponent(btnReset))
       );
       setLayout(groupLayout);
    }
@@ -307,10 +309,23 @@ public class QuizPanelLine extends JPanel implements ActionListener {
          mypaint(g);
          
          if(e.getSource().equals(btnReset)){
-        	repaint();
-        	buttonGroup_1.clearSelection();
-        	buttonGroup_1.clearSelection();
+           repaint();
+           buttonGroup_1.clearSelection();
+           buttonGroup_1.clearSelection();
          }
    
    }
+   
+//   public static void main(String[] args){
+//      JFrame frame = new JFrame();
+//      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//      
+//      QuizChapter4 q = new QuizChapter4();
+//      frame.add(q);
+//      
+//      frame.setSize(500, 500);
+//      frame.setVisible(true);
+//   }
+   
+
 }

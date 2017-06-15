@@ -1,6 +1,7 @@
 package Quizes;
 
 
+
 import javax.swing.JPanel;
 import java.awt.Color;
 import javax.swing.UIManager;
@@ -22,7 +23,7 @@ import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.FormSpecs;
 import com.jgoodies.forms.layout.RowSpec;
 
-public class QuizChapter6 extends JPanel implements ActionListener{
+public class QuizChapter6 extends Quiz implements ActionListener{
    
    private JFrame frame;
    private JTextField textField;
@@ -171,55 +172,61 @@ public class QuizChapter6 extends JPanel implements ActionListener{
             			.addGap(40))
             );
             setLayout(groupLayout);
-
    }
+   
+   
+@Override
+public void CheckAnswer(){
+	
+	 btnAnswer.setEnabled(true);//submit을 한번이라도 눌러야 answer가 활성화됨 
+	 
+	 int Score = 0;
+     char Signal_1,Signal_2,Signal_3,Signal_4,Signal_5 ; // 어떤 문제가 맞고 틀린지 옆에 OX 체크
+     
+     if(textField.getText().toLowerCase().equals(Answer[0])){
+        Score++;
+        Signal_1 = 'O';
+     }
+     else
+        Signal_1 = 'X';  //1번쨰 문제
+     
+     if(textField_1.getText().toLowerCase().equals(Answer[1])){
+        Score++;
+        Signal_2 = 'O';
+     }
+     else
+        Signal_2 = 'X';  //2번쨰 문제
+     
+     if(textField_2.getText().toLowerCase().equals(Answer[2])){
+        Score++;
+        Signal_3 = 'O';
+     }
+     else
+        Signal_3 = 'X'; // 3번째 문제
+     
+     if(textField_3.getText().toLowerCase().equals(Answer[3])){
+        Score++;
+        Signal_4 = 'O';
+     }
+     else
+        Signal_4 = 'X'; //4번쨰 문제
+     
+     if(textField_4.getText().toLowerCase().equals(Answer[4])){
+        Score++;
+        Signal_5 = 'O';
+     }
+     else
+        Signal_5 = 'X'; //5번째 문제
+     
+     JOptionPane.showMessageDialog(frame, "You've got "+Score+" / 5 correct."+"\n1."+Signal_1+"\n2."+Signal_2+"\n3."+Signal_3+"\n4."+Signal_4+"\n5."+Signal_5);
+}
+
 @Override
 public void actionPerformed(ActionEvent e) {
 	 
 	if(e.getSource().equals(btnSubmit)){ //submit버튼 눌렀을때 !
 		 
-		 btnAnswer.setEnabled(true);//submit을 한번이라도 눌러야 answer가 활성화됨 
-		 
-		 int Score = 0;
-	     char Signal_1,Signal_2,Signal_3,Signal_4,Signal_5 ; // 어떤 문제가 맞고 틀린지 옆에 OX 체크
-	     
-	     if(textField.getText().toLowerCase().equals(Answer[0])){
-	        Score++;
-	        Signal_1 = 'O';
-	     }
-	     else
-	        Signal_1 = 'X';  //1번쨰 문제
-	     
-	     if(textField_1.getText().toLowerCase().equals(Answer[1])){
-	        Score++;
-	        Signal_2 = 'O';
-	     }
-	     else
-	        Signal_2 = 'X';  //2번쨰 문제
-	     
-	     if(textField_2.getText().toLowerCase().equals(Answer[2])){
-	        Score++;
-	        Signal_3 = 'O';
-	     }
-	     else
-	        Signal_3 = 'X'; // 3번째 문제
-	     
-	     if(textField_3.getText().toLowerCase().equals(Answer[3])){
-	        Score++;
-	        Signal_4 = 'O';
-	     }
-	     else
-	        Signal_4 = 'X'; //4번쨰 문제
-	     
-	     if(textField_4.getText().toLowerCase().equals(Answer[4])){
-	        Score++;
-	        Signal_5 = 'O';
-	     }
-	     else
-	        Signal_5 = 'X'; //5번째 문제
-	     
-	     JOptionPane.showMessageDialog(frame, "You've got "+Score+" / 5 correct."+"\n1."+Signal_1+"\n2."+Signal_2+"\n3."+Signal_3+"\n4."+Signal_4+"\n5."+Signal_5);
-	   
+		
 	}
 	if(e.getSource().equals(btnAnswer)){
 		

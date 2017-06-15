@@ -1,6 +1,7 @@
 package Quizes;
 
 
+
 import javax.swing.JPanel;
 import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
@@ -23,7 +24,7 @@ import javax.swing.JRadioButton;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 
-public class QuizChapter7 extends JPanel implements ActionListener{
+public class QuizChapter7 extends Quiz implements ActionListener{
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private final ButtonGroup buttonGroup_1 = new ButtonGroup();
 
@@ -172,31 +173,35 @@ public class QuizChapter7 extends JPanel implements ActionListener{
 		setLayout(groupLayout);
 
 	}
+	
+	@Override 
+	public void CheckAnswer(){
+		
+		answerbutton.setEnabled(true);	
+		char signal1;
+		char signal2;
+		
+		if(button1.isSelected()){
+			count++;
+			signal1 = 'O';
+		}
+		else
+			signal1 = 'X';
+		if(button2.isSelected()){
+			count++;
+			signal2 ='O';
+		}
+		else
+			signal2 = 'X';
+		
+		JOptionPane.showMessageDialog(null, "You've got "+count+" / 2 correct."+"\n1."+signal1+"\n2."+signal2);
+	}
 
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		if(arg0.getSource().equals(submitbutton)){
 			
-			answerbutton.setEnabled(true);
-			
-			char signal1;
-			char signal2;
-			
-			if(button1.isSelected()){
-				count++;
-				signal1 = 'O';
-			}
-			else
-				signal1 = 'X';
-			if(button2.isSelected()){
-				count++;
-				signal2 ='O';
-			}
-			else
-				signal2 = 'X';
-			
-			JOptionPane.showMessageDialog(null, "You've got "+count+" / 2 correct."+"\n1."+signal1+"\n2."+signal2);
 		}
 		if(arg0.getSource().equals(answerbutton)){
 			

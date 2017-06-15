@@ -1,5 +1,6 @@
 package Chapter;
 
+
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.io.File;
@@ -7,19 +8,16 @@ import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
-import Quizes.QuizChapter2;
-import Quizes.QuizChapter3;
-import Quizes.QuizChapter6;
-import Quizes.QuizChapter7;
-import Quizes.QuizPanelLine;
+import Quizes.*;
 
 public class Cardpanel extends JPanel {
 	
-	
-	private QuizPanelLine quiz2 = new QuizChapter2(); //polymorphism
-	private QuizChapter3 quiz3 = new QuizChapter3();
-	private QuizChapter6 quiz6 = new QuizChapter6();
-	private QuizChapter7 quiz7 = new QuizChapter7();
+	private Quiz quiz2 = new QuizChapter2();
+	private Quiz quiz3 = new QuizChapter3();
+	private Quiz quiz4 = new QuizChapter4();
+	private Quiz quiz5 = new QuizChapter5();
+	private Quiz quiz6 = new QuizChapter6();
+	private Quiz quiz7 = new QuizChapter7();
 	
 	private MultiPanel textpanel;
 	private int num = 1;
@@ -60,6 +58,7 @@ public class Cardpanel extends JPanel {
 		this.add(new MultiPanel("",1,"chapter2\\text2_13.txt",25,"chapter2\\text2_13.jpg"));
 		this.add(new MultiPanel("\nArray",40,"chapter2\\text2_14.txt",25),"panel10"); //Array	
 		this.add(quiz2);
+		
 	}
 	
 	public void Chapter3(){
@@ -90,6 +89,7 @@ public class Cardpanel extends JPanel {
 		this.add(new MultiPanel("\nAccess Modifiers",40,"chapter4\\text4_12.txt",25), "panel20" ); //Access modifiers
 		this.add(new MultiPanel("\n\nFour access modifiers\n",40,"chapter4\\text4_13.png") ); 
 		this.add(new MultiPanel("",1,"chapter4\\text4_14.txt",25,"chapter4\\text4_14.png") );
+		this.add(quiz4);
 		
 	}
 	
@@ -101,6 +101,7 @@ public class Cardpanel extends JPanel {
 		this.add(new MultiPanel("\nWhy polymorphism is important",40,"chapter5\\text5_3.txt",24), "panel21" ); // Polymorphism example
 		this.add(new MultiPanel("Example: illegal overrides\n",40,"chapter5\\text5_4.png"), "panel22" ); // Illegal overrides
 		this.add(new MultiPanel("Overloading",40,"chapter5\\text5_5.txt",25,"chapter5\\text5_5.png"), "panel23" ); // Overloading
+		this.add(quiz5);
 	}
 	
 	
