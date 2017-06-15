@@ -24,7 +24,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.awt.event.ActionEvent;
 
-public class QuestionFrame extends JFrame implements ActionListener{
+public class CommentFrame extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -51,14 +51,15 @@ public class QuestionFrame extends JFrame implements ActionListener{
 	/**
 	 * Create the frame.
 	 */
-	public QuestionFrame() {
+	public CommentFrame() {
+		this.setTitle("Comments");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 334, 244);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		scrollpane = new JScrollPane();
-		JLabel lblWhatIsYour = new JLabel("What is your Question?");
+		JLabel lblWhatIsYour = new JLabel("Any comments?");
 		
 		textField = new JTextField();
 		textField.setColumns(10);

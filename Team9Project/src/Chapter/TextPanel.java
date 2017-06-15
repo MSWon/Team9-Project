@@ -55,7 +55,7 @@ public class TextPanel extends JPanel implements ActionListener {
 		JButton btnQuestion = new JButton("Question");
 		btnQuestion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				QuestionFrame option = new QuestionFrame();
+				CommentFrame option = new CommentFrame();
 			}
 		});
 		btnQuestion.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 18));
