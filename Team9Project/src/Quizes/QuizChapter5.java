@@ -1,6 +1,7 @@
 package Quizes;
 
 
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -48,12 +49,12 @@ public class QuizChapter5 extends Quiz implements ActionListener{
 		JLabel lblQuizSerialization = new JLabel("Quiz - Polymorphism");
 		lblQuizSerialization.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 40));
 		
-		button1 = new JRadioButton("1. It is when a single variable is used with several different types of related objects at different places in a program.");
+		button1 = new JRadioButton("1. It is when a single variable is used with several different types");
 		buttonGroup.add(button1);
 		button1.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
 		button1.setBackground(Color.WHITE);
 		
-		JRadioButton rdbtnFileFiltering = new JRadioButton("2. It is when a program uses several different types of objects, each with its own variable.");
+		JRadioButton rdbtnFileFiltering = new JRadioButton("2. It is when a program uses several different types of objects, ");
 		buttonGroup.add(rdbtnFileFiltering);
 		rdbtnFileFiltering.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
 		rdbtnFileFiltering.setBackground(Color.WHITE);
@@ -63,12 +64,12 @@ public class QuizChapter5 extends Quiz implements ActionListener{
 		rdbtnExternalization.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
 		rdbtnExternalization.setBackground(Color.WHITE);
 		
-		JRadioButton rdbtnAllOf = new JRadioButton("4. It is when a class has several methods with the same name but different parameter types.");
+		JRadioButton rdbtnAllOf = new JRadioButton("4. It is when a class has several methods with the same name ");
 		buttonGroup.add(rdbtnAllOf);
 		rdbtnAllOf.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
 		rdbtnAllOf.setBackground(Color.WHITE);
 		
-		button2 = new JRadioButton("1. The same program logic can be used with objects of several related types");
+		button2 = new JRadioButton("1. The same program logic can be used with objects of several\r\n");
 		buttonGroup_1.add(button2);
 		button2.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
 		button2.setBackground(Color.WHITE);
@@ -83,7 +84,7 @@ public class QuizChapter5 extends Quiz implements ActionListener{
 		rdbtnFileFiltering_1.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
 		rdbtnFileFiltering_1.setBackground(Color.WHITE);
 		
-		JRadioButton rdbtnPolymorphismIs = new JRadioButton("4. Polymorphism is a dangerous aspect of inheritance and should be avoided.");
+		JRadioButton rdbtnPolymorphismIs = new JRadioButton("4. Polymorphism is a dangerous aspect of inheritance and should ");
 		buttonGroup_1.add(rdbtnPolymorphismIs);
 		rdbtnPolymorphismIs.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
 		rdbtnPolymorphismIs.setBackground(Color.WHITE);
@@ -96,50 +97,106 @@ public class QuizChapter5 extends Quiz implements ActionListener{
 		answerbutton.addActionListener(this);
 		answerbutton.setEnabled(false);
 		answerbutton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
-		setLayout(new FormLayout(new ColumnSpec[] {
-				ColumnSpec.decode("86px"),
-				ColumnSpec.decode("437px"),
-				ColumnSpec.decode("103px"),
-				FormSpecs.UNRELATED_GAP_COLSPEC,
-				ColumnSpec.decode("99px"),},
-			new RowSpec[] {
-				FormSpecs.PARAGRAPH_GAP_ROWSPEC,
-				RowSpec.decode("54px"),
-				RowSpec.decode("57px"),
-				RowSpec.decode("38px"),
-				FormSpecs.RELATED_GAP_ROWSPEC,
-				RowSpec.decode("35px"),
-				FormSpecs.RELATED_GAP_ROWSPEC,
-				RowSpec.decode("27px"),
-				FormSpecs.RELATED_GAP_ROWSPEC,
-				RowSpec.decode("27px"),
-				FormSpecs.RELATED_GAP_ROWSPEC,
-				RowSpec.decode("27px"),
-				FormSpecs.PARAGRAPH_GAP_ROWSPEC,
-				RowSpec.decode("34px"),
-				FormSpecs.PARAGRAPH_GAP_ROWSPEC,
-				RowSpec.decode("27px"),
-				FormSpecs.RELATED_GAP_ROWSPEC,
-				RowSpec.decode("27px"),
-				FormSpecs.RELATED_GAP_ROWSPEC,
-				RowSpec.decode("27px"),
-				FormSpecs.RELATED_GAP_ROWSPEC,
-				RowSpec.decode("27px"),
-				FormSpecs.LABEL_COMPONENT_GAP_ROWSPEC,
-				RowSpec.decode("35px"),}));
-		add(lblQuizSerialization, "2, 2, left, top");
-		add(txtrWhichOf, "2, 4, 4, 1, fill, fill");
-		add(button1, "2, 6, fill, top");
-		add(rdbtnFileFiltering, "2, 8, fill, fill");
-		add(rdbtnExternalization, "2, 10, fill, fill");
-		add(rdbtnAllOf, "2, 12, 2, 1, fill, fill");
-		add(txtrWhichOf_1, "2, 14, 2, 1, left, center");
-		add(button2, "2, 16, fill, fill");
-		add(rdbtnGarbageCollection, "2, 18, fill, fill");
-		add(rdbtnFileFiltering_1, "2, 20, fill, fill");
-		add(rdbtnPolymorphismIs, "2, 22, fill, fill");
-		add(answerbutton, "3, 24, left, top");
-		add(submitbutton, "5, 24, left, top");
+		
+		JLabel lblNewLabel = new JLabel("    of related objects at different places in a program.");
+		lblNewLabel.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
+		
+		JLabel lblEachWithIts = new JLabel("    each with its own variable.");
+		lblEachWithIts.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
+		
+		JLabel lblButDifferentParameter = new JLabel("    but different parameter types.");
+		lblButDifferentParameter.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
+		
+		JLabel lblRelatedTypes = new JLabel("     related types");
+		lblRelatedTypes.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
+		
+		JLabel lblBeAvoided = new JLabel("    be avoided.");
+		lblBeAvoided.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
+		GroupLayout groupLayout = new GroupLayout(this);
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(57)
+					.addComponent(lblQuizSerialization))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(57)
+					.addComponent(txtrWhichOf, GroupLayout.PREFERRED_SIZE, 719, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(57)
+					.addComponent(button1, GroupLayout.PREFERRED_SIZE, 719, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(57)
+					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 719, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(57)
+					.addComponent(rdbtnFileFiltering, GroupLayout.PREFERRED_SIZE, 719, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(57)
+					.addComponent(lblEachWithIts, GroupLayout.PREFERRED_SIZE, 437, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(57)
+					.addComponent(rdbtnExternalization, GroupLayout.PREFERRED_SIZE, 719, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(57)
+					.addComponent(rdbtnAllOf, GroupLayout.PREFERRED_SIZE, 719, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(57)
+					.addComponent(lblButDifferentParameter, GroupLayout.PREFERRED_SIZE, 437, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(57)
+					.addComponent(txtrWhichOf_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(57)
+					.addComponent(button2, GroupLayout.PREFERRED_SIZE, 719, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(57)
+					.addComponent(lblRelatedTypes, GroupLayout.PREFERRED_SIZE, 437, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(57)
+					.addComponent(rdbtnGarbageCollection, GroupLayout.PREFERRED_SIZE, 719, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(57)
+					.addComponent(rdbtnFileFiltering_1, GroupLayout.PREFERRED_SIZE, 719, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(57)
+					.addComponent(rdbtnPolymorphismIs, GroupLayout.PREFERRED_SIZE, 719, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(57)
+					.addComponent(lblBeAvoided, GroupLayout.PREFERRED_SIZE, 437, GroupLayout.PREFERRED_SIZE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(494)
+					.addComponent(answerbutton)
+					.addGap(18)
+					.addComponent(submitbutton))
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(19)
+					.addComponent(lblQuizSerialization)
+					.addGap(57)
+					.addComponent(txtrWhichOf, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
+					.addComponent(button1, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+					.addComponent(lblNewLabel)
+					.addComponent(rdbtnFileFiltering, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
+					.addComponent(lblEachWithIts)
+					.addComponent(rdbtnExternalization, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
+					.addComponent(rdbtnAllOf, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
+					.addComponent(lblButDifferentParameter)
+					.addGap(9)
+					.addComponent(txtrWhichOf_1, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
+					.addComponent(button2, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
+					.addComponent(lblRelatedTypes)
+					.addComponent(rdbtnGarbageCollection, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
+					.addComponent(rdbtnFileFiltering_1, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
+					.addComponent(rdbtnPolymorphismIs, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
+					.addComponent(lblBeAvoided)
+					.addGap(9)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(answerbutton)
+						.addComponent(submitbutton)))
+		);
+		setLayout(groupLayout);
 
 	}
 	
@@ -173,7 +230,8 @@ public class QuizChapter5 extends Quiz implements ActionListener{
 			CheckAnswer();	
 		}
 		if(arg0.getSource().equals(answerbutton)){	
-			JOptionPane.showMessageDialog(null, "The Answer is\n"+"1.Serialization\n"+"2.Serialization");	
+			JOptionPane.showMessageDialog(null,"1.It is when a single variable is used with several different types of related objects at different places in a program."
+					+ "\n2.The same program logic can be used with objects of several related types");	
 		}
 		
 	}
