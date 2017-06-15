@@ -6,15 +6,22 @@ import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
+import Quizes.QuizChapter2;
 import Quizes.QuizChapter3;
+import Quizes.QuizChapter6;
+import Quizes.QuizChapter7;
 import Quizes.QuizPanel1;
 import Quizes.QuizPanel2;
+import Quizes.QuizPanelLine;
 
 public class Cardpanel extends JPanel {
 	
-	private QuizPanel1 quiz1;
-	private QuizPanel2 quiz2;
+	
+	private QuizPanelLine quiz2 = new QuizChapter2(); //polymorphism
 	private QuizChapter3 quiz3 = new QuizChapter3();
+	private QuizChapter6 quiz6 = new QuizChapter6();
+	private QuizChapter7 quiz7 = new QuizChapter7();
+	
 	private MultiPanel textpanel;
 	private int num = 1;
 	
@@ -53,7 +60,7 @@ public class Cardpanel extends JPanel {
 		this.add(new MultiPanel("\nReference Variables\n",40,"chapter2\\text2_12.txt",25,"chapter2\\text2_12.jpg"));
 		this.add(new MultiPanel("",1,"chapter2\\text2_13.txt",25,"chapter2\\text2_13.jpg"));
 		this.add(new MultiPanel("\nArray",40,"chapter2\\text2_14.txt",25),"panel10"); //Array	
-		
+		this.add(quiz2);
 	}
 	
 	public void Chapter3(){
@@ -110,7 +117,7 @@ public class Cardpanel extends JPanel {
 		this.add(new MultiPanel("\nEvent Handling\n",40,"chapter6\\text6_7.jpg") );
 		this.add(new MultiPanel("\nEvent Handling2\n\n",40,"chapter6\\text6_8.jpg") );
 		this.add(new MultiPanel("Cusom Widgets\n",40,"chapter6\\text6_9.txt",25,"chapter6\\text6_9.jpg"), "panel27" ); // Custom Widgets
-		
+		this.add(quiz6);
 	}
 	
 	
@@ -125,7 +132,7 @@ public class Cardpanel extends JPanel {
 		this.add(new MultiPanel("",1,"chapter7\\text7_5.png") ); 
 		this.add(new MultiPanel("How to make object Serializable",40,"chapter7\\text7_6.txt",25,"chapter7\\text7_6.png") ); 
 		this.add(new MultiPanel("",1,"chapter7\\text7_7.txt",20), "panel30" ); // Deserialization 
-	
+		this.add(quiz7);
 	}
 
 }

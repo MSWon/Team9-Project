@@ -1,5 +1,6 @@
 package Quizes;
 
+
 import javax.swing.JPanel;
 import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
@@ -27,7 +28,7 @@ public class QuizChapter3 extends JPanel implements ActionListener {
 	private JFrame frame;
 	private JButton btnNewButton;
 	private JButton btnAnswer;
-	private int click = 0;
+	
 	
 	public QuizChapter3() {
 		this.setBackground(Color.white);
@@ -200,9 +201,8 @@ public class QuizChapter3 extends JPanel implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getSource().equals(btnNewButton)){ // submit 버튼을 눌렀을때 
-			click++;
-			if(click >=1)
-				btnAnswer.setEnabled(true);
+			
+			btnAnswer.setEnabled(true);
 			int Score = 0;
 		    char Signal_1,Signal_2,Signal_3; // 어떤 문제가 맞고 틀린지 옆에 OX 체크
 		     

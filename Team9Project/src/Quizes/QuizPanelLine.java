@@ -1,5 +1,6 @@
 package Quizes;
 
+
 import javax.swing.JPanel;
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
@@ -32,29 +33,27 @@ import com.jgoodies.forms.layout.RowSpec;
 import java.awt.Font;
 import com.jgoodies.forms.layout.FormSpecs;
 import javax.swing.JTextArea;
+import javax.swing.JButton;
 
-public class QuizPanel2 extends JPanel implements ActionListener {
+public class QuizPanelLine extends JPanel implements ActionListener {
    
    private JRadioButton leftButton_1,leftButton_2,leftButton_3,RightButton_1,RightButton_2,RightButton_3,leftButton_4,RightButton_4;
 
    private final ButtonGroup buttonGroup = new ButtonGroup();
    private final ButtonGroup buttonGroup_1 = new ButtonGroup();
-   private JLabel lblNewLabel;
-   private JLabel lblConstructor;
-   private JLabel lblInstanceVariable;
-   private JLabel lblEveryJavaProgram;
-   private JLabel lblProgramHas;
-   private JTextArea txtrEe;
-   private JTextArea txtrEqeqe;
-   private JTextArea txtrWwrwr;
-   private JLabel lblQuiz;
+   JTextArea right2;
+   JTextArea right3;
+   JTextArea right4;
+   JLabel lblQuiz;
+   JButton btnReset;
+   JTextArea left1;
+   JTextArea left2;
+   JTextArea left3;
+   JTextArea left4;
 
-   public QuizPanel2() {
+   public QuizPanelLine() {
       
       this.setBackground(Color.WHITE);
-      
-      lblNewLabel = new JLabel("Class\r\n");
-      lblNewLabel.setFont(new Font("±¼¸²", Font.BOLD, 18));
       
       leftButton_4 = new JRadioButton("");
       leftButton_4.setBackground(Color.WHITE);
@@ -62,16 +61,10 @@ public class QuizPanel2 extends JPanel implements ActionListener {
       buttonGroup.add(leftButton_4);
       leftButton_4.addActionListener(this);
       
-      lblConstructor = new JLabel("Constructor");
-      lblConstructor.setFont(new Font("±¼¸²", Font.BOLD, 18));
-      
       leftButton_3 = new JRadioButton("");
       buttonGroup.add(leftButton_3);
       leftButton_3.setHorizontalTextPosition(SwingConstants.LEFT);
       leftButton_3.addActionListener(this);
-      
-      lblInstanceVariable = new JLabel("Instance Variables");
-      lblInstanceVariable.setFont(new Font("±¼¸²", Font.BOLD, 18));
       leftButton_3.setBackground(Color.WHITE);
       
             
@@ -87,12 +80,6 @@ public class QuizPanel2 extends JPanel implements ActionListener {
       buttonGroup.add(leftButton_1);
       leftButton_1.setHorizontalTextPosition(JRadioButton.LEFT);
       
-      lblEveryJavaProgram = new JLabel("Every Java");
-      lblEveryJavaProgram.setFont(new Font("±¼¸²", Font.BOLD, 18));
-      
-      lblProgramHas = new JLabel("Program has");
-      lblProgramHas.setFont(new Font("±¼¸²", Font.BOLD, 18));
-      
       RightButton_1 = new JRadioButton("");
       RightButton_1.setBackground(Color.WHITE);
       RightButton_1.addActionListener(this);
@@ -102,72 +89,102 @@ public class QuizPanel2 extends JPanel implements ActionListener {
       lblQuiz.setFont(new Font("±¼¸²", Font.BOLD, 33));
       buttonGroup_1.add(RightButton_1);
       
-      JTextArea txtrG = new JTextArea();
-      txtrG.setFont(new Font("Monospaced", Font.BOLD, 18));
-      txtrG.setText("at least one class with\r\na main() method.");
+      JTextArea right1 = new JTextArea();
+      right1.setEditable(false);
+      right1.setFont(new Font("Monospaced", Font.BOLD, 18));
+      right1.setText("at least one class with\r\na main() method.");
       RightButton_2 = new JRadioButton("");
       RightButton_2.setBackground(Color.WHITE);
       RightButton_2.addActionListener(this);
       buttonGroup_1.add(RightButton_2);
       
-      txtrEe = new JTextArea();
-      txtrEe.setFont(new Font("Monospaced", Font.BOLD, 18));
-      txtrEe.setText("Store state of an object\r\n(also called fields)");
+      right2 = new JTextArea();
+      right2.setEditable(false);
+      right2.setFont(new Font("Monospaced", Font.BOLD, 18));
+      right2.setText("Store state of an object\r\n(also called fields)");
       RightButton_3 = new JRadioButton("");
       RightButton_3.setBackground(Color.WHITE);
       RightButton_3.addActionListener(this);
       buttonGroup_1.add(RightButton_3);
       
-      txtrEqeqe = new JTextArea();
-      txtrEqeqe.setFont(new Font("Monospaced", Font.BOLD, 18));
-      txtrEqeqe.setText("is Type(blueprint or model)\r\nof an object\r\n");
+      right3 = new JTextArea();
+      right3.setEditable(false);
+      right3.setFont(new Font("Monospaced", Font.BOLD, 18));
+      right3.setText("is Type(blueprint or model)\r\nof an object\r\n");
       RightButton_4 = new JRadioButton("");
       RightButton_4.setBackground(Color.WHITE);
       RightButton_4.addActionListener(this);
       buttonGroup_1.add(RightButton_4);
       
-      txtrWwrwr = new JTextArea();
-      txtrWwrwr.setFont(new Font("Monospaced", Font.BOLD, 18));
-      txtrWwrwr.setText("Has the same name than\r\nthe class and no return value.");
+      right4 = new JTextArea();
+      right4.setEditable(false);
+      right4.setFont(new Font("Monospaced", Font.BOLD, 18));
+      right4.setText("Has the same name than\r\nthe class and no return value.");
+      
+      btnReset = new JButton("Reset");
+      btnReset.addActionListener(this);
+      btnReset.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+      
+      left1 = new JTextArea();
+      left1.setEditable(false);
+      left1.setFont(new Font("Monospaced", Font.BOLD, 18));
+      left1.setText("Class");
+      
+      left2 = new JTextArea();
+      left2.setEditable(false);
+      left2.setFont(new Font("Monospaced", Font.BOLD, 18));
+      left2.setText("Constructor");
+      
+      left3 = new JTextArea();
+      left3.setEditable(false);
+      left3.setFont(new Font("Monospaced", Font.BOLD, 18));
+      left3.setText("Instance Variable");
+      
+      left4 = new JTextArea();
+      left4.setEditable(false);
+      left4.setFont(new Font("Monospaced", Font.BOLD, 18));
+      left4.setText("Every Java \r\nProgram has");
       GroupLayout groupLayout = new GroupLayout(this);
       groupLayout.setHorizontalGroup(
       	groupLayout.createParallelGroup(Alignment.LEADING)
       		.addGroup(groupLayout.createSequentialGroup()
-      			.addGap(99)
+      			.addGap(86)
       			.addComponent(lblQuiz))
       		.addGroup(groupLayout.createSequentialGroup()
-      			.addGap(175)
-      			.addComponent(lblNewLabel)
+      			.addGap(178)
+      			.addComponent(left1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+      			.addGap(3)
       			.addComponent(leftButton_1)
-      			.addGap(426)
+      			.addGap(423)
       			.addComponent(RightButton_1)
-      			.addComponent(txtrG, GroupLayout.PREFERRED_SIZE, 304, GroupLayout.PREFERRED_SIZE))
+      			.addComponent(right1, GroupLayout.PREFERRED_SIZE, 310, GroupLayout.PREFERRED_SIZE))
       		.addGroup(groupLayout.createSequentialGroup()
       			.addGap(118)
-      			.addComponent(lblConstructor)
+      			.addComponent(left2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
       			.addComponent(leftButton_4)
       			.addGap(426)
       			.addComponent(RightButton_2)
-      			.addComponent(txtrEe, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+      			.addComponent(right2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
       		.addGroup(groupLayout.createSequentialGroup()
-      			.addGap(60)
-      			.addComponent(lblInstanceVariable)
-      			.addPreferredGap(ComponentPlacement.RELATED)
+      			.addGap(58)
+      			.addComponent(left3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+      			.addGap(3)
       			.addComponent(leftButton_3)
       			.addGap(426)
       			.addComponent(RightButton_3)
-      			.addComponent(txtrEqeqe, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+      			.addComponent(right3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
       		.addGroup(groupLayout.createSequentialGroup()
-      			.addGap(109)
-      			.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-      				.addGroup(groupLayout.createSequentialGroup()
-      					.addGap(15)
-      					.addComponent(lblEveryJavaProgram))
-      				.addComponent(lblProgramHas))
+      			.addGap(118)
+      			.addComponent(left4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+      			.addGap(6)
       			.addComponent(leftButton_2)
       			.addGap(426)
       			.addComponent(RightButton_4)
-      			.addComponent(txtrWwrwr, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+      			.addComponent(right4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+      		.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+      			.addContainerGap(860, Short.MAX_VALUE)
+      			.addComponent(btnReset)
+      			.addGap(81))
       );
       groupLayout.setVerticalGroup(
       	groupLayout.createParallelGroup(Alignment.LEADING)
@@ -176,31 +193,30 @@ public class QuizPanel2 extends JPanel implements ActionListener {
       			.addComponent(lblQuiz)
       			.addGap(48)
       			.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-      				.addComponent(lblNewLabel)
+      				.addComponent(left1, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
       				.addComponent(leftButton_1)
       				.addComponent(RightButton_1)
-      				.addComponent(txtrG, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+      				.addComponent(right1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
       			.addGap(54)
       			.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-      				.addComponent(lblConstructor)
+      				.addComponent(left2, GroupLayout.PREFERRED_SIZE, 73, GroupLayout.PREFERRED_SIZE)
       				.addComponent(leftButton_4)
       				.addComponent(RightButton_2)
-      				.addComponent(txtrEe, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+      				.addComponent(right2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
       			.addGap(63)
       			.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-      				.addComponent(lblInstanceVariable)
+      				.addComponent(left3, GroupLayout.PREFERRED_SIZE, 107, GroupLayout.PREFERRED_SIZE)
       				.addComponent(leftButton_3)
       				.addComponent(RightButton_3)
-      				.addComponent(txtrEqeqe, GroupLayout.PREFERRED_SIZE, 95, GroupLayout.PREFERRED_SIZE))
+      				.addComponent(right3, GroupLayout.PREFERRED_SIZE, 107, GroupLayout.PREFERRED_SIZE))
       			.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-      				.addGroup(groupLayout.createSequentialGroup()
-      					.addGap(4)
-      					.addComponent(lblEveryJavaProgram)
-      					.addGap(4)
-      					.addComponent(lblProgramHas))
+      				.addComponent(left4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
       				.addComponent(leftButton_2)
       				.addComponent(RightButton_4)
-      				.addComponent(txtrWwrwr, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+      				.addComponent(right4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+      			.addGap(18)
+      			.addComponent(btnReset)
+      			.addContainerGap(43, Short.MAX_VALUE))
       );
       setLayout(groupLayout);
    }
@@ -284,26 +300,17 @@ public class QuizPanel2 extends JPanel implements ActionListener {
       }
    }
 
-//   public static void main(String[] args) {
-//      
-//      JFrame frame = new JFrame();
-//      
-//      QuizPanel2 qp = new QuizPanel2();
-//      frame.getContentPane().add(qp);
-//      
-//      frame.setSize(600, 700);
-//      frame.setVisible(true);
-//      
-//   
-//      ¿©±â ÄÚµå´Â  QuizPanel2°¡ Àß µ¹¾Æ°¡´ÂÁö º¸·Á°í main ÇÔ¼ö¸¦ Â¥º»°Å (¾ø¾îµµ µÊ)
-//   }
-   
    @Override
    public void actionPerformed(ActionEvent e) {
       
          Graphics2D g = (Graphics2D) this.getGraphics();
          mypaint(g);
          
+         if(e.getSource().equals(btnReset)){
+        	repaint();
+        	buttonGroup_1.clearSelection();
+        	buttonGroup_1.clearSelection();
+         }
    
    }
 }
