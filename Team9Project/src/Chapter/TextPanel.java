@@ -68,7 +68,7 @@ public class TextPanel extends JPanel implements ActionListener {
 
 		btnpanel.add(editbutton);
 		
-		JButton btnQuestion = new JButton("Question");
+		JButton btnQuestion = new JButton("Comment");
 		btnQuestion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				CommentFrame option = new CommentFrame();

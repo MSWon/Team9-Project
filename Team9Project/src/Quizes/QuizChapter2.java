@@ -283,7 +283,7 @@ public class QuizChapter2 extends Quiz implements ActionListener {
          if(e.getSource().equals(btnReset)){
            repaint();
            buttonGroup_1.clearSelection();
-           buttonGroup_1.clearSelection();
+           buttonGroup.clearSelection();
          }
    
    }

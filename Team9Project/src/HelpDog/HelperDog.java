@@ -27,7 +27,7 @@ public class HelperDog extends JFrame implements ActionListener{
 	private JButton btnNewButton;
 	private JButton btnNewButton_1;
 	private ImageIcon helperDog = new ImageIcon("HelperDog_Message_pop_up.jpg");
-	SearchKeyword dialog=new SearchKeyword(this,"Search Keyword");
+	SearchKeyword dialog;
 	/**
 	 * Create the frame.
 	 */
@@ -82,6 +82,7 @@ public class HelperDog extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (((JButton)e.getSource()).equals(btnNewButton)) {
+			dialog = new SearchKeyword(this,"Search Keyword");
 			dialog.setVisible(true);
 		}
 		if (((JButton)e.getSource()).equals(btnNewButton_1)) {

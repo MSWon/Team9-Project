@@ -31,6 +31,7 @@ public class MainPage implements ActionListener{
 		frame = new JFrame("OOP Education");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(1250, 800);
+		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 		
 		spanel = new JPanel();

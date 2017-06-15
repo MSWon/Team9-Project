@@ -14,7 +14,7 @@ public class SearchKeyword extends JDialog implements ActionListener{
 	private JTextField inputkey=new JTextField(10);
 	private JScrollPane scroll=new JScrollPane();
 	private JTextArea area=new JTextArea();
-	private JList list=new JList();
+	private JList list;
 	private JButton btnsearch;
 	private JButton btnok=new JButton("Go");
 	private JButton btncancel=new JButton("Cancel");
@@ -26,6 +26,7 @@ public class SearchKeyword extends JDialog implements ActionListener{
 	private Cardpanel cp;
 	public SearchKeyword(JFrame frame, String title){
 		super(frame,title);
+		list=new JList();
 		setLayout(new FlowLayout(new FlowLayout().LEFT));
 		setSize(350,300);
 		ImageIcon oriicon=new ImageIcon("search_icon.png");

@@ -33,7 +33,8 @@ public class Chapter implements ActionListener{
 	public void go(){
 		
 		frame = new JFrame("OOP Education");  
-		frame.setSize(1300, 950);
+		frame.setSize(1300, 980);
+		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		

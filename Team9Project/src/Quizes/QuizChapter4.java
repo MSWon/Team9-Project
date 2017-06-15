@@ -311,21 +311,9 @@ public class QuizChapter4 extends Quiz implements ActionListener {
          if(e.getSource().equals(btnReset)){
            repaint();
            buttonGroup_1.clearSelection();
-           buttonGroup_1.clearSelection();
+           buttonGroup.clearSelection();
          }
    
    }
-   
-//   public static void main(String[] args){
-//      JFrame frame = new JFrame();
-//      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//      
-//      QuizChapter4 q = new QuizChapter4();
-//      frame.add(q);
-//      
-//      frame.setSize(500, 500);
-//      frame.setVisible(true);
-//   }
-   
 
 }
