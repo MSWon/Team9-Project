@@ -21,13 +21,11 @@ public class SearchKeyword extends JDialog implements ActionListener{
 	private JLabel lbl1=new JLabel("Enter Keyword : ");
 	private JLabel lbl2=new JLabel("Similar Keywords\n");
 	//listStr은 임시로 만들어지는 형태 보려고 만듬. 추후 ArrayList Keyword에서 inputkey가 들어가있는 String을 추출해서 저장하는 곳으로 쓸 것임.
-	private String listStr1[]=new String[50];
-	private ArrayList<String> listStr=new ArrayList<String>();
+	private ArrayList<String> listStr;
 	private Chapter c;
 	private Cardpanel cp;
 	public SearchKeyword(JFrame frame, String title){
 		super(frame,title);
-		listStr1[0]="---------------------------------";
 		setLayout(new FlowLayout(new FlowLayout().LEFT));
 		setSize(350,300);
 		ImageIcon oriicon=new ImageIcon("search_icon.png");
@@ -55,14 +53,19 @@ public class SearchKeyword extends JDialog implements ActionListener{
 	
 	public void keysearch(){
 		
+		
+		ArrayList<String> listStr1 = new ArrayList<String>();
+		
 		c = new Chapter();
 		c.set();
 		String key=inputkey.getText();
 		ArrayList<String> as=new ArrayList<String>();
+		listStr = new ArrayList<String>();
 		ValueList[] copy=new ValueList[30];
 		
 		copy=c.vl.clone();
-		int p=0;
+		listStr1.add("--------------------------------------------------------------------");
+		
 		for(ValueList a: copy)
 		{
 			as=(ArrayList<String>) a.getKeyWord().clone();
@@ -72,17 +75,16 @@ public class SearchKeyword extends JDialog implements ActionListener{
 				if(s.contains(key))
 				{
 					listStr.add(s);
-					p++;
 				}
 			}
 		}
 		int n=1;
 		for(String k:listStr)
 		{
-			listStr1[n++]=k;
+			listStr1.add(k);
 		}
-		listStr1[0]="--------------------------------------------------------------------";
-		list.setListData(listStr1);
+		
+		list.setListData(listStr1.toArray());
 	}
 
 	@Override
@@ -118,7 +120,7 @@ public class SearchKeyword extends JDialog implements ActionListener{
 					else if(list.getSelectedValue().equals(s)){				
 							//move to chapter m 		
 							clt.show(cp, "panel" + m);
-							dispose();
+//							dispose();
 					}
 				}
 				
