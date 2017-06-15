@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
 public class Keywords {
 	
 	ArrayList<ArrayList> keyword_dataframe;
@@ -37,7 +39,7 @@ public class Keywords {
 		      reader.close();
 		      
 		} catch (Exception ex) {
-			
+			JOptionPane.showMessageDialog(null, "There is an error!!");
 			ex.printStackTrace();
 		}
 		

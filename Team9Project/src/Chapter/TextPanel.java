@@ -93,8 +93,6 @@ public class TextPanel extends JPanel implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		String resultStr = null;
-		String correctAns = "pass";
 		JPanel panel = new JPanel();
 		JLabel label = new JLabel("Enter a password:");
 		JPasswordField pass = new JPasswordField(10);
@@ -104,7 +102,7 @@ public class TextPanel extends JPanel implements ActionListener {
 		int option = JOptionPane.showOptionDialog(null, panel, "The title",
 		                         JOptionPane.NO_OPTION, JOptionPane.PLAIN_MESSAGE,
 		                         null, options, options[1]);
-		if(option == 0) // pressing OK button
+		if(option == 0) 
 		{
 			try {
 				char[] inputpassword = pass.getPassword();
@@ -116,22 +114,9 @@ public class TextPanel extends JPanel implements ActionListener {
 					JOptionPane.showMessageDialog(null, "You enter wrong password");
 				}
 			} catch(NullPointerException NEX) {
-				System.out.println("User enters null.");
+				JOptionPane.showMessageDialog(null, "There is an error!! User enters null.");
+				NEX.printStackTrace();
 			}
 		}
-//		resultStr = JOptionPane.showInputDialog("Enter the admin's password\n\u203B Edit is only for administratior \u203B");
-//		try {
-//			if (resultStr.equals(correctAns))
-//			{
-//				editorpane = new EditorPane();
-//				editorpane.makeEditorFrom(textpane, FileNameHolder);
-//			}
-//			else
-//			{
-//				JOptionPane.showMessageDialog(null, "You enter wrong password");
-//			}
-//		} catch(NullPointerException NEX) {
-//			System.out.println("User enters null.");
-//		}
 	}
 }

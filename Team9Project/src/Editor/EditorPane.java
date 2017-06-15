@@ -132,6 +132,7 @@ public class EditorPane implements ActionListener{
 				bufferedWriter.close();
 
 			} catch (IOException ioe) {
+				JOptionPane.showMessageDialog(null, "There is an IOexception error!!");
 				ioe.printStackTrace();
 			}
 			

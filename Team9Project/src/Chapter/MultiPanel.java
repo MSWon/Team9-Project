@@ -8,6 +8,7 @@ import java.io.FileReader;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
@@ -40,6 +41,7 @@ public class MultiPanel extends TextPanel {
 		      }
 		      reader.close();
 		} catch (Exception ex) {
+			JOptionPane.showMessageDialog(null, "There is an error!!");
 			ex.printStackTrace();
 		}
 		
@@ -75,6 +77,7 @@ public class MultiPanel extends TextPanel {
 		      }
 		      reader.close();
 		} catch (Exception ex) {
+			JOptionPane.showMessageDialog(null, "There is an error!!");
 			ex.printStackTrace();
 		}
 		ImageIcon icon = new ImageIcon(imagename);
@@ -153,6 +156,7 @@ public class MultiPanel extends TextPanel {
 		      }
 		      reader.close();
 		} catch (Exception ex) {
+			JOptionPane.showMessageDialog(null, "There is an error!!");
 			ex.printStackTrace();
 		}
 
@@ -208,6 +212,7 @@ public class MultiPanel extends TextPanel {
 		      }
 		      reader.close();
 		} catch (Exception ex) {
+			JOptionPane.showMessageDialog(null, "There is an error!!");
 			ex.printStackTrace();
 		}
 		

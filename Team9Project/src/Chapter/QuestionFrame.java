@@ -11,6 +11,7 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.JTextPane;
 import javax.swing.JTextArea;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.ScrollPane;
 import javax.swing.JTextField;
@@ -80,7 +81,8 @@ public class QuestionFrame extends JFrame implements ActionListener{
 		    reader.close();
 			
 		} catch(Exception E) {
-			System.out.println("There is an error");
+			JOptionPane.showMessageDialog(null, "There is an error!!");
+			E.printStackTrace();
 		}
 		scrollpane.setViewportView(textArea);
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
@@ -134,7 +136,8 @@ public class QuestionFrame extends JFrame implements ActionListener{
 			    
 			    writer.close();
 			} catch (Exception E) {
-				System.out.println("There is an error");
+				JOptionPane.showMessageDialog(null, "There is an error!!");
+				E.printStackTrace();
 			}
 			this.dispose();
 		}
