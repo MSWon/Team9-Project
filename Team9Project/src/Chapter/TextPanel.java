@@ -99,7 +99,7 @@ public class TextPanel extends JPanel implements ActionListener {
 		panel.add(label);
 		panel.add(pass);
 		String[] options = new String[]{"OK", "Cancel"};
-		int option = JOptionPane.showOptionDialog(null, panel, "The title",
+		int option = JOptionPane.showOptionDialog(null, panel, "Password",
 		                         JOptionPane.NO_OPTION, JOptionPane.PLAIN_MESSAGE,
 		                         null, options, options[1]);
 		if(option == 0) 
