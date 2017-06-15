@@ -6,6 +6,7 @@ import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
+import Quizes.QuizChapter3;
 import Quizes.QuizPanel1;
 import Quizes.QuizPanel2;
 
@@ -13,6 +14,7 @@ public class Cardpanel extends JPanel {
 	
 	private QuizPanel1 quiz1;
 	private QuizPanel2 quiz2;
+	private QuizChapter3 quiz3 = new QuizChapter3();
 	private MultiPanel textpanel;
 	private int num = 1;
 	
@@ -62,7 +64,7 @@ public class Cardpanel extends JPanel {
 		this.add(new MultiPanel("Passing data to a Method",40,"chapter3\\text3_3.jpg") );
 		this.add(new MultiPanel("Benefits of encapsulation",40,"chapter3\\text3_4.txt",25) , "panel13"); //Getter&Setter
 		this.add(new MultiPanel("To Encapsulate",40,"chapter3\\text3_5.txt",25, "chapter3\\text3_5.jpg") );
-		
+		this.add(quiz3);
 	}
 	
 	public void Chapter4(){
