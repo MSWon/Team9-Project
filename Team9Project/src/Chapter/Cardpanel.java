@@ -1,4 +1,5 @@
 package Chapter;
+
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.io.File;
@@ -10,8 +11,6 @@ import Quizes.QuizChapter2;
 import Quizes.QuizChapter3;
 import Quizes.QuizChapter6;
 import Quizes.QuizChapter7;
-import Quizes.QuizPanel1;
-import Quizes.QuizPanel2;
 import Quizes.QuizPanelLine;
 
 public class Cardpanel extends JPanel {
