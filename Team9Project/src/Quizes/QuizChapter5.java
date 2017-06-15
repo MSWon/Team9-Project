@@ -96,82 +96,50 @@ public class QuizChapter5 extends Quiz implements ActionListener{
 		answerbutton.addActionListener(this);
 		answerbutton.setEnabled(false);
 		answerbutton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
-		GroupLayout groupLayout = new GroupLayout(this);
-		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(86)
-							.addComponent(lblQuizSerialization))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(86)
-							.addComponent(txtrWhichOf, GroupLayout.PREFERRED_SIZE, 653, GroupLayout.PREFERRED_SIZE))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(86)
-							.addComponent(button1, GroupLayout.PREFERRED_SIZE, 437, GroupLayout.PREFERRED_SIZE))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(86)
-							.addComponent(rdbtnFileFiltering, GroupLayout.PREFERRED_SIZE, 437, GroupLayout.PREFERRED_SIZE))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(86)
-							.addComponent(rdbtnExternalization, GroupLayout.PREFERRED_SIZE, 437, GroupLayout.PREFERRED_SIZE))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(86)
-							.addComponent(txtrWhichOf_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(86)
-							.addComponent(button2, GroupLayout.PREFERRED_SIZE, 437, GroupLayout.PREFERRED_SIZE))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(86)
-							.addComponent(rdbtnGarbageCollection, GroupLayout.PREFERRED_SIZE, 437, GroupLayout.PREFERRED_SIZE))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(86)
-							.addComponent(rdbtnFileFiltering_1, GroupLayout.PREFERRED_SIZE, 437, GroupLayout.PREFERRED_SIZE))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(86)
-							.addComponent(rdbtnPolymorphismIs, GroupLayout.PREFERRED_SIZE, 437, GroupLayout.PREFERRED_SIZE))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(523)
-							.addComponent(answerbutton)
-							.addGap(14)
-							.addComponent(submitbutton))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(86)
-							.addComponent(rdbtnAllOf, GroupLayout.PREFERRED_SIZE, 512, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap(5, Short.MAX_VALUE))
-		);
-		groupLayout.setVerticalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(16)
-					.addComponent(lblQuizSerialization)
-					.addGap(90)
-					.addComponent(txtrWhichOf, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
-					.addGap(7)
-					.addComponent(button1)
-					.addGap(7)
-					.addComponent(rdbtnFileFiltering, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-					.addGap(7)
-					.addComponent(rdbtnExternalization, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-					.addGap(7)
-					.addComponent(rdbtnAllOf, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-					.addGap(16)
-					.addComponent(txtrWhichOf_1, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
-					.addGap(16)
-					.addComponent(button2, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-					.addGap(7)
-					.addComponent(rdbtnGarbageCollection, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-					.addGap(7)
-					.addComponent(rdbtnFileFiltering_1, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-					.addGap(7)
-					.addComponent(rdbtnPolymorphismIs, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-					.addGap(4)
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(answerbutton)
-						.addComponent(submitbutton)))
-		);
-		setLayout(groupLayout);
+		setLayout(new FormLayout(new ColumnSpec[] {
+				ColumnSpec.decode("86px"),
+				ColumnSpec.decode("437px"),
+				ColumnSpec.decode("103px"),
+				FormSpecs.UNRELATED_GAP_COLSPEC,
+				ColumnSpec.decode("99px"),},
+			new RowSpec[] {
+				FormSpecs.PARAGRAPH_GAP_ROWSPEC,
+				RowSpec.decode("54px"),
+				RowSpec.decode("57px"),
+				RowSpec.decode("38px"),
+				FormSpecs.RELATED_GAP_ROWSPEC,
+				RowSpec.decode("35px"),
+				FormSpecs.RELATED_GAP_ROWSPEC,
+				RowSpec.decode("27px"),
+				FormSpecs.RELATED_GAP_ROWSPEC,
+				RowSpec.decode("27px"),
+				FormSpecs.RELATED_GAP_ROWSPEC,
+				RowSpec.decode("27px"),
+				FormSpecs.PARAGRAPH_GAP_ROWSPEC,
+				RowSpec.decode("34px"),
+				FormSpecs.PARAGRAPH_GAP_ROWSPEC,
+				RowSpec.decode("27px"),
+				FormSpecs.RELATED_GAP_ROWSPEC,
+				RowSpec.decode("27px"),
+				FormSpecs.RELATED_GAP_ROWSPEC,
+				RowSpec.decode("27px"),
+				FormSpecs.RELATED_GAP_ROWSPEC,
+				RowSpec.decode("27px"),
+				FormSpecs.LABEL_COMPONENT_GAP_ROWSPEC,
+				RowSpec.decode("35px"),}));
+		add(lblQuizSerialization, "2, 2, left, top");
+		add(txtrWhichOf, "2, 4, 4, 1, fill, fill");
+		add(button1, "2, 6, fill, top");
+		add(rdbtnFileFiltering, "2, 8, fill, fill");
+		add(rdbtnExternalization, "2, 10, fill, fill");
+		add(rdbtnAllOf, "2, 12, 2, 1, fill, fill");
+		add(txtrWhichOf_1, "2, 14, 2, 1, left, center");
+		add(button2, "2, 16, fill, fill");
+		add(rdbtnGarbageCollection, "2, 18, fill, fill");
+		add(rdbtnFileFiltering_1, "2, 20, fill, fill");
+		add(rdbtnPolymorphismIs, "2, 22, fill, fill");
+		add(answerbutton, "3, 24, left, top");
+		add(submitbutton, "5, 24, left, top");
 
 	}
 	
