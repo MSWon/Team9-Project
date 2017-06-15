@@ -35,7 +35,23 @@ public class TextPanel extends JPanel implements ActionListener {
 	JEditPane textpane;
 	String FileNameHolder;
 	JLabel label1, label2;
+	private char[] Password ;
 	
+	
+	//Getter Setter Encapulation
+	
+	public char[] getPassword() {
+		return Password;
+	}
+
+
+	public void setPassword(char[] password) {
+		if(password !=null)   // Guardian
+			Password = password;
+	}
+
+
+
 	// main structure 
 	public TextPanel(){
 		
@@ -81,8 +97,12 @@ public class TextPanel extends JPanel implements ActionListener {
 		btnpanel.setLayout(gl_btnpanel);			
 	}
 	
+	
+	
 	private boolean isCorrect(char[] inputPassword) {
-		char[] Password = { 'p', 'a', 's', 's'};
+		
+		char[] password2 = {'p','a','s','s'};
+		setPassword(password2);
 		if (inputPassword.length != Password.length)
 			return false;
 		for (int i = 0; i < inputPassword.length; i++)
