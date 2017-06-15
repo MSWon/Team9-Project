@@ -16,6 +16,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
 import javax.swing.JButton;
@@ -80,24 +81,57 @@ public class TextPanel extends JPanel implements ActionListener {
 		btnpanel.setLayout(gl_btnpanel);			
 	}
 	
+	private boolean isCorrect(char[] inputPassword) {
+		char[] Password = { 'p', 'a', 's', 's'};
+		if (inputPassword.length != Password.length)
+			return false;
+		for (int i = 0; i < inputPassword.length; i++)
+			if (inputPassword[i] != Password[i])
+				return false;
+		return true;
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String resultStr = null;
 		String correctAns = "pass";
-		resultStr = JOptionPane.showInputDialog("Enter the admin's password\n\u203B Edit is only for administratior \u203B");
-		try {
-			if (resultStr.equals(correctAns))
-			{
-				editorpane = new EditorPane();
-				editorpane.makeEditorFrom(textpane, FileNameHolder);
+		JPanel panel = new JPanel();
+		JLabel label = new JLabel("Enter a password:");
+		JPasswordField pass = new JPasswordField(10);
+		panel.add(label);
+		panel.add(pass);
+		String[] options = new String[]{"OK", "Cancel"};
+		int option = JOptionPane.showOptionDialog(null, panel, "The title",
+		                         JOptionPane.NO_OPTION, JOptionPane.PLAIN_MESSAGE,
+		                         null, options, options[1]);
+		if(option == 0) // pressing OK button
+		{
+			try {
+				char[] inputpassword = pass.getPassword();
+				if (isCorrect(inputpassword) == true) {
+					editorpane = new EditorPane();
+					editorpane.makeEditorFrom(textpane, FileNameHolder);
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "You enter wrong password");
+				}
+			} catch(NullPointerException NEX) {
+				System.out.println("User enters null.");
 			}
-			else
-			{
-				JOptionPane.showMessageDialog(null, "You enter wrong password");
-			}
-		} catch(NullPointerException NEX) {
-			System.out.println("User enters null.");
 		}
+//		resultStr = JOptionPane.showInputDialog("Enter the admin's password\n\u203B Edit is only for administratior \u203B");
+//		try {
+//			if (resultStr.equals(correctAns))
+//			{
+//				editorpane = new EditorPane();
+//				editorpane.makeEditorFrom(textpane, FileNameHolder);
+//			}
+//			else
+//			{
+//				JOptionPane.showMessageDialog(null, "You enter wrong password");
+//			}
+//		} catch(NullPointerException NEX) {
+//			System.out.println("User enters null.");
+//		}
 	}
 }
