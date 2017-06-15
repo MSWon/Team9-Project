@@ -27,6 +27,7 @@ public class QuizChapter3 extends JPanel implements ActionListener {
 	private JFrame frame;
 	private JButton btnNewButton;
 	private JButton btnAnswer;
+	private int click = 0;
 	
 	public QuizChapter3() {
 		this.setBackground(Color.white);
@@ -89,6 +90,7 @@ public class QuizChapter3 extends JPanel implements ActionListener {
 		btnNewButton.addActionListener(this);
 		
 		btnAnswer = new JButton("Answer");
+		btnAnswer.setEnabled(false);
 		btnAnswer.setFont(new Font("맑은 고딕", Font.BOLD, 20));
 		btnAnswer.addActionListener(this);
 		GroupLayout groupLayout = new GroupLayout(this);
@@ -198,6 +200,9 @@ public class QuizChapter3 extends JPanel implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getSource().equals(btnNewButton)){ // submit 버튼을 눌렀을때 
+			click++;
+			if(click >=1)
+				btnAnswer.setEnabled(true);
 			int Score = 0;
 		    char Signal_1,Signal_2,Signal_3; // 어떤 문제가 맞고 틀린지 옆에 OX 체크
 		     
