@@ -120,7 +120,8 @@ public class TextPanel extends JPanel implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-
+		
+		editbutton.setEnabled(false);
 		JPanel panel = new JPanel();
 		JLabel label = new JLabel("Enter a password:");
 		JPasswordField pass = new JPasswordField(10);
@@ -137,7 +138,7 @@ public class TextPanel extends JPanel implements ActionListener {
 				char[] inputpassword = pass.getPassword();
 				if (isCorrect(inputpassword) == true) {
 					editorpane = new EditorPane();
-					editorpane.makeEditorFrom(textpane, FileNameHolder);
+					editorpane.makeEditorFrom(textpane, FileNameHolder,editbutton);
 				}
 				else {
 					JOptionPane.showMessageDialog(null, "You enter wrong password");
@@ -146,6 +147,9 @@ public class TextPanel extends JPanel implements ActionListener {
 				JOptionPane.showMessageDialog(null, "There is an error!! User enters null.");
 				NEX.printStackTrace();
 			}
+		}
+		else{
+			editbutton.setEnabled(true);
 		}
 	}
 }

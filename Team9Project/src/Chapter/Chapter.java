@@ -370,6 +370,9 @@ public class Chapter implements ActionListener{
 		JButton source = (JButton)e.getSource();
 		
 		if(source.equals(button1)){
+			if(hd != null){
+				hd.dispose();
+			}
 			this.frame.dispose();
 			MainPage frame = new MainPage();
 			frame.go();

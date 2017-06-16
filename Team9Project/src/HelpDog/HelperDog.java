@@ -34,6 +34,7 @@ public class HelperDog extends JFrame implements ActionListener{
 	 * Create the frame.
 	 */
 	public HelperDog(JButton caller_input) {
+		
 		this.setResizable(false);
 		caller=caller_input;
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

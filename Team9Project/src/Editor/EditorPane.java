@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.awt.image.BufferedImage;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -27,7 +29,7 @@ public class EditorPane implements ActionListener{
 	private JTextPane editedPane;
 	private String textNameHolder;
 	private JScrollPane scrollPane;
-	private JButton editButton;
+	private JButton editButton,caller;
 	private JButton cancelButton;
 	private Border borderForPane;
 	private String firsttext;
@@ -36,7 +38,9 @@ public class EditorPane implements ActionListener{
 	/**
 	 * @wbp.parser.entryPoint
 	 */
-	public void makeEditorFrom(JTextPane paneToEdit, String textName){
+	public void makeEditorFrom(JTextPane paneToEdit, String textName,JButton input_caller){
+		
+		this.caller = input_caller;
 		// frame
 		editorFrame = new JFrame();
 		editorFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -108,6 +112,51 @@ public class EditorPane implements ActionListener{
 					.addContainerGap())
 		);
 		editorPanel.setLayout(gl_editorPanel);
+		
+        editorFrame.addWindowListener(new WindowListener() {
+			
+			@Override
+			public void windowOpened(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowIconified(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowDeiconified(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowDeactivated(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowClosing(WindowEvent e) {
+				caller.setEnabled(true);
+				
+			}
+			
+			@Override
+			public void windowClosed(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowActivated(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
 		editorFrame.setVisible(true);
 		
