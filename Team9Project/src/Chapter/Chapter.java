@@ -25,6 +25,7 @@ public class Chapter implements ActionListener{
 	private JButton label_1,label_2,label_3,label_4,label_5,label_6,label_7;
 	public static Cardpanel cardpanel;
 	private Keywords keyword;
+	private static boolean clicked = false;
 	private CardLayout cl;
 	private HelperDog hd;
 	ValueList[] vl=new ValueList[30];
@@ -299,15 +300,7 @@ public class Chapter implements ActionListener{
 			
 				
 	}
-	public Cardpanel getCardPanel()
-	{
-		cardpanel=new Cardpanel();
-		cardpanel.Chapter1();
-		cardpanel.Chapter2();
-		cardpanel.Chapter3();
-		cardpanel.Chapter4();
-		return cardpanel;
-	}
+
 	public void go_to_Chap1(){
 		
 		cl = (CardLayout) (cardpanel.getLayout());
@@ -364,15 +357,22 @@ public class Chapter implements ActionListener{
 				vl[i].setKeyWord((String) keyword.keyword_dataframe.get(i).get(j));
 		}
 	}
+	
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
 		JButton source = (JButton)e.getSource();
 		
 		if(source.equals(button1)){
+						
 			if(hd != null){
 				hd.dispose();
 			}
+			if(TextPanel.editorpane!=null){
+				TextPanel.editorpane.dispose();
+			}
+				
 			this.frame.dispose();
 			MainPage frame = new MainPage();
 			frame.go();
@@ -420,6 +420,14 @@ public class Chapter implements ActionListener{
 		else if(e.getSource().equals(label_7))
 			cl.show(cardpanel, "chapter7");
 
+	}
+
+	public HelperDog getHd() {
+		return hd;
+	}
+
+	public void setHd(HelperDog hd) {
+		this.hd = hd;
 	}	
 }
 

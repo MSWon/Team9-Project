@@ -31,7 +31,7 @@ import Editor.JEditPane;
 
 public class TextPanel extends JPanel implements ActionListener {
 	
-	EditorPane editorpane;
+	static EditorPane editorpane;
 	JPanel subpanel, btnpanel;
 	JPanel subpanel2;
 	JEditPane textpane;
@@ -137,8 +137,8 @@ public class TextPanel extends JPanel implements ActionListener {
 				
 				char[] inputpassword = pass.getPassword();
 				if (isCorrect(inputpassword) == true) {
-					editorpane = new EditorPane();
-					editorpane.makeEditorFrom(textpane, FileNameHolder,editbutton);
+					editorpane = new EditorPane(textpane, FileNameHolder,editbutton);
+
 				}
 				else {
 					JOptionPane.showMessageDialog(null, "You enter wrong password");

@@ -2,6 +2,8 @@ package Main;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -116,6 +118,8 @@ public class MainPage implements ActionListener{
 					.addComponent(label_1)
 					.addContainerGap(97, Short.MAX_VALUE))
 		);
+		
+		
 		cpanel.setLayout(gl_cpanel);
 		frame.getContentPane().add(scroller);
 		

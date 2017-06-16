@@ -17,12 +17,15 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.TitledBorder;
 import javax.swing.text.Document;
+
+import Chapter.Chapter;
+
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
-public class EditorPane implements ActionListener{
+public class EditorPane extends JFrame implements ActionListener{
 
-	private JFrame editorFrame;
+
 	private JPanel editorPanel;
 	private JPanel buttonPanel;
 	private JTextPane paneHolder;
@@ -33,22 +36,23 @@ public class EditorPane implements ActionListener{
 	private JButton cancelButton;
 	private Border borderForPane;
 	private String firsttext;
-
+	
+	
+	
 	
 	/**
 	 * @wbp.parser.entryPoint
 	 */
-	public void makeEditorFrom(JTextPane paneToEdit, String textName,JButton input_caller){
+	public EditorPane(JTextPane paneToEdit, String textName,JButton input_caller){
 		
 		this.caller = input_caller;
 		// frame
-		editorFrame = new JFrame();
-		editorFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		editorFrame.setTitle("Editor");
-		editorFrame.setSize(819, 645);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setTitle("Editor");
+		setSize(819, 645);
 		// outer panel
 		editorPanel = new JPanel();
-		editorFrame.getContentPane().add(editorPanel);
+		getContentPane().add(editorPanel);
 		
 		// pane holder
 		paneHolder = paneToEdit;
@@ -113,11 +117,11 @@ public class EditorPane implements ActionListener{
 		);
 		editorPanel.setLayout(gl_editorPanel);
 		
-        editorFrame.addWindowListener(new WindowListener() {
+        this.addWindowListener(new WindowListener() {
 			
 			@Override
 			public void windowOpened(WindowEvent e) {
-				// TODO Auto-generated method stub
+				
 				
 			}
 			
@@ -158,8 +162,8 @@ public class EditorPane implements ActionListener{
 			}
 		});
 		
-		editorFrame.setVisible(true);
-		
+		this.setVisible(true);
+	
 		
 	}
 
@@ -189,7 +193,7 @@ public class EditorPane implements ActionListener{
 		else{
 			paneHolder.setText(firsttext);
 		}
-		editorFrame.dispose();
+		dispose();
 		
 	}
 	

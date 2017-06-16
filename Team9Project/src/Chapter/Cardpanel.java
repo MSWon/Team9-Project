@@ -19,7 +19,7 @@ public class Cardpanel extends JPanel {
 	private Quiz quiz6 = new QuizChapter6();
 	private Quiz quiz7 = new QuizChapter7();
 	
-	private MultiPanel textpanel;
+	public MultiPanel multipanel;
 	private int num = 1;
 	
 	
