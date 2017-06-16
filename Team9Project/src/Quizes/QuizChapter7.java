@@ -24,7 +24,7 @@ import javax.swing.JRadioButton;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 
-public class QuizChapter7 extends Quiz implements ActionListener{
+public class QuizChapter7 extends Quiz{
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private final ButtonGroup buttonGroup_1 = new ButtonGroup();
 

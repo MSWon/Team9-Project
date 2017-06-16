@@ -21,7 +21,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class QuizChapter3 extends Quiz implements ActionListener {
+public class QuizChapter3 extends Quiz{
 	
 	private JTextField txtEncapsulation;
 	private JTextField textField;

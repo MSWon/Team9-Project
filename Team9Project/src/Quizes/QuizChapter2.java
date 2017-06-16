@@ -36,7 +36,7 @@ import com.jgoodies.forms.layout.FormSpecs;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
 
-public class QuizChapter2 extends Quiz implements ActionListener {
+public class QuizChapter2 extends Quiz{
    
    private JRadioButton leftButton_1,leftButton_2,leftButton_3,RightButton_1,RightButton_2,RightButton_3,leftButton_4,RightButton_4;
 
