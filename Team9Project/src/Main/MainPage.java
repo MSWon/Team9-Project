@@ -29,6 +29,7 @@ public class MainPage implements ActionListener{
 	public void go(){
 		
 		frame = new JFrame("OOP Education");
+		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(1250, 800);
 		frame.setResizable(false);

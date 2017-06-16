@@ -18,6 +18,8 @@ import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 
@@ -25,13 +27,15 @@ public class HelperDog extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
 	private JButton btnNewButton;
-	private JButton btnNewButton_1;
+	private JButton btnNewButton_1,caller;
 	private ImageIcon helperDog = new ImageIcon("HelperDog_Message_pop_up.jpg");
 	SearchKeyword dialog;
 	/**
 	 * Create the frame.
 	 */
-	public HelperDog() {
+	public HelperDog(JButton caller_input) {
+		this.setResizable(false);
+		caller=caller_input;
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 234, 208);
@@ -76,6 +80,50 @@ public class HelperDog extends JFrame implements ActionListener{
 					.addContainerGap(99, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
+		this.addWindowListener(new WindowListener() {
+			
+			@Override
+			public void windowOpened(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowIconified(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowDeiconified(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowDeactivated(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowClosing(WindowEvent e) {
+				caller.setEnabled(true);
+				
+			}
+			
+			@Override
+			public void windowClosed(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowActivated(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		setVisible(true);
 	}
 

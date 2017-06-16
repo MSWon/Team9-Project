@@ -393,7 +393,9 @@ public class Chapter implements ActionListener{
 		}
 		
 		if(e.getSource().equals(button2))
-			hd = new HelperDog();
+			{hd = new HelperDog(button2);
+			button2.setEnabled(false);
+			}
 			
 		for(int i=0; i<buttons.size(); i++){
 			if(source == buttons.get(i))

@@ -60,7 +60,7 @@ public class SearchKeyword extends JDialog implements ActionListener{
 		
 		c = new Chapter();
 		c.set();
-		String key=inputkey.getText();
+		String key=inputkey.getText().toLowerCase();
 		ArrayList<String> as=new ArrayList<String>();
 		listStr = new ArrayList<String>();
 		ValueList[] copy=new ValueList[30];
@@ -92,8 +92,7 @@ public class SearchKeyword extends JDialog implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-//		if(COUNT==1){
-//		COUNT=1;
+
 		// TODO Auto-generated method stub
 		int m=1; //chapter number
 		

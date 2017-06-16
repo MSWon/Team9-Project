@@ -36,6 +36,7 @@ public class TextPanel extends JPanel implements ActionListener {
 	String FileNameHolder;
 	JLabel label1, label2;
 	private char[] Password ;
+	JButton btnQuestion;
 	
 	
 	//Getter Setter Encapulation
@@ -68,10 +69,12 @@ public class TextPanel extends JPanel implements ActionListener {
 
 		btnpanel.add(editbutton);
 		
-		JButton btnQuestion = new JButton("Comment");
+		btnQuestion = new JButton("Comment");
 		btnQuestion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				CommentFrame option = new CommentFrame();
+				CommentFrame option = new CommentFrame(btnQuestion);
+				btnQuestion.setEnabled(false);
+				
 			}
 		});
 		btnQuestion.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 18));

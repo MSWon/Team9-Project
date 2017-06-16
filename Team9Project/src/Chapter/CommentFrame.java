@@ -17,6 +17,8 @@ import java.awt.ScrollPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -31,6 +33,7 @@ public class CommentFrame extends JFrame implements ActionListener{
 	private JTextArea textArea;
 	private JScrollPane scrollpane;
 	private JButton btnEnter, btnExit;
+	private JButton caller;
 
 	/**
 	 * Launch the application.
@@ -51,7 +54,9 @@ public class CommentFrame extends JFrame implements ActionListener{
 	/**
 	 * Create the frame.
 	 */
-	public CommentFrame() {
+	public CommentFrame(JButton caller_input) 
+	{
+		this.caller = caller_input;
 		this.setTitle("Comments");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 334, 244);
@@ -114,6 +119,53 @@ public class CommentFrame extends JFrame implements ActionListener{
 					.addGap(153))
 		);
 		contentPane.setLayout(gl_contentPane);
+		this.addWindowListener(new WindowListener() {
+			
+			@Override
+			public void windowOpened(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowIconified(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowDeiconified(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowDeactivated(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowClosing(WindowEvent e) 
+			{
+			
+				caller.setEnabled(true);// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowClosed(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowActivated(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
 		this.setVisible(true);
 	}
 
