@@ -36,7 +36,7 @@ public class QuizChapter7 extends Quiz{
 	
 	
 	public QuizChapter7() {
-		this.setBackground(Color.white);
+		
 		JTextArea txtrWhichOf = new JTextArea();
 		txtrWhichOf.setEditable(false);
 		txtrWhichOf.setFont(new Font("¸¼Àº °íµñ", Font.BOLD | Font.ITALIC, 23));

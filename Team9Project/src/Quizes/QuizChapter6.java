@@ -40,8 +40,7 @@ public class QuizChapter6 extends Quiz{
     */
    public QuizChapter6() {
       
-	   this.setBackground(Color.WHITE);
-      
+	   
       JLabel lblQuizGui = new JLabel("Quiz - GUI");
       lblQuizGui.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 40));
       

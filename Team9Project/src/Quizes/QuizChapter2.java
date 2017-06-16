@@ -56,7 +56,6 @@ public class QuizChapter2 extends Quiz{
 
    public QuizChapter2() {
       
-      this.setBackground(Color.WHITE);
       
       leftButton_4 = new JRadioButton("");
       leftButton_4.setBackground(Color.WHITE);
