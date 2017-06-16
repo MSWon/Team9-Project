@@ -223,23 +223,6 @@ public class QuizChapter4 extends Quiz{
    }
    
 
-   private void drawConnectors(Graphics2D g2) {
-       Rectangle r1, r2;
-       double x1, y1, x2, y2;
- 
-       Component[] c = getComponents();
-       for(int i = 0; i < c.length; i++) {
-           r1 = c[i].getBounds();
-           x1 = r1.getCenterX();
-           y1 = r1.getCenterY();
-           for(int j = i + 1; j < c.length; j++) {
-               r2 = c[j].getBounds();
-               x2 = r2.getCenterX();
-               y2 = r2.getCenterY();
-               g2.draw(new Line2D.Double(x1, y1, x2, y2));
-           }
-       }
-   }
 
 
    public void mypaint(Graphics2D g){
