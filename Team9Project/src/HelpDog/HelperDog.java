@@ -36,7 +36,6 @@ public class HelperDog extends JFrame implements ActionListener{
 	public HelperDog(JButton caller_input) {
 		this.setResizable(false);
 		caller=caller_input;
-		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 234, 208);
 		contentPane = new JPanel() {
@@ -130,8 +129,12 @@ public class HelperDog extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (((JButton)e.getSource()).equals(btnNewButton)) {
-			dialog = new SearchKeyword(this,"Search Keyword");
+			btnNewButton.setEnabled(false);
+			
+			dialog = new SearchKeyword(this,"Search Keyword",btnNewButton);
 			dialog.setVisible(true);
+			
+			
 		}
 		if (((JButton)e.getSource()).equals(btnNewButton_1)) {
 			JOptionPane.showMessageDialog(HelperDog.this, 

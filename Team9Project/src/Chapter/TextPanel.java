@@ -5,6 +5,8 @@ import java.awt.Font;
 import java.awt.TextArea;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -37,6 +39,8 @@ public class TextPanel extends JPanel implements ActionListener {
 	JLabel label1, label2;
 	private char[] Password ;
 	JButton btnQuestion;
+	private JButton editbutton;
+	
 	
 	
 	//Getter Setter Encapulation
@@ -63,7 +67,7 @@ public class TextPanel extends JPanel implements ActionListener {
 		btnpanel = new JPanel();
 		btnpanel.setBackground(Color.WHITE);
 		
-		JButton editbutton = new JButton("Edit");
+		editbutton = new JButton("Edit");
 		editbutton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 18));
 		editbutton.addActionListener(this);
 
@@ -116,6 +120,7 @@ public class TextPanel extends JPanel implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+
 		JPanel panel = new JPanel();
 		JLabel label = new JLabel("Enter a password:");
 		JPasswordField pass = new JPasswordField(10);
@@ -128,6 +133,7 @@ public class TextPanel extends JPanel implements ActionListener {
 		if(option == 0) 
 		{
 			try {
+				
 				char[] inputpassword = pass.getPassword();
 				if (isCorrect(inputpassword) == true) {
 					editorpane = new EditorPane();

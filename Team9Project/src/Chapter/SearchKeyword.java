@@ -5,6 +5,8 @@ import Chapter.*;
 import Main.MainPage;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -25,8 +27,11 @@ public class SearchKeyword extends JDialog implements ActionListener{
 	private Chapter c;
 	private Cardpanel cp;
 	private static int COUNT=0;
-	public SearchKeyword(JFrame frame, String title){
+	private JButton caller;
+	
+	public SearchKeyword(JFrame frame, String title,JButton caller_input){
 		super(frame,title);
+		this.caller = caller_input;
 		list=new JList();
 		setLayout(new FlowLayout(new FlowLayout().LEFT));
 		setSize(350,300);
@@ -51,6 +56,53 @@ public class SearchKeyword extends JDialog implements ActionListener{
 		add(btncancel);
 		setLocation(350,200);
 		
+		this.addWindowListener(new WindowListener() {
+			
+			@Override
+			public void windowOpened(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowIconified(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowDeiconified(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowDeactivated(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowClosing(WindowEvent e) 
+			{
+			
+				caller.setEnabled(true);// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowClosed(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowActivated(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		this.setVisible(true);
 	}
 	
 	public void keysearch(){
