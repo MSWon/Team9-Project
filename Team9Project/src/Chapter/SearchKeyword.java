@@ -24,6 +24,7 @@ public class SearchKeyword extends JDialog implements ActionListener{
 	private ArrayList<String> listStr;
 	private Chapter c;
 	private Cardpanel cp;
+	private static int COUNT=0;
 	public SearchKeyword(JFrame frame, String title){
 		super(frame,title);
 		list=new JList();
@@ -91,6 +92,8 @@ public class SearchKeyword extends JDialog implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
+//		if(COUNT==1){
+//		COUNT=1;
 		// TODO Auto-generated method stub
 		int m=1; //chapter number
 		
