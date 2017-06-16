@@ -106,7 +106,7 @@ public class QuizChapter7 extends Quiz implements ActionListener{
 					.addComponent(lblQuizSerialization))
 				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(86)
-					.addComponent(txtrWhichOf, GroupLayout.PREFERRED_SIZE, 657, GroupLayout.PREFERRED_SIZE))
+					.addComponent(txtrWhichOf, GroupLayout.PREFERRED_SIZE, 659, GroupLayout.PREFERRED_SIZE))
 				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(86)
 					.addComponent(button1, GroupLayout.PREFERRED_SIZE, 396, GroupLayout.PREFERRED_SIZE))
@@ -137,15 +137,15 @@ public class QuizChapter7 extends Quiz implements ActionListener{
 				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(523)
 					.addComponent(answerbutton)
-					.addGap(18)
+					.addGap(20)
 					.addComponent(submitbutton))
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(17)
+					.addGap(15)
 					.addComponent(lblQuizSerialization)
-					.addGap(19)
+					.addGap(68)
 					.addComponent(txtrWhichOf, GroupLayout.PREFERRED_SIZE, 79, GroupLayout.PREFERRED_SIZE)
 					.addGap(9)
 					.addComponent(button1)
@@ -155,7 +155,7 @@ public class QuizChapter7 extends Quiz implements ActionListener{
 					.addComponent(rdbtnExternalization, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
 					.addGap(9)
 					.addComponent(rdbtnAllOf, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-					.addGap(21)
+					.addGap(19)
 					.addComponent(txtrWhichOf_1, GroupLayout.PREFERRED_SIZE, 79, GroupLayout.PREFERRED_SIZE)
 					.addGap(15)
 					.addComponent(button2, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
@@ -201,6 +201,7 @@ public class QuizChapter7 extends Quiz implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		if(arg0.getSource().equals(submitbutton)){
+			CheckAnswer();
 			
 		}
 		if(arg0.getSource().equals(answerbutton)){

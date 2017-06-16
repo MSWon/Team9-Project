@@ -225,7 +225,7 @@ public void CheckAnswer(){
 public void actionPerformed(ActionEvent e) {
 	 
 	if(e.getSource().equals(btnSubmit)){ //submit버튼 눌렀을때 !
-		 
+		 CheckAnswer();
 		
 	}
 	if(e.getSource().equals(btnAnswer)){

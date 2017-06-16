@@ -88,8 +88,8 @@ public class QuizChapter2 extends Quiz implements ActionListener {
       RightButton_1.addActionListener(this);
       
       lblQuiz = new JLabel("Quiz - FirstStepToOOP");
-      lblQuiz.setForeground(Color.RED);
-      lblQuiz.setFont(new Font("±¼¸²", Font.BOLD, 33));
+      lblQuiz.setForeground(Color.BLACK);
+      lblQuiz.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 40));
       buttonGroup_1.add(RightButton_1);
       
       right1 = new JTextArea();
