@@ -11,6 +11,8 @@ import java.util.ArrayList;
 
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class SearchKeyword extends JDialog implements ActionListener{
 	private JTextField inputkey=new JTextField(10);
@@ -31,9 +33,9 @@ public class SearchKeyword extends JDialog implements ActionListener{
 	
 	public SearchKeyword(JFrame frame, String title,JButton caller_input){
 		super(frame,title);
+		this.setResizable(false);
 		this.caller = caller_input;
 		list=new JList();
-		setLayout(new FlowLayout(new FlowLayout().LEFT));
 		setSize(350,300);
 		ImageIcon oriicon=new ImageIcon("search_icon.png");
 		Image oriimg=oriicon.getImage();
@@ -47,13 +49,52 @@ public class SearchKeyword extends JDialog implements ActionListener{
 		scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		add(lbl1);
-		add(inputkey);
-		add(btnsearch);
-		add(lbl2);
-		add(scroll);
-		add(btnok);
-		add(btncancel);
+		GroupLayout groupLayout = new GroupLayout(getContentPane());
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(5)
+							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+								.addGroup(groupLayout.createSequentialGroup()
+									.addComponent(lbl1)
+									.addGap(5)
+									.addComponent(inputkey, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+									.addPreferredGap(ComponentPlacement.RELATED)
+									.addComponent(btnsearch))
+								.addComponent(lbl2)
+								.addComponent(scroll, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(4)
+							.addComponent(btnok)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(btncancel)))
+					.addContainerGap(60, Short.MAX_VALUE))
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(5)
+							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+								.addGroup(groupLayout.createSequentialGroup()
+									.addGap(3)
+									.addComponent(lbl1))
+								.addComponent(inputkey, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addGap(5)
+							.addComponent(lbl2))
+						.addComponent(btnsearch))
+					.addGap(5)
+					.addComponent(scroll, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(btncancel)
+						.addComponent(btnok))
+					.addGap(44))
+		);
+		getContentPane().setLayout(groupLayout);
 		setLocation(350,200);
 		
 		this.addWindowListener(new WindowListener() {
@@ -112,7 +153,7 @@ public class SearchKeyword extends JDialog implements ActionListener{
 		
 		c = new Chapter();
 		c.set();
-		String key=inputkey.getText().toLowerCase();
+		String key=inputkey.getText();
 		ArrayList<String> as=new ArrayList<String>();
 		listStr = new ArrayList<String>();
 		ValueList[] copy=new ValueList[30];
@@ -125,11 +166,13 @@ public class SearchKeyword extends JDialog implements ActionListener{
 			as=(ArrayList<String>) a.getKeyWord().clone();
 			for(String s:as)
 			{
+			  String s2 = s.toLowerCase();
 			
-				if(s.contains(key))
+				if(s2.contains(key))
 				{
 					listStr.add(s);
 				}
+			
 			}
 		}
 		int n=1;
@@ -155,7 +198,9 @@ public class SearchKeyword extends JDialog implements ActionListener{
 		
 		if(e.getSource().equals(btnsearch))
 		{
+		
 			keysearch();
+			
 			//JTextField에 쓴 키워드가 원래 설정되어 있는 키워드에 속해있는지 판단하고
 			//검색어가 속해있는 키워드들을 JList에 나열, 및 선택하게 함 
 		}
